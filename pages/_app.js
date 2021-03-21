@@ -1,4 +1,4 @@
-import { Chakra } from "../utils/Chakra";
+import { Chakra } from "../utils/chakra";
 
 import Header from "../components/header";
 function MyApp({ Component, pageProps }) {
