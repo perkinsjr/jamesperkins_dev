@@ -31,8 +31,6 @@ const ContactForm = () => {
           id="email"
           type="email"
           name="email"
-          variant="filled"
-          bg="primary.100"
           mt={8}
           placeholder="batman@gmail.com"
           color="white"
