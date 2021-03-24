@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Box, Heading, Input } from "@chakra-ui/react";
 import StyledButton from "./button";
 
-function OptInForm() {
+const OptInForm = () => {
   useEffect(() => {
     const kwesScript = document.createElement("script");
     kwesScript.setAttribute("src", "https://kwes.io/v2/kwes-script.js");
@@ -38,6 +38,6 @@ function OptInForm() {
       </form>
     </Box>
   );
-}
+};
 
 export default OptInForm;

@@ -1,8 +1,16 @@
 import React from "react";
 import matter from "gray-matter";
 import BlogPosts from "@/components/blogposts";
+import { Heading } from "@chakra-ui/react";
 const Blog = (props) => {
-  return <BlogPosts allBlogs={props.allBlogs} />;
+  return (
+    <>
+      <Heading as="h1" mb={4} textAlign="center">
+        Blog
+      </Heading>
+      <BlogPosts allBlogs={props.allBlogs} />
+    </>
+  );
 };
 export default Blog;
 export async function getStaticProps() {
