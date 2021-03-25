@@ -1,10 +1,10 @@
 import React from "react";
-
+import { StatGroup, Stat, StatLabel, StatNumber } from "@chakra-ui/react";
 export default function YouTubeStat({ label, number }) {
   return (
-    <div>
-      <p>{label}</p>
-      <p>{number}</p>
-    </div>
+    <Stat>
+      <StatLabel textAlign="center">{label}</StatLabel>
+      <StatNumber textAlign="center">{number}</StatNumber>
+    </Stat>
   );
 }

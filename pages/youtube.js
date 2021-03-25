@@ -1,7 +1,7 @@
 import React from "react";
 import useSWR from "swr";
 import fetcher from "@/lib/fetcher";
-import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, StatGroup, Center } from "@chakra-ui/react";
 import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
 import YouTubeStat from "@/components/youtubestats";
 
@@ -22,8 +22,10 @@ export default function Youtube({ results }) {
         alignItems="center"
         columns={{ sm: 1, lg: 2 }}
       >
-        <YouTubeStat label="Subscriber Count" number={subscriberCount} />
-        <YouTubeStat label="View Count" number={viewCount} />
+        <Center>
+          <YouTubeStat label="Subscriber Count" number={subscriberCount} />
+          <YouTubeStat label="View Count" number={viewCount} />
+        </Center>
       </Box>
       <Heading as="h1" my={10} textAlign="center">
         My Latest YouTube Videos
@@ -33,10 +35,19 @@ export default function Youtube({ results }) {
           results.map((video) => {
             return (
               <Box key={video.id}>
-                <Heading as="h5" fontSize="md" textAlign="center" noOfLines={1}>
+                <Heading
+                  as="h5"
+                  fontSize="md"
+                  textAlign="center"
+                  noOfLines={1}
+                  mb={2}
+                >
                   {video.snippet.title}
                 </Heading>
-                <YoutubeVideoPlayer id={video.snippet.resourceId.videoId} />
+                <YoutubeVideoPlayer
+                  thumb={video.snippet.thumbnails.high.url}
+                  id={video.snippet.resourceId.videoId}
+                />
               </Box>
             );
           })}
@@ -54,5 +65,6 @@ export async function getStaticProps() {
 
   return {
     props: { results: results.items },
+    revalidate: 10,
   };
 }

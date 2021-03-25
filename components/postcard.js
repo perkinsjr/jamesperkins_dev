@@ -1,7 +1,5 @@
 import { Box, Text } from "@chakra-ui/layout";
 import Link from "next/link";
-
-import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
 const PostCard = ({ post }) => {

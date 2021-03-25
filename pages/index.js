@@ -1,56 +1,79 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
+import {
+  Flex,
+  SimpleGrid,
+  Heading,
+  Box,
+  Text,
+  useColorMode,
+  Skeleton,
+  Center,
+} from "@chakra-ui/react";
 
-export default function Home() {
+const Index = ({ results }) => {
+  const { colorMode } = useColorMode();
   return (
-    <>
-      <div className={styles.container}>
-        <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
-          </h1>
-
-          <p className={styles.description}>
-            Get started by editing{" "}
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-
-          <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h3>Documentation &rarr;</h3>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-
-            <a href="https://nextjs.org/learn" className={styles.card}>
-              <h3>Learn &rarr;</h3>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
-
-            <a
-              href="https://github.com/vercel/next.js/tree/master/examples"
-              className={styles.card}
-            >
-              <h3>Examples &rarr;</h3>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className={styles.card}
-            >
-              <h3>Deploy &rarr;</h3>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
-          </div>
-        </main>
-      </div>
-    </>
+    <Flex flexDirection="column" justifyContent="center" alignItems="center">
+      <Heading as="h2" mb={6} size="2xl" textAlign="center">
+        James Perkins
+      </Heading>
+      <Heading as="h3" mb={6} size="lg" textAlign="center">
+        Developer | <span>Teacher</span> <span>| Blogger</span>
+      </Heading>
+      <Box>
+        <SimpleGrid
+          columns={[1, 1, 2]}
+          mt={8}
+          mb={6}
+          mx="auto"
+          justifyContent="center"
+        >
+          <Center>
+            <Box width="100%" height="100%">
+              {results &&
+                results.map((video) => {
+                  return (
+                    <Box key={video.id}>
+                      <YoutubeVideoPlayer
+                        id={video.snippet.resourceId.videoId}
+                      />
+                    </Box>
+                  );
+                })}
+            </Box>
+          </Center>
+          <Box mt={8} width="50%">
+            <Text>
+              I create Jamstack related content on YouTube, I drop a video a
+              week and a new crash course every other week!
+            </Text>
+          </Box>
+          <Box>
+            <Skeleton
+              height="300px"
+              width="500px"
+              startColor="secondary.200"
+              endColor="primary.100"
+              speed="1.0"
+            />
+          </Box>
+          <Box>It's livestreams</Box>
+        </SimpleGrid>
+      </Box>
+    </Flex>
   );
+};
+
+export default Index;
+export async function getStaticProps() {
+  const MY_PLAYLIST = process.env.YOUTUBE_PLAYLIST_ID;
+  const API_KEY = process.env.YOUTUBE_API_KEY;
+  const REQUEST_URL = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${MY_PLAYLIST}&key=${API_KEY}&maxResults=1`;
+  const response = await fetch(REQUEST_URL);
+  const results = await response.json();
+
+  return {
+    props: { results: results.items },
+    revalidate: 10,
+  };
 }
