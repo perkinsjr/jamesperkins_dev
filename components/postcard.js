@@ -7,7 +7,6 @@ import Image from "next/image";
 const PostCard = ({ post }) => {
   function truncateSummary(content) {
     const contentTrunc = content.slice(0, 197).trimEnd();
-    console.log(contentTrunc);
     return `${contentTrunc}...`;
   }
 

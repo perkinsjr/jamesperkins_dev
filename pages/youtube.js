@@ -1,0 +1,58 @@
+import React from "react";
+import useSWR from "swr";
+import fetcher from "@/lib/fetcher";
+import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
+import YouTubeStat from "@/components/youtubestats";
+
+export default function Youtube({ results }) {
+  const { data, error } = useSWR("/api/youtube", fetcher);
+  if (!data) return <div>loading...</div>;
+  if (error) return <div>Sorry, we couldn't load the </div>;
+  const { subscriberCount, viewCount } = data;
+
+  return (
+    <Box maxWidth="960px" width="100%" mx="auto" mb={4} px={4}>
+      <Box
+        width="100%"
+        mt={[0, 8]}
+        mb={12}
+        mx="auto"
+        justifyItems="center"
+        alignItems="center"
+        columns={{ sm: 1, lg: 2 }}
+      >
+        <YouTubeStat label="Subscriber Count" number={subscriberCount} />
+        <YouTubeStat label="View Count" number={viewCount} />
+      </Box>
+      <Heading as="h1" my={10} textAlign="center">
+        My Latest YouTube Videos
+      </Heading>
+      <SimpleGrid columns={[1, 2, 3]} spacing={8}>
+        {results &&
+          results.map((video) => {
+            return (
+              <Box key={video.id}>
+                <Heading as="h5" fontSize="md" textAlign="center" noOfLines={1}>
+                  {video.snippet.title}
+                </Heading>
+                <YoutubeVideoPlayer id={video.snippet.resourceId.videoId} />
+              </Box>
+            );
+          })}
+      </SimpleGrid>
+    </Box>
+  );
+}
+
+export async function getStaticProps() {
+  const MY_PLAYLIST = process.env.YOUTUBE_PLAYLIST_ID;
+  const API_KEY = process.env.YOUTUBE_API_KEY;
+  const REQUEST_URL = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${MY_PLAYLIST}&key=${API_KEY}&maxResults=12`;
+  const response = await fetch(REQUEST_URL);
+  const results = await response.json();
+
+  return {
+    props: { results: results.items },
+  };
+}

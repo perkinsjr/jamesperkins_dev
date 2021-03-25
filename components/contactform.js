@@ -31,6 +31,7 @@ const ContactForm = () => {
           id="email"
           type="email"
           name="email"
+          focusBorderColor="primary.200"
           mt={8}
           placeholder="batman@gmail.com"
           color="white"
@@ -39,8 +40,8 @@ const ContactForm = () => {
         <Textarea
           id="message"
           name="message"
-          variant="filled"
           placeholder="Tell me what you are looking for"
+          focusBorderColor="primary.200"
           mt={8}
           required
         />

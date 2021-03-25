@@ -1,11 +1,12 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown/with-html";
-import { Box, Code, Heading, Text } from "@chakra-ui/react";
+import { Box, Code, Heading, Text, useColorMode } from "@chakra-ui/react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image";
 
 const glob = require("glob");
+
 const InlineCode = ({ value }) => {
   return (
     <Code color="white" bg="primary.100" fontStyle="italic">
@@ -21,22 +22,26 @@ const CodeBlock = ({ language, value }) => {
   );
 };
 
-const BlockQuote = (props) => {
+const BlockQuote = (markdownBody, color) => {
   return (
     <Box
       p={4}
       as="blockquote"
       shadow="lg"
-      borderWidth="1px"
+      borderColor="primary.200"
+      borderWidth="2px"
       borderRadius={2}
       mb={4}
     >
-      {props.node.children[0].children[0].value}
+      {markdownBody.node.children[0].children[0].value}
     </Box>
   );
 };
 
 export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
+  const { colorMode } = useColorMode();
+
+  const color = colorMode === "light" ? "primary.200" : "primary.100";
   function reformatDate(fullDate) {
     const date = new Date(fullDate);
     return date.toDateString().slice(4);
@@ -75,9 +80,6 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
             }}
           />
         </div>
-        <Heading my={4} as="h3">
-          Written By: {frontmatter.author}
-        </Heading>
       </article>
     </Box>
   );

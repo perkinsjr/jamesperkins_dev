@@ -30,6 +30,7 @@ const OptInForm = () => {
           id="email"
           type="email"
           name="email"
+          focusBorderColor="primary.200"
           mt={8}
           placeholder="batman@gmail.com"
           required
