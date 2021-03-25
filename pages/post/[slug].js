@@ -1,6 +1,6 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown/with-html";
-import { Box, Code, Heading } from "@chakra-ui/react";
+import { Box, Code, Heading, Text } from "@chakra-ui/react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image";
@@ -21,6 +21,21 @@ const CodeBlock = ({ language, value }) => {
   );
 };
 
+const BlockQuote = (props) => {
+  return (
+    <Box
+      p={4}
+      as="blockquote"
+      shadow="lg"
+      borderWidth="1px"
+      borderRadius={2}
+      mb={4}
+    >
+      {props.node.children[0].children[0].value}
+    </Box>
+  );
+};
+
 export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
   function reformatDate(fullDate) {
     const date = new Date(fullDate);
@@ -30,9 +45,9 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
   if (!frontmatter) return <></>;
 
   return (
-    <Box maxWidth="720px" width="100%" mx="auto" mb={4}>
+    <Box maxWidth="720px" width="100%" mx="auto" mb={4} px={4}>
       <article>
-        <figure className="blog__hero">
+        <Box as="figure">
           <Image
             src={frontmatter.hero_image}
             width="720"
@@ -40,12 +55,12 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
             objectPosition=""
             alt={`blog_hero_${frontmatter.title}`}
           />
-        </figure>
+        </Box>
         <Box my={[2, 4]}>
           <Heading as="h2" size="3xl">
             {frontmatter.title}
           </Heading>
-          <Heading as="h4" size="md" fontWeight="normal">
+          <Heading as="h4" size="md" fontWeight="normal" my={4}>
             {reformatDate(frontmatter.date)}
           </Heading>
         </Box>
@@ -53,10 +68,16 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
           <ReactMarkdown
             escapeHtml={false}
             source={markdownBody}
-            renderers={{ code: CodeBlock, inlineCode: InlineCode }}
+            renderers={{
+              code: CodeBlock,
+              inlineCode: InlineCode,
+              blockquote: BlockQuote,
+            }}
           />
         </div>
-        <Heading as="h3">Written By: {frontmatter.author}</Heading>
+        <Heading my={4} as="h3">
+          Written By: {frontmatter.author}
+        </Heading>
       </article>
     </Box>
   );
