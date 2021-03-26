@@ -12,7 +12,7 @@ export default function Youtube({ results }) {
   const { subscriberCount, viewCount } = data;
 
   return (
-    <Box maxWidth="960px" width="100%" mx="auto" mb={4} px={4}>
+    <Box maxWidth="1080px" width="100%" mx="auto" mb={4} px={4}>
       <Box
         width="100%"
         mt={[0, 8]}

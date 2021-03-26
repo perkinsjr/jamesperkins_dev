@@ -1,27 +1,17 @@
 import React from "react";
-import { Box, Button, Stack, useColorMode } from "@chakra-ui/react";
+import { Box, Button, Stack, useColorMode, IconButton } from "@chakra-ui/react";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 export default function Logo(props) {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Box {...props}>
       <Stack isInline>
-        <Button
-          bg="transparent"
-          fontSize="lg"
-          fontWeight="semibold"
+        <IconButton
+          aria-label="Toggle dark mode"
           onClick={toggleColorMode}
-        >
-          {colorMode === "light" ? "Dark" : "Light"}
-        </Button>
-        <Button
-          bg="transparent"
-          fontSize="lg"
-          fontWeight="semibold"
-          onClick={toggleColorMode}
-        >
-          {colorMode === "light" ? "Dark" : "Light"}
-        </Button>
+          icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        ></IconButton>
       </Stack>
     </Box>
   );

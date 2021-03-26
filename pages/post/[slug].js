@@ -23,12 +23,13 @@ const CodeBlock = ({ language, value }) => {
 };
 
 const BlockQuote = (markdownBody, color) => {
+  const { colorMode } = useColorMode();
   return (
     <Box
       p={4}
       as="blockquote"
       shadow="lg"
-      borderColor="primary.200"
+      borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
       borderWidth="2px"
       borderRadius={2}
       mb={4}
@@ -39,9 +40,6 @@ const BlockQuote = (markdownBody, color) => {
 };
 
 export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
-  const { colorMode } = useColorMode();
-
-  const color = colorMode === "light" ? "primary.200" : "primary.100";
   function reformatDate(fullDate) {
     const date = new Date(fullDate);
     return date.toDateString().slice(4);

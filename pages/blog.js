@@ -1,15 +1,21 @@
 import React from "react";
 import matter from "gray-matter";
 import BlogPosts from "@/components/blogposts";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Flex } from "@chakra-ui/react";
 const Blog = (props) => {
   return (
-    <>
+    <Flex
+      maxWidth="1080px"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      mx="auto"
+    >
       <Heading as="h1" mb={4} textAlign="center">
         Blog
       </Heading>
       <BlogPosts allBlogs={props.allBlogs} />
-    </>
+    </Flex>
   );
 };
 export default Blog;

@@ -14,7 +14,7 @@ const Index = ({ results }) => {
   const { colorMode } = useColorMode();
   return (
     <Flex
-      maxWidth="960px"
+      maxWidth="1080px"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
@@ -46,7 +46,7 @@ const Index = ({ results }) => {
         <Box
           p={4}
           shadow="lg"
-          borderColor="secondary.100"
+          borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
           borderWidth="2px"
           borderRadius={2}
           mb={4}
@@ -56,7 +56,7 @@ const Index = ({ results }) => {
             mb={6}
             size="2xl"
             textAlign="left"
-            color="primary.100"
+            color={colorMode === "light" ? "#98199F" : "#E883ED"}
           >
             YouTube Videos
           </Heading>
@@ -88,7 +88,7 @@ const Index = ({ results }) => {
         <Box
           p={4}
           shadow="lg"
-          borderColor="secondary.100"
+          borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
           borderWidth="2px"
           borderRadius={2}
           my={8}
@@ -98,7 +98,7 @@ const Index = ({ results }) => {
             mb={6}
             size="2xl"
             textAlign="left"
-            color="primary.100"
+            color={colorMode === "light" ? "#98199F" : "#E883ED"}
           >
             I write occasionally
           </Heading>

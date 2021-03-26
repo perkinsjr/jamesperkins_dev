@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 
-import { Box, Heading, Input } from "@chakra-ui/react";
+import { Box, Heading, Input, useColorMode } from "@chakra-ui/react";
 import StyledButton from "./button";
 
 const OptInForm = () => {
+  const { colorMode } = useColorMode();
   useEffect(() => {
     const kwesScript = document.createElement("script");
     kwesScript.setAttribute("src", "https://kwes.io/v2/kwes-script.js");
@@ -30,7 +31,7 @@ const OptInForm = () => {
           id="email"
           type="email"
           name="email"
-          focusBorderColor="primary.200"
+          focusBorderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
           mt={8}
           placeholder="batman@gmail.com"
           required
