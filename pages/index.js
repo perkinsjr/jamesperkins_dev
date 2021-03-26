@@ -13,9 +13,15 @@ import {
 const Index = ({ results }) => {
   const { colorMode } = useColorMode();
   return (
-    <Flex flexDirection="column" justifyContent="center" alignItems="center">
+    <Flex
+      maxWidth="960px"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      mx="auto"
+    >
       <Grid p={6} columnGap={6} templateColumns="auto 1fr" alignItems="center">
-        <Box>
+        <Box display={["none", "block"]}>
           <Image
             rounded="50%"
             maxW="250px"
@@ -27,11 +33,10 @@ const Index = ({ results }) => {
           <Heading as="h2" mb={6} size="2xl" textAlign="center">
             Hi, I'm James!
           </Heading>
-          <Text fontSize="lg" maxWidth="500px">
-            I am a developer who specializes in{" "}
-            <span>
-              <Text as="u">JamStack Development</Text>
-            </span>{" "}
+          <Text fontSize="lg" maxWidth="600px">
+            I am a developer who specializes in JamStack Development.
+            <br />
+            <br />
             Most of the time you will find me on Twitter with hot takes, or
             hanging out with my dogs and awesome wife.
           </Text>
@@ -41,7 +46,7 @@ const Index = ({ results }) => {
         <Box
           p={4}
           shadow="lg"
-          borderColor="primary.200"
+          borderColor="secondary.100"
           borderWidth="2px"
           borderRadius={2}
           mb={4}
@@ -66,20 +71,11 @@ const Index = ({ results }) => {
             disappointed!
           </Text>
         </Box>
-        <SimpleGrid columns={[1, 1, 3]} spacing={8}>
+        <SimpleGrid columns={[1, 1, 3]} spacing={8} mt={8}>
           {results &&
             results.map((video) => {
               return (
                 <Box key={video.id}>
-                  <Heading
-                    as="h5"
-                    fontSize="md"
-                    textAlign="center"
-                    noOfLines={1}
-                    mb={2}
-                  >
-                    {video.snippet.title}
-                  </Heading>
                   <YoutubeVideoPlayer
                     thumb={video.snippet.thumbnails.high.url}
                     id={video.snippet.resourceId.videoId}
@@ -92,14 +88,28 @@ const Index = ({ results }) => {
         <Box
           p={4}
           shadow="lg"
-          borderColor="primary.200"
+          borderColor="secondary.100"
           borderWidth="2px"
           borderRadius={2}
-          my={4}
+          my={8}
         >
-          <Text>
-            I create Jamstack related content on YouTube, I drop a video a week
-            and a new crash course every other week!
+          <Heading
+            as="h2"
+            mb={6}
+            size="2xl"
+            textAlign="left"
+            color="primary.100"
+          >
+            I write occasionally
+          </Heading>
+          <Text fontSize="lg" maxWidth="850px" textAlign="left">
+            I do occasionally write blog posts about all sorts of things, from
+            implementation of code. Improving your code, reviewing courses I
+            have taken.
+            <br />
+            <br />
+            Sometimes I even write about random things, like shows I am watching
+            and movies I really like!
           </Text>
         </Box>
       </Box>

@@ -8,7 +8,7 @@ const colors = {
   primary: {
     100: "#E883ED",
     200: "#F194C8",
-    300: "#A21565",
+    300: "#8E1494",
   },
   secondary: {
     100: "#FCA685",
