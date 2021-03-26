@@ -1,13 +1,33 @@
 import React from "react";
 import useSWR from "swr";
 import fetcher from "@/lib/fetcher";
-import { Box, Heading, SimpleGrid, StatGroup, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  SimpleGrid,
+  Center,
+  Spinner,
+  useColorMode,
+} from "@chakra-ui/react";
 import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
 import YouTubeStat from "@/components/youtubestats";
 
 export default function Youtube({ results }) {
   const { data, error } = useSWR("/api/youtube", fetcher);
-  if (!data) return <div>loading...</div>;
+  const { colorMode } = useColorMode();
+  if (!data) {
+    return (
+      <Center h="100vh">
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color={colorMode === "light" ? "#98199F" : "#E883ED"}
+          size="xl"
+        />
+      </Center>
+    );
+  }
   if (error) return <div>Sorry, we couldn't load the </div>;
   const { subscriberCount, viewCount } = data;
 
