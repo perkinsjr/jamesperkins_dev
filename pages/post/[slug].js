@@ -51,7 +51,13 @@ export default function BlogTemplate({ frontmatter, markdownBody,slug }) {
     return date.toDateString().slice(4);
   }
 
-  <NextSeo
+  
+
+  if (!frontmatter) return <></>;
+
+  return (
+    <Box maxWidth="960px" width="100%" mx="auto" mb={4} px={4}>
+      <NextSeo
               title={frontmatter.title}
               description={frontmatter.excerpt}
               openGraph={{
@@ -66,11 +72,6 @@ export default function BlogTemplate({ frontmatter, markdownBody,slug }) {
                 cardType: "summary_large_image",
               }}
             />
-
-  if (!frontmatter) return <></>;
-
-  return (
-    <Box maxWidth="960px" width="100%" mx="auto" mb={4} px={4}>
       <article>
         <Flex as="figure" alignContent="center" justifyContent="center" mx="auto">
           <Image
