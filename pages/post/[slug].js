@@ -56,7 +56,7 @@ export default function BlogTemplate({ frontmatter, markdownBody,slug }) {
   if (!frontmatter) return <></>;
   console.log(frontmatter.hero_image);
   return (
-    <Box maxWidth="960px" width="100%" mx="auto" mb={4} px={4}>
+    <Box maxWidth="960px" width="100%" mx="auto" mt={[2,4]} mb={4} px={4}>
       <NextSeo
               title={frontmatter.title}
               description={frontmatter.excerpt}
@@ -92,7 +92,7 @@ export default function BlogTemplate({ frontmatter, markdownBody,slug }) {
           />
         </Flex>
         <Box my={[2, 4]}>
-          <Heading as="h2" size="3xl">
+          <Heading as="h2" size="3xl" textAlign="center">
             {frontmatter.title}
           </Heading>
           <Heading as="h4" size="md" fontWeight="normal" my={4}>

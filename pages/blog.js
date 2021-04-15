@@ -57,11 +57,15 @@ export async function getStaticProps() {
       };
     });
     return data;
-  })(require.context("../posts", true, /\.md$/));
+  }
+   
+  )(require.context("../posts", true, /\.md$/));
 
+  const sortedPosts = posts.slice().sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+  
   return {
     props: {
-      allBlogs: posts,
+      allBlogs: sortedPosts,
       title: siteConfig.default.title,
       description: siteConfig.default.description,
     },
