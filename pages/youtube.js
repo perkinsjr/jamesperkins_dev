@@ -40,7 +40,7 @@ export default function Youtube({ results }) {
           url: "https://jamesperkins.dev/youtube",
           title: "Home Page",
           description: "YouTube Page",
-          images: [{ url: "/me.jpg" }],
+          images: [{ url: "https://jamesperkins.dev/me.jpg" }],
           site_name: "James Perkins",
         }}
         twitter={{

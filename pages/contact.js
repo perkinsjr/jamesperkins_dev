@@ -11,7 +11,7 @@ export default function Contact() {
       url: "https://jamesperkins.dev/contact",
       title: "Contact Page",
       description: "James' Contact Page",
-      images: [{ url: "/me.jpg" }],
+      images: [{ url: "https://jamesperkins.dev/me.jpg" }],
       site_name: "James Perkins",
     }}
     twitter={{

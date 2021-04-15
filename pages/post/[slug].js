@@ -54,7 +54,7 @@ export default function BlogTemplate({ frontmatter, markdownBody,slug }) {
   
 
   if (!frontmatter) return <></>;
-
+  console.log(frontmatter.hero_image);
   return (
     <Box maxWidth="960px" width="100%" mx="auto" mb={4} px={4}>
       <NextSeo
@@ -64,8 +64,17 @@ export default function BlogTemplate({ frontmatter, markdownBody,slug }) {
                 url: `https://jamesperkins.dev/post/${slug}`,
                 title: `${frontmatter.title}`,
                 description: `${frontmatter.excerpt}`,
-                images: [{ url: `${frontmatter.hero_image}` }],
+                images: [{ url: `https://jamesperkins.dev${frontmatter.hero_image}` }],
                 site_name: "James Perkins",
+              }}
+              article={{
+                publishedTime: frontmatter.date,
+                modifiedTime: frontmatter.date,
+                expirationTime: frontmatter.date,
+                authors: [
+                  "James Perkins",
+                ],
+                tags: frontmatter.tags,
               }}
               twitter={{
                 handle: "@james_r_perkins",

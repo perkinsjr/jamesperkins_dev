@@ -27,7 +27,7 @@ const Index = ({ results }) => {
           url: "https://jamesperkins.dev/",
           title: "Home Page",
           description: `Home Page`,
-          images: [{ url: "/me.jpg" }],
+          images: [{ url: "https://jamesperkins.dev/me.jpg" }],
           site_name: "James Perkins",
         }}
         twitter={{

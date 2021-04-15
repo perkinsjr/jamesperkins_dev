@@ -19,7 +19,7 @@ const Blog = (props) => {
           url: "https://jamesperkins.dev/blog",
           title: "Blog Page",
           description: "Blog Page",
-          images: [{ url: "/me.jpg" }],
+          images: [{ url: "https://jamesperkins.dev/me.jpg" }],
           site_name: "James Perkins",
         }}
         twitter={{

@@ -4,6 +4,7 @@ date: "2021-04-14"
 title: "Using jsconfig for faster nextjs development"
 excerpt: "I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project."
 hero_image: "/jsconfig.png"
+tags: ["nextjs","tutorial"]
 ---
 
 I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a ` jsconfig.json ` file to each project. 

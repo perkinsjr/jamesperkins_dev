@@ -12,7 +12,7 @@ export default function Newsletter() {
       url: "https://jamesperkins.dev/newsletter",
       title: "Newsletter Page",
       description: "James' Newsletter Page",
-      images: [{ url: "/me.jpg" }],
+      images: [{ url: "https://jamesperkins.dev/me.jpg" }],
       site_name: "James Perkins",
     }}
     twitter={{
