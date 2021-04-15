@@ -1,25 +1,48 @@
-import React, { useEffect } from "react";
-
-import {Input, useColorMode } from "@chakra-ui/react";
+import React, { useState, useRef } from "react";
+import SuccessMessage from "./successmessage";
+import ErrorMessage from "./errormessage";
+import { Input, useColorMode } from "@chakra-ui/react";
 import StyledButton from "./button";
 
 const OptInForm = () => {
   const { colorMode } = useColorMode();
-  useEffect(() => {
-    const kwesScript = document.createElement("script");
-    kwesScript.setAttribute("src", "https://kwes.io/v2/kwes-script.js");
-    kwesScript.setAttribute("defer", "defer");
-    document.head.appendChild(kwesScript);
-  }, []);
+  const [form, setForm] = useState(false);
+  const inputEl = useRef(null);
+
+  const subscribe = async (e) => {
+    e.preventDefault();
+    setForm({ state: "loading" });
+
+    const res = await fetch("/api/subscribe", {
+      body: JSON.stringify({
+        email: inputEl.current.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      setForm({
+        state: "error",
+        message: error,
+      });
+      return;
+    }
+
+    inputEl.current.value = "";
+    setForm({
+      state: "success",
+      message: `Congratulations, you are on the list`,
+    });
+  };
   return (
-   
-      
-      <form
-        method="POST"
-        className="kwes-form"
-        action="https://kwes.io/api/foreign/forms/kwgK4CF1LJxmra8CqpKW"
-      >
+    <>
+      <form onSubmit={subscribe}>
         <Input
+          ref={inputEl}
           id="email"
           type="email"
           name="email"
@@ -28,9 +51,19 @@ const OptInForm = () => {
           placeholder="batman@gmail.com"
           required
         />
-        <StyledButton type="submit" text="Sign Up" />
+        <input type="hidden" value="1" name="embed" />
+        <StyledButton
+          isLoading={form.state === "loading"}
+          type="submit"
+          text="Sign Up"
+        />
       </form>
-
+      {form.state === "error" ? (
+        <ErrorMessage>{form.message}</ErrorMessage>
+      ) : (
+        <SuccessMessage>{form.message}</SuccessMessage>
+      )}
+    </>
   );
 };
 
