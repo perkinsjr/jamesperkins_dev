@@ -2,7 +2,7 @@
 author: James Perkins
 date: "2020-04-03"
 title: "Why I removed analytics and and ended up with NextJs"
-excerpt: "On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability."
+excerpt: "On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.I first decided its time to get rid of analytics, advertisements and other shit that no one really needs"
 hero_image: "/nextjs-change.png"
 tags: ["nextjs","speeds"]
 ---

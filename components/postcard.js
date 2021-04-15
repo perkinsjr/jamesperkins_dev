@@ -38,7 +38,7 @@ const PostCard = ({ post }) => {
 
               <Box d="flex" mt="2" alignItems="center">
                 <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                  {post.frontmatter.excerpt}
+                  {truncateSummary(post.frontmatter.excerpt)}
                 </Box>
               </Box>
             </Box>
