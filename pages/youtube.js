@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
 import YouTubeStat from "@/components/youtubestats";
-
+import {NextSeo} from "next-seo";
 export default function Youtube({ results }) {
   const { data, error } = useSWR("/api/youtube", fetcher);
   const { colorMode } = useColorMode();
@@ -33,6 +33,21 @@ export default function Youtube({ results }) {
 
   return (
     <Box maxWidth="1080px" width="100%" mx="auto" my={4} px={4}>
+      <NextSeo
+    title="YouTube Page"
+    description="James'Youtube Page "
+    openGraph={{
+      url: `https://jamesperkins.dev/youtube`,
+      title: `Youtube Page`,
+      description: `James' YouTube Page`,
+      images: [{ url: `./me.jpg` }],
+      site_name: "James Perkins",
+    }}
+    twitter={{
+      handle: "@james_r_perkins",
+      cardType: "summary_large_image",
+    }}
+  />
       <Box
         width="100%"
         mt={[0, 8]}

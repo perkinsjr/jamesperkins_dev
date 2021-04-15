@@ -2,6 +2,7 @@ import React from "react";
 import matter from "gray-matter";
 import BlogPosts from "@/components/blogposts";
 import { Heading, Flex } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
 const Blog = (props) => {
   return (
     <Flex
@@ -11,6 +12,22 @@ const Blog = (props) => {
       alignItems="center"
       mx="auto"
     >
+      <NextSeo
+              title="Blog Page"
+              description="James' Blog Page "
+              openGraph={{
+                url: `https://jamesperkins.dev/blog`,
+                title: `Blog Page`,
+                description: `James' Blog Page`,
+                images: [{ url: `./me.jpg` }],
+                site_name: "James Perkins",
+              }}
+              twitter={{
+                handle: "@james_r_perkins",
+                cardType: "summary_large_image",
+              }}
+            />
+      
       <Heading as="h1" mb={4} textAlign="center">
         Blog
       </Heading>

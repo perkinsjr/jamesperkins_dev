@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Box, Heading, Input, useColorMode } from "@chakra-ui/react";
+import {Input, useColorMode } from "@chakra-ui/react";
 import StyledButton from "./button";
 
 const OptInForm = () => {
@@ -12,16 +12,8 @@ const OptInForm = () => {
     document.head.appendChild(kwesScript);
   }, []);
   return (
-    <Box maxWidth="700px" width="100%" px={6} mt={[0, 8]} mb={8} mx="auto">
-      <Heading
-        letterSpacing="tight"
-        mb={2}
-        as="h1"
-        size="2xl"
-        textAlign="center"
-      >
-        Sign up to my newsletter!
-      </Heading>
+   
+      
       <form
         method="POST"
         className="kwes-form"
@@ -38,7 +30,7 @@ const OptInForm = () => {
         />
         <StyledButton type="submit" text="Sign Up" />
       </form>
-    </Box>
+
   );
 };
 

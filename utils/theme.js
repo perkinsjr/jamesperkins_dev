@@ -19,6 +19,7 @@ const colors = {
   },
 };
 
+
 const CustomTheme = extendTheme({ colors, config });
 
 export default CustomTheme;

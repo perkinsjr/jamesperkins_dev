@@ -80,7 +80,7 @@ const MenuLinks = ({ isOpen }) => {
         pt={[4, 4, 0, 0]}
       >
         <MenuItem to="/">Home</MenuItem>
-
+        <MenuItem to="/blog">Blog</MenuItem>
         <MenuItem to="/youtube">YouTube </MenuItem>
         <MenuItem to="/contact">Contact </MenuItem>
         <MenuItem to="/newsletter" isLast>

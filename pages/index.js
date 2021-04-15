@@ -9,7 +9,7 @@ import {
   Image,
   SimpleGrid,
 } from "@chakra-ui/react";
-
+import { NextSeo } from "next-seo";
 const Index = ({ results }) => {
   const { colorMode } = useColorMode();
   return (
@@ -20,6 +20,10 @@ const Index = ({ results }) => {
       alignItems="center"
       mx="auto"
     >
+      <NextSeo
+        title="Home | James Perkins"
+        description="James Perkins homepage, blog and more"
+      />
       <Grid p={6} columnGap={6} templateColumns="auto 1fr" alignItems="center">
         <Box display={["none", "block"]}>
           <Image
