@@ -9,10 +9,6 @@ tags: ["nextjs", "tutorial", "faunadb"]
 
 Welcome to my latest blog post, which is a crash course on NextJS and Fauna, in this blog post I am going to show you how to Create a Database, Read from that database and finally update the collection.
 
-If you are looking for a video version you can find it here:
-
-[![fauna-crash-course](http://img.youtube.com/vi/mEc9u231jFM/0.jpg)](http://www.youtube.com/watch?v=mEc9u231jFM "NextJS Fauna Crash Course")
-
 ### The Setup
 
 To begin with lets create a database, and prepopulate it with test data. Firstly sign up or login to your fauna account and click Create new database and you should have a screen that looks like this:
