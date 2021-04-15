@@ -9,10 +9,10 @@ export default function Newsletter() {
     title="Newsletter Page"
     description="James' Newsletter Page "
     openGraph={{
-      url: `https://jamesperkins.dev/newsletter`,
-      title: `Newsletter Page`,
-      description: `James' Newsletter Page`,
-      images: [{ url: `./me.jpg` }],
+      url: "https://jamesperkins.dev/newsletter",
+      title: "Newsletter Page",
+      description: "James' Newsletter Page",
+      images: [{ url: "/me.jpg" }],
       site_name: "James Perkins",
     }}
     twitter={{

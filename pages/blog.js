@@ -13,20 +13,20 @@ const Blog = (props) => {
       mx="auto"
     >
       <NextSeo
-              title="Blog Page"
-              description="James' Blog Page "
-              openGraph={{
-                url: `https://jamesperkins.dev/blog`,
-                title: `Blog Page`,
-                description: `James' Blog Page`,
-                images: [{ url: `./me.jpg` }],
-                site_name: "James Perkins",
-              }}
-              twitter={{
-                handle: "@james_r_perkins",
-                cardType: "summary_large_image",
-              }}
-            />
+        title="Blog | James Perkins"
+        description="James Perkins homepage, blog and more"
+        openGraph={{
+          url: "https://jamesperkins.dev/blog",
+          title: "Blog Page",
+          description: "Blog Page",
+          images: [{ url: "/me.jpg" }],
+          site_name: "James Perkins",
+        }}
+        twitter={{
+          handle: "@james_r_perkins",
+          cardType: "summary_large_image",
+        }}
+      />
       
       <Heading as="h1" mb={4} textAlign="center">
         Blog

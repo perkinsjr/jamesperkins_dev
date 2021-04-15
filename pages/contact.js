@@ -8,10 +8,10 @@ export default function Contact() {
     title="Contact Page"
     description="James'Contact Page "
     openGraph={{
-      url: `https://jamesperkins.dev/contact`,
-      title: `Contact Page`,
-      description: `James' Contact Page`,
-      images: [{ url: `./me.jpg` }],
+      url: "https://jamesperkins.dev/contact",
+      title: "Contact Page",
+      description: "James' Contact Page",
+      images: [{ url: "/me.jpg" }],
       site_name: "James Perkins",
     }}
     twitter={{

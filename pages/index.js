@@ -23,6 +23,17 @@ const Index = ({ results }) => {
       <NextSeo
         title="Home | James Perkins"
         description="James Perkins homepage, blog and more"
+        openGraph={{
+          url: "https://jamesperkins.dev/",
+          title: "Home Page",
+          description: `Home Page`,
+          images: [{ url: "/me.jpg" }],
+          site_name: "James Perkins",
+        }}
+        twitter={{
+          handle: "@james_r_perkins",
+          cardType: "summary_large_image",
+        }}
       />
       <Grid p={6} columnGap={6} templateColumns="auto 1fr" alignItems="center">
         <Box display={["none", "block"]}>
