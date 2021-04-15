@@ -1,6 +1,7 @@
 import React from "react";
 import OptInForm from "@/components/optinform";
 import {Box, Heading} from "@chakra-ui/react";
+import {NextSeo} from "next-seo";
 export default function Newsletter() {
   return (
     <Box maxWidth="700px" width="100%" px={6} mt={[0, 8]} mb={8} mx="auto">
