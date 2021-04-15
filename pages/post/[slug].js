@@ -1,6 +1,6 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown/with-html";
-import ChakraUIRenderer, { defaults } from 'chakra-ui-markdown-renderer';
+import ChakraUIRenderer, { defaults } from "chakra-ui-markdown-renderer";
 import { Box, Code, Heading, Flex, useColorMode } from "@chakra-ui/react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -11,84 +11,99 @@ import { NextSeo } from "next-seo";
 const glob = require("glob");
 const newTheme = {
   ...defaults,
-  code: props => {
+  code: (props) => {
     const { language, value } = props;
-      return (
-        <SyntaxHighlighter style={atomDark} language={language}>
-          {value}
-        </SyntaxHighlighter>
-      );
+    return (
+      <SyntaxHighlighter style={atomDark} language={language}>
+        {value}
+      </SyntaxHighlighter>
+    );
   },
-  inlineCode: props => {
+  inlineCode: (props) => {
     const { children } = props;
     return (
-      <Code color="white" p={1} bg="primary.400" fontStyle="italic" fontWeight="bold">
-      {children}
-    </Code>
-    )
+      <Code
+        color="white"
+        p={1}
+        bg="primary.400"
+        fontStyle="italic"
+        fontWeight="bold"
+      >
+        {children}
+      </Code>
+    );
   },
-  blockquote : props => {
-    const {children} = props;
+  blockquote: (props) => {
+    const { children } = props;
     const { colorMode } = useColorMode();
-  return (
-    <Box
-      p={4}
-      as="blockquote"
-      shadow="lg"
-      borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
-      borderWidth="2px"
-      borderRadius={2}
-      mb={4}
-    >{children}</Box>
-  )
-  }
-}
+    return (
+      <Box
+        p={4}
+        as="blockquote"
+        shadow="lg"
+        borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
+        borderWidth="2px"
+        borderRadius={2}
+        mb={4}
+      >
+        {children}
+      </Box>
+    );
+  },
+};
 
-
-export default function BlogTemplate({ frontmatter, markdownBody,slug }) {
+export default function BlogTemplate({ frontmatter, markdownBody, slug }) {
   function reformatDate(fullDate) {
     const date = new Date(fullDate);
     return date.toDateString().slice(4);
   }
 
-  
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
+  };
 
   if (!frontmatter) return <></>;
-  console.log(frontmatter.hero_image);
+
   return (
-    <Box maxWidth="960px" width="100%" mx="auto" mt={[2,4]} mb={4} px={4}>
+    <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb={4} px={4}>
       <NextSeo
-              title={frontmatter.title}
-              description={frontmatter.excerpt}
-              openGraph={{
-                url: `https://jamesperkins.dev/post/${slug}`,
-                title: `${frontmatter.title}`,
-                description: `${frontmatter.excerpt}`,
-                images: [{ url: `https://jamesperkins.dev${frontmatter.hero_image}` }],
-                site_name: "James Perkins",
-              }}
-              article={{
-                publishedTime: frontmatter.date,
-                modifiedTime: frontmatter.date,
-                expirationTime: frontmatter.date,
-                authors: [
-                  "James Perkins",
-                ],
-                tags: frontmatter.tags,
-              }}
-              twitter={{
-                handle: "@james_r_perkins",
-                cardType: "summary_large_image",
-              }}
-            />
+        title={frontmatter.title}
+        description={frontmatter.excerpt}
+        openGraph={{
+          url: `https://jamesperkins.dev/post/${slug}`,
+          title: `${frontmatter.title}`,
+          description: `${frontmatter.excerpt}`,
+          images: [
+            { url: `https://jamesperkins.dev${frontmatter.hero_image}` },
+          ],
+          site_name: "James Perkins",
+        }}
+        article={{
+          publishedTime: frontmatter.date,
+          modifiedTime: frontmatter.date,
+          expirationTime: frontmatter.date,
+          authors: ["James Perkins"],
+          tags: frontmatter.tags,
+        }}
+        twitter={{
+          handle: "@james_r_perkins",
+          cardType: "summary_large_image",
+        }}
+      />
       <article>
-        <Flex as="figure" alignContent="center" justifyContent="center" mx="auto">
+        <Flex
+          as="figure"
+          alignContent="center"
+          justifyContent="center"
+          mx="auto"
+        >
           <Image
+            loader={myLoader}
             src={frontmatter.hero_image}
-            width="720"
-            height="384"
-            objectPosition="cover"
-            alt={`blog_hero_${frontmatter.title}`}
+            alt={frontmatter.hero_image}
+            width={720}
+            quality={50}
+            height={384}
           />
         </Flex>
         <Box my={[2, 4]}>
@@ -103,15 +118,15 @@ export default function BlogTemplate({ frontmatter, markdownBody,slug }) {
           <ReactMarkdown
             escapeHtml={false}
             source={markdownBody}
-            renderers={
-              ChakraUIRenderer(newTheme)
-            }
+            renderers={ChakraUIRenderer(newTheme)}
           />
         </Box>
       </article>
       <Box maxWidth="720px" width="100%" mx="auto" my={6} px={4}>
-        <Heading my={2} as="h4" fontSize="2xl" textAlign="center">Enjoying my content? Sign up for my newsletter!</Heading>
-        <OptInForm/>
+        <Heading my={2} as="h4" fontSize="2xl" textAlign="center">
+          Enjoying my content? Sign up for my newsletter!
+        </Heading>
+        <OptInForm />
       </Box>
     </Box>
   );

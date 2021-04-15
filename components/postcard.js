@@ -12,15 +12,20 @@ const PostCard = ({ post }) => {
     const date = new Date(fullDate);
     return date.toDateString().slice(4);
   }
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality}`;
+  };
   return (
     <Link key={post.slug} href={{ pathname: `/post/${post.slug}` }} passHref>
       <a>
         <>
           <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
             <Image
+              loader={myLoader}
               src={post.frontmatter.hero_image}
               alt={post.frontmatter.hero_image}
               height={250}
+              quality={50}
               width={400}
             />
             <Box p="6">

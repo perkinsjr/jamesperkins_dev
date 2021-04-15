@@ -3,8 +3,8 @@ author: James Perkins
 date: "2020-04-03"
 title: "Why I removed analytics and and ended up with NextJs"
 excerpt: "On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.I first decided its time to get rid of analytics, advertisements and other shit that no one really needs"
-hero_image: "/nextjs-change.png"
-tags: ["nextjs","speeds"]
+hero_image: "https://res.cloudinary.com/dub20ptvt/image/upload/v1618489781/nextjs-change_k0djoi.png"
+tags: ["nextjs", "speeds"]
 ---
 
 On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.
@@ -16,7 +16,7 @@ I then started updating my WordPress theme to use better web standards (Gzip, mi
 At this point I decided to abandon ship, I'd been working on this for almost 5 hours and had improved usability, removed analytics and ads but hadn't increased performance more than 5%. I had a couple of options at this point, the popular Gatsby or Next.js. I considered a few things when weighing my options:
 
 1. Ease of development
-2. Usability on a Windows machine *** Yes I still use a Windows machine for development
+2. Usability on a Windows machine \*\*\* Yes I still use a Windows machine for development
 3. Flexibility
 4. Easy deployments
 

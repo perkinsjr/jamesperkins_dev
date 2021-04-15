@@ -3,7 +3,7 @@ author: James Perkins
 date: "2019-09-17"
 title: "Why I removed analytics and and ended up with NextJs"
 excerpt: "I’ve heard and seen a lot of “What language should I pick first?” Questions in my time as a developer. It’s an interesting question that I seem to have the opposite response to most."
-hero_image: "/pick-a-language.png"
+hero_image: "https://res.cloudinary.com/dub20ptvt/image/upload/v1618489783/pick-a-language_tpbwg4.png"
 tags: ["thoughts"]
 ---
 

@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
 import YouTubeStat from "@/components/youtubestats";
-import {NextSeo} from "next-seo";
+import { NextSeo } from "next-seo";
 export default function Youtube({ results }) {
   const { data, error } = useSWR("/api/youtube", fetcher);
   const { colorMode } = useColorMode();
@@ -33,14 +33,19 @@ export default function Youtube({ results }) {
 
   return (
     <Box maxWidth="1080px" width="100%" mx="auto" my={4} px={4}>
-     <NextSeo
+      <NextSeo
         title="Youtube | James Perkins"
         description="James Perkins Youtube"
         openGraph={{
           url: "https://jamesperkins.dev/youtube",
           title: "Home Page",
           description: "YouTube Page",
-          images: [{ url: "https://jamesperkins.dev/me.jpg" }],
+          images: [
+            {
+              url:
+                "https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg",
+            },
+          ],
           site_name: "James Perkins",
         }}
         twitter={{

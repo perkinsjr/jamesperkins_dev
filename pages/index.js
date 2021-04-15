@@ -27,7 +27,12 @@ const Index = ({ results }) => {
           url: "https://jamesperkins.dev/",
           title: "Home Page",
           description: `Home Page`,
-          images: [{ url: "https://jamesperkins.dev/me.jpg" }],
+          images: [
+            {
+              url:
+                "https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg",
+            },
+          ],
           site_name: "James Perkins",
         }}
         twitter={{
