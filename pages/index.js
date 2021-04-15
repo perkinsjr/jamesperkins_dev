@@ -45,7 +45,7 @@ const Index = ({ results }) => {
           <Image
             rounded="50%"
             maxW="250px"
-            src="./me.jpg"
+            src="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg"
             alt="James Perkins Picture"
           />
         </Box>
