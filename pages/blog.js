@@ -69,10 +69,10 @@ export async function getStaticProps() {
     .sort(
       (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
     );
-
+  const publishedOnly = sortedPosts.filter(item => (item.frontmatter.published === true));
   return {
     props: {
-      allBlogs: sortedPosts,
+      allBlogs: publishedOnly,
       title: siteConfig.default.title,
       description: siteConfig.default.description,
     },

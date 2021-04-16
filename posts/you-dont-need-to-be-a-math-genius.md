@@ -5,6 +5,7 @@ title: "Why you don't need to be a mathematics genius to be a developer."
 excerpt: "When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra."
 hero_image: "https://res.cloudinary.com/dub20ptvt/image/upload/v1618514460/fed59dedf02086f19ecbe26fc58dd850f72d974e-1066x600_y0wgwp.gif"
 tags: ["thoughts"]
+published: true
 ---
 
 When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra.

@@ -5,6 +5,7 @@ title: "Why I removed analytics and and ended up with NextJs"
 excerpt: "On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.I first decided its time to get rid of analytics, advertisements and other shit that no one really needs"
 hero_image: "https://res.cloudinary.com/dub20ptvt/image/upload/v1618489781/nextjs-change_k0djoi.png"
 tags: ["nextjs", "speeds"]
+published: true
 ---
 
 On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.
