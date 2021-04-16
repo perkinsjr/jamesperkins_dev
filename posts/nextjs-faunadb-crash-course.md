@@ -154,7 +154,7 @@ module.exports = async (req, res) => {
 
 Inside the try we are creating a constant called dbs which makes a request using the fauna db client, we then create the actual query.
 
-```
+```javascript
 q.Map(
         // iterate each item in result
         q.Paginate(
@@ -170,7 +170,7 @@ q.Map(
 
 The Map returns a new array with the results of calling the lambda function on each item in array, or as I put it, iterates each item in the result. The Paginate function takes the Ref on the last line, and returns a page of results. The Match function finds the "search terms" provided to Match, which in our case is the index called ("all_customers").
 
-Then the (ref) => q.Get(ref) looks up each result by the referenced above. Finally the dbs will be full of customers! If all goes well we will return `res.status(200).json(dbs.data);` which will be our array of customers.
+Then the `(ref) => q.Get(ref)` looks up each result by the referenced above. Finally the dbs will be full of customers! If all goes well we will return `res.status(200).json(dbs.data);` which will be our array of customers.
 
 #### Using our serverless function
 
@@ -202,7 +202,7 @@ async function getCustomerData() {
 }
 ```
 
-This async function makes a request to our api, then updates the state to contain the customer information. Now we are finally ready to make this request! Go ahead and add getCustomerData() to the useEffect and we can test, to make sure you are all in the same below here is our current code.
+This async function makes a request to our api, then updates the state to contain the customer information. Now we are finally ready to make this request! Go ahead and add `getCustomerData()` to the useEffect and we can test, to make sure you are all in the same below here is our current code.
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -420,7 +420,7 @@ Now we have props to play with lets create our UI, now each one of the elements 
 
 So when we get finished we out CustomerData component it will look like the following:
 
-```
+```javascript
 import { Divider, Stack, Text, Box } from "@chakra-ui/core";
 
 export default function CustomerData({
@@ -578,7 +578,7 @@ Lets tackle the serverless function first and then add our form and data needed.
 
 The newCustomer serverless function is going to take in the body of the request, which will contain our form data. It will then update the collection with the data, and return a 200 for a successful add and a 500 for anything else.
 
-Go ahead and create a new folder in your api directory called newCustomer and inside that folder create an index.js, below is the starter code that looks exactly the same as your previous one:
+Go ahead and create a new folder in your api directory called `newCustomer` and inside that folder create an  `index.js`, below is the starter code that looks exactly the same as your previous one:
 
 ```javascript
 const faunadb = require("faunadb");
@@ -590,7 +590,7 @@ const client = new faunadb.Client({ secret });
 module.exports = async (req, res) => {};
 ```
 
-Now lets get to the new stuff, first we are going to take the req.body.data that will come from our front end and pass that down in a query.
+Now lets get to the new stuff, first we are going to take the `req.body.data` that will come from our front end and pass that down in a query.
 
 ```javascript
 const faunadb = require("faunadb");
@@ -772,7 +772,7 @@ export default function Home() {
 }
 ```
 
-We now need to add onSubmit={handleSubmit} and method="post" to the form, will will create the handleSubmit and onChange handling later. Each one of our inputs will be the following, a Form Label, and then an Input except the radio button.:
+We now need to add `onSubmit={handleSubmit}` and `method="post"` to the form, will will create the handleSubmit and onChange handling later. Each one of our inputs will be the following, a Form Label, and then an Input except the radio button.:
 
 ```javascript
  <FormLabel htmlFor="firstName">First Name</FormLabel>
@@ -865,7 +865,7 @@ ChakraUI has a Radio Group that will line up and keep your radio buttons togethe
 
 You can this to your form, after your address, it will only allow a single selection and will be align horiziontally.
 
-Finally we need the cardNumber and a button to submit this so lets add those:
+Finally we need the `cardNumber` and a button to submit this so lets add those:
 
 ```javascript
 <Input
@@ -963,7 +963,7 @@ The full form should now look like this
 
 ### adding state, Initial form data.
 
-Our form is complete but we need some state to handle the input and also some initial data. At the top of your Home function lets add a const called initialFormData that is an Object.freeze that will handle all of our form elements.
+Our form is complete but we need some state to handle the input and also some initial data. At the top of your Home function lets add a const called `initialFormData` that is an `Object.freeze` that will handle all of our form elements.
 
 ```javascript
 const initialFormData = Object.freeze({
@@ -979,7 +979,7 @@ const initialFormData = Object.freeze({
 });
 ```
 
-The Object.freeze stops us from adding additional field properties which is great for our form as we don't want to accidentally add something our database does not currently have.
+The `Object.freeze` stops us from adding additional field properties which is great for our form as we don't want to accidentally add something our database does not currently have.
 
 Then lets add another state for our formData, `const [formData, updateFormData] = useState({});` this will be updated through our onChange and onSubmit.
 
@@ -1010,7 +1010,7 @@ const requestOptions = {
 };
 ```
 
-Now we've added a requestOptions variable, we can create a addCustomer function that makes the API call, and if it is successful we will make a call to our getData() so we can refresh our table at the top.
+Now we've added a requestOptions variable, we can create a addCustomer function that makes the API call, and if it is successful we will make a call to our `getData()` so we can refresh our table at the top.
 
 ```javascript
 async function addCustomer() {
@@ -1020,7 +1020,7 @@ async function addCustomer() {
 }
 ```
 
-Our Form is complete your full index.js should look like below:
+Our Form is complete your full `index.js` should look like below:
 
 ```javascript
 import { useEffect, useState } from "react";
