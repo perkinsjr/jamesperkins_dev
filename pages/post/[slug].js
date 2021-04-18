@@ -78,13 +78,6 @@ export default function BlogTemplate({ frontmatter, markdownBody, slug }) {
           ],
           site_name: "James Perkins",
         }}
-        article={{
-          publishedTime: frontmatter.date,
-          modifiedTime: frontmatter.date,
-          expirationTime: frontmatter.date,
-          authors: ["James Perkins"],
-          tags: frontmatter.tags,
-        }}
         twitter={{
           handle: "@james_r_perkins",
           cardType: "summary_large_image",
