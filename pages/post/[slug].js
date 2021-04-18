@@ -72,9 +72,10 @@ export default function BlogTemplate({ frontmatter, markdownBody, slug }) {
         openGraph={{
           url: `https://jamesperkins.dev/post/${slug}`,
           title: `${frontmatter.title}`,
+          site_name: "James Perkins",
           description: `${frontmatter.excerpt}`,
           images: [
-            { url: `https://jamesperkins.dev${frontmatter.hero_image}` },
+            { url: `${frontmatter.hero_image}` },
           ],
           site_name: "James Perkins",
         }}
