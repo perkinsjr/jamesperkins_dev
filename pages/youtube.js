@@ -11,7 +11,8 @@ import {
 } from "@chakra-ui/react";
 import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
 import YouTubeStat from "@/components/youtubestats";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
+
 export default function Youtube({ results }) {
   const { data, error } = useSWR("/api/youtube", fetcher);
   const { colorMode } = useColorMode();
@@ -32,67 +33,66 @@ export default function Youtube({ results }) {
   const { subscriberCount, viewCount } = data;
 
   return (
-    <Box maxWidth="1080px" width="100%" mx="auto" my={4} px={4}>
-      <NextSeo
-        title="Youtube | James Perkins"
-        description="James Perkins Youtube"
-        openGraph={{
-          url: "https://jamesperkins.dev/youtube",
-          title: "Home Page",
-          description: "YouTube Page",
-          images: [
-            {
-              url:
-                "https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg",
-            },
-          ],
-          site_name: "James Perkins",
-        }}
-        twitter={{
-          handle: "@james_r_perkins",
-          cardType: "summary_large_image",
-        }}
-      />
-      <Box
-        width="100%"
-        mt={[0, 8]}
-        mb={12}
-        mx="auto"
-        justifyItems="center"
-        alignItems="center"
-        columns={{ sm: 1, lg: 2 }}
-      >
-        <Center>
-          <YouTubeStat label="Subscriber Count" number={subscriberCount} />
-          <YouTubeStat label="View Count" number={viewCount} />
-        </Center>
-      </Box>
-      <Heading as="h1" my={10} textAlign="center">
-        My Latest YouTube Videos
+    <>
+      <Head>
+        <title>YouTube | James Perkins</title>
+        <meta name="robots" content="follow, index" />
+        <meta content="YouTube videos for James Perkins" name="description" />
+        <meta property="og:url" content={`https://jamesperkins.dev/youtube`} />
+        <link rel="canonical" href={`https://jamesperkins.dev/youtube`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="James Perkins" />
+        <meta property="og:description" content="YouTube videos for James Perkins" />
+        <meta property="og:title" content="YouTube | James Perkins" />
+        <meta property="og:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@james_r_perkins" />
+        <meta name="twitter:title" content="YouTube | James Perkins" />
+        <meta name="twitter:description" content="YouTube videos for James Perkins" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
+      </Head>
+      <Box maxWidth="1080px" width="100%" mx="auto" my={4} px={4}>
+        <Box
+          width="100%"
+          mt={[0, 8]}
+          mb={12}
+          mx="auto"
+          justifyItems="center"
+          alignItems="center"
+          columns={{ sm: 1, lg: 2 }}
+        >
+          <Center>
+            <YouTubeStat label="Subscriber Count" number={subscriberCount} />
+            <YouTubeStat label="View Count" number={viewCount} />
+          </Center>
+        </Box>
+        <Heading as="h1" my={10} textAlign="center">
+          My Latest YouTube Videos
       </Heading>
-      <SimpleGrid columns={[1, 2, 3]} spacing={8}>
-        {results &&
-          results.map((video) => {
-            return (
-              <Box key={video.id}>
-                <Heading
-                  as="h5"
-                  fontSize="md"
-                  textAlign="center"
-                  noOfLines={1}
-                  mb={2}
-                >
-                  {video.snippet.title}
-                </Heading>
-                <YoutubeVideoPlayer
-                  thumb={video.snippet.thumbnails.high.url}
-                  id={video.snippet.resourceId.videoId}
-                />
-              </Box>
-            );
-          })}
-      </SimpleGrid>
-    </Box>
+        <SimpleGrid columns={[1, 2, 3]} spacing={8}>
+          {results &&
+            results.map((video) => {
+              return (
+                <Box key={video.id}>
+                  <Heading
+                    as="h5"
+                    fontSize="md"
+                    textAlign="center"
+                    noOfLines={1}
+                    mb={2}
+                  >
+                    {video.snippet.title}
+                  </Heading>
+                  <YoutubeVideoPlayer
+                    thumb={video.snippet.thumbnails.high.url}
+                    id={video.snippet.resourceId.videoId}
+                  />
+                </Box>
+              );
+            })}
+        </SimpleGrid>
+      </Box>
+    </>
   );
 }
 

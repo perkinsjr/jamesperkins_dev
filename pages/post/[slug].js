@@ -1,4 +1,5 @@
 import matter from "gray-matter";
+import Head from "next/head";
 import ReactMarkdown from "react-markdown/with-html";
 import ChakraUIRenderer, { defaults } from "chakra-ui-markdown-renderer";
 import { Box, Code, Heading, Flex, useColorMode } from "@chakra-ui/react";
@@ -6,7 +7,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image";
 import OptInForm from "@/components/optinform";
-import { NextSeo } from "next-seo";
+
 
 const glob = require("glob");
 const newTheme = {
@@ -65,64 +66,66 @@ export default function BlogTemplate({ frontmatter, markdownBody, slug }) {
   if (!frontmatter) return <></>;
 
   return (
-    <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb={4} px={4}>
-      <NextSeo
-        title={frontmatter.title}
-        description={frontmatter.excerpt}
-        openGraph={{
-          url: `https://jamesperkins.dev/post/${slug}`,
-          title: `${frontmatter.title}`,
-          site_name: "James Perkins",
-          description: `${frontmatter.excerpt}`,
-          images: [
-            { url: `${frontmatter.hero_image}` },
-          ],
-          site_name: "James Perkins",
-        }}
-        twitter={{
-          handle: "@james_r_perkins",
-          cardType: "summary_large_image",
-        }}
-      />
-      <article>
-        <Flex
-          as="figure"
-          alignContent="center"
-          justifyContent="center"
-          mx="auto"
-        >
-          <Image
-            loader={myLoader}
-            src={frontmatter.hero_image}
-            alt={frontmatter.hero_image}
-            width={720}
-            quality={50}
-            height={384}
-          />
-        </Flex>
-        <Box my={[2, 4]}>
-          <Heading as="h2" size="3xl" textAlign="center">
-            {frontmatter.title}
-          </Heading>
-          <Heading as="h4" size="md" fontWeight="normal" my={4}>
-            {reformatDate(frontmatter.date)}
-          </Heading>
-        </Box>
-        <Box width="100%">
-          <ReactMarkdown
-            escapeHtml={false}
-            source={markdownBody}
-            renderers={ChakraUIRenderer(newTheme)}
-          />
-        </Box>
-      </article>
-      <Box maxWidth="720px" width="100%" mx="auto" my={6} px={4}>
-        <Heading my={2} as="h4" fontSize="2xl" textAlign="center">
-          Enjoying my content? Sign up for my newsletter!
+    <>
+      <Head>
+        <title>{frontmatter.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={frontmatter.excerpt} name="description" />
+        <meta property="og:url" content={`https://jamesperkins.dev/post/${slug}`} />
+        <link rel="canonical" href={`https://jamesperkins.dev/post/${slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="James Perkins" />
+        <meta property="og:description" content={frontmatter.excerpt} />
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:image" content={frontmatter.hero_image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@james_r_perkins" />
+        <meta name="twitter:title" content={frontmatter.title} />
+        <meta name="twitter:description" content={frontmatter.excerpt} />
+        <meta name="twitter:image" content={frontmatter.hero_image} />
+      </Head>
+
+      <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb={4} px={4}>
+        <article>
+          <Flex
+            as="figure"
+            alignContent="center"
+            justifyContent="center"
+            mx="auto"
+          >
+            <Image
+              loader={myLoader}
+              src={frontmatter.hero_image}
+              alt={frontmatter.hero_image}
+              width={720}
+              quality={50}
+              height={384}
+            />
+          </Flex>
+          <Box my={[2, 4]}>
+            <Heading as="h2" size="3xl" textAlign="center">
+              {frontmatter.title}
+            </Heading>
+            <Heading as="h4" size="md" fontWeight="normal" my={4}>
+              {reformatDate(frontmatter.date)}
+            </Heading>
+          </Box>
+          <Box width="100%">
+            <ReactMarkdown
+              escapeHtml={false}
+              source={markdownBody}
+              renderers={ChakraUIRenderer(newTheme)}
+            />
+          </Box>
+        </article>
+        <Box maxWidth="720px" width="100%" mx="auto" my={6} px={4}>
+          <Heading my={2} as="h4" fontSize="2xl" textAlign="center">
+            Enjoying my content? Sign up for my newsletter!
         </Heading>
-        <OptInForm />
+          <OptInForm />
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 }
 

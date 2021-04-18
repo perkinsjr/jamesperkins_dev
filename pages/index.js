@@ -9,131 +9,130 @@ import {
   Image,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 const Index = ({ results }) => {
   const { colorMode } = useColorMode();
   return (
-    <Flex
-      maxWidth="1080px"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-      mx="auto"
-    >
-      <NextSeo
-        title="Home | James Perkins"
-        description="James Perkins homepage, blog and more"
-        openGraph={{
-          url: "https://jamesperkins.dev/",
-          title: "Home Page",
-          description: `Home Page`,
-          images: [
-            {
-              url:
-                "https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg",
-            },
-          ],
-          site_name: "James Perkins",
-        }}
-        twitter={{
-          handle: "@james_r_perkins",
-          cardType: "summary_large_image",
-        }}
-      />
-      <Grid p={6} columnGap={6} templateColumns="auto 1fr" alignItems="center">
-        <Box display={["none", "block"]}>
-          <Image
-            rounded="50%"
-            maxW="250px"
-            src="https://res.cloudinary.com/dub20ptvt/image/upload/v1618489779/me_n7quph.jpg"
-            alt="James Perkins Picture"
-          />
-        </Box>
-        <Box>
-          <Heading as="h2" mb={6} size="2xl" textAlign="center">
-            Hi, I'm James!
+    <>
+      <Head>
+        <title>Home | James Perkins</title>
+        <meta name="robots" content="follow, index" />
+        <meta content="James Perkins home, blog and Youtube content" name="description" />
+        <meta property="og:url" content={`https://jamesperkins.dev/`} />
+        <link rel="canonical" href={`https://jamesperkins.dev/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="James Perkins" />
+        <meta property="og:description" content="James Perkins home, blog and Youtube content" />
+        <meta property="og:title" content="Home | James Perkins" />
+        <meta property="og:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@james_r_perkins" />
+        <meta name="twitter:title" content="Home | James Perkins" />
+        <meta name="twitter:description" content="James Perkins home, blog and Youtube content" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
+      </Head>
+      <Flex
+        maxWidth="1080px"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        mx="auto"
+      >
+        <Grid p={6} columnGap={6} templateColumns="auto 1fr" alignItems="center">
+          <Box display={["none", "block"]}>
+            <Image
+              rounded="50%"
+              maxW="250px"
+              src="https://res.cloudinary.com/dub20ptvt/image/upload/v1618489779/me_n7quph.jpg"
+              alt="James Perkins Picture"
+            />
+          </Box>
+          <Box>
+            <Heading as="h2" mb={6} size="2xl" textAlign="center">
+              Hi, I'm James!
           </Heading>
-          <Text fontSize="lg" maxWidth="600px">
-            I am a developer who specializes in JamStack Development.
+            <Text fontSize="lg" maxWidth="600px">
+              I am a developer who specializes in JamStack Development.
             <br />
-            <br />
+              <br />
             Most of the time you will find me on Twitter with hot takes, or
             hanging out with my dogs and awesome wife.
           </Text>
-        </Box>
-      </Grid>
-      <Box>
-        <Box
-          p={4}
-          shadow="lg"
-          borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
-          borderWidth="2px"
-          borderRadius={2}
-          mb={4}
-        >
-          <Heading
-            as="h2"
-            mb={6}
-            size="2xl"
-            textAlign="left"
-            color={colorMode === "light" ? "#98199F" : "#E883ED"}
+          </Box>
+        </Grid>
+        <Box>
+          <Box
+            p={4}
+            shadow="lg"
+            borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
+            borderWidth="2px"
+            borderRadius={2}
+            mb={4}
           >
-            YouTube Videos
+            <Heading
+              as="h2"
+              mb={6}
+              size="2xl"
+              textAlign="left"
+              color={colorMode === "light" ? "#98199F" : "#E883ED"}
+            >
+              YouTube Videos
           </Heading>
-          <Text fontSize="lg" maxWidth="850px" textAlign="left">
-            I create JamStack videos every single week, and every other week a
-            full crash course on a particular tech in conjunction with NextJS.
-            This include FaunaDB, Firebase, NextAuth, WordPress and so much
-            more!
+            <Text fontSize="lg" maxWidth="850px" textAlign="left">
+              I create JamStack videos every single week, and every other week a
+              full crash course on a particular tech in conjunction with NextJS.
+              This include FaunaDB, Firebase, NextAuth, WordPress and so much
+              more!
             <br />
-            <br />
+              <br />
             Below are my latest 3 videos, give it a look you won't be
             disappointed!
           </Text>
-        </Box>
-        <SimpleGrid columns={[1, 1, 3]} spacing={8} mt={8}>
-          {results &&
-            results.map((video) => {
-              return (
-                <Box key={video.id}>
-                  <YoutubeVideoPlayer
-                    thumb={video.snippet.thumbnails.high.url}
-                    id={video.snippet.resourceId.videoId}
-                  />
-                </Box>
-              );
-            })}
-        </SimpleGrid>
-        <Box></Box>
-        <Box
-          p={4}
-          shadow="lg"
-          borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
-          borderWidth="2px"
-          borderRadius={2}
-          my={8}
-        >
-          <Heading
-            as="h2"
-            mb={6}
-            size="2xl"
-            textAlign="left"
-            color={colorMode === "light" ? "#98199F" : "#E883ED"}
+          </Box>
+          <SimpleGrid columns={[1, 1, 3]} spacing={8} mt={8}>
+            {results &&
+              results.map((video) => {
+                return (
+                  <Box key={video.id}>
+                    <YoutubeVideoPlayer
+                      thumb={video.snippet.thumbnails.high.url}
+                      id={video.snippet.resourceId.videoId}
+                    />
+                  </Box>
+                );
+              })}
+          </SimpleGrid>
+          <Box></Box>
+          <Box
+            p={4}
+            shadow="lg"
+            borderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
+            borderWidth="2px"
+            borderRadius={2}
+            my={8}
           >
-            I write occasionally
+            <Heading
+              as="h2"
+              mb={6}
+              size="2xl"
+              textAlign="left"
+              color={colorMode === "light" ? "#98199F" : "#E883ED"}
+            >
+              I write occasionally
           </Heading>
-          <Text fontSize="lg" maxWidth="850px" textAlign="left">
-            I do occasionally write blog posts about all sorts of things, from
-            implementation of code. Improving your code, reviewing courses I
-            have taken.
+            <Text fontSize="lg" maxWidth="850px" textAlign="left">
+              I do occasionally write blog posts about all sorts of things, from
+              implementation of code. Improving your code, reviewing courses I
+              have taken.
             <br />
-            <br />
+              <br />
             Sometimes I even write about random things, like shows I am watching
             and movies I really like!
           </Text>
+          </Box>
         </Box>
-      </Box>
-    </Flex>
+      </Flex>
+    </>
   );
 };
 

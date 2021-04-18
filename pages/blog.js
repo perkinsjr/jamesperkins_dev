@@ -2,42 +2,40 @@ import React from "react";
 import matter from "gray-matter";
 import BlogPosts from "@/components/blogposts";
 import { Heading, Flex } from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 const Blog = (props) => {
   return (
-    <Flex
-      maxWidth="1080px"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-      mx="auto"
-    >
-      <NextSeo
-        title="Blog | James Perkins"
-        description="James Perkins homepage, blog and more"
-        openGraph={{
-          url: "https://jamesperkins.dev/blog",
-          title: "Blog Page",
-          description: "Blog Page",
-          images: [
-            {
-              url:
-                "https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg",
-            },
-          ],
-          site_name: "James Perkins",
-        }}
-        twitter={{
-          handle: "@james_r_perkins",
-          cardType: "summary_large_image",
-        }}
-      />
-
-      <Heading as="h1" mb={4} textAlign="center">
-        Blog
+    <>
+      <Head>
+        <title>Blog | James Perkins</title>
+        <meta name="robots" content="follow, index" />
+        <meta content="James Perkins homepage, blog and more " name="description" />
+        <meta property="og:url" content={`https://jamesperkins.dev/blog`} />
+        <link rel="canonical" href={`https://jamesperkins.dev/blog`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="James Perkins" />
+        <meta property="og:description" content="James Perkins homepage, blog and more" />
+        <meta property="og:title" content="Blog | James Perkins" />
+        <meta property="og:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@james_r_perkins" />
+        <meta name="twitter:title" content="Blog | James Perkins" />
+        <meta name="twitter:description" content="James Perkins homepage, blog and more" />
+        <meta name="twitter:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
+      </Head>
+      <Flex
+        maxWidth="1080px"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        mx="auto"
+      >
+        <Heading as="h1" mb={4} textAlign="center">
+          Blog
       </Heading>
-      <BlogPosts allBlogs={props.allBlogs} />
-    </Flex>
+        <BlogPosts allBlogs={props.allBlogs} />
+      </Flex>
+    </>
   );
 };
 export default Blog;
