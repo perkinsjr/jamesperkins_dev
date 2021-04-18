@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Stack, useColorMode, IconButton } from "@chakra-ui/react";
+import { Box, Stack, useColorMode, IconButton } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 export default function Logo(props) {
