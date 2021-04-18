@@ -4,7 +4,7 @@ export default function YouTubeStat({ label, number }) {
   return (
     <Stat>
       <StatLabel textAlign="center">{label}</StatLabel>
-      <StatNumber textAlign="center">{number}</StatNumber>
+      <StatNumber textAlign="center">{number.toLocaleString()}</StatNumber>
     </Stat>
   );
 }
