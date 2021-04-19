@@ -17,19 +17,42 @@ const Index = ({ results }) => {
       <Head>
         <title>Home | James Perkins</title>
         <meta name="robots" content="follow, index" />
-        <meta content="James Perkins home, blog and Youtube content" name="description" />
+        <meta
+          content="James Perkins home, blog and Youtube content"
+          name="description"
+        />
         <meta property="og:url" content={`https://jamesperkins.dev/`} />
         <link rel="canonical" href={`https://jamesperkins.dev/`} />
+        <meta itemprop="name" content="James Perkins" />
+        <meta
+          itemprop="description"
+          content="James Perkins home, blog and Youtube content"
+        />
+        <meta
+          itemprop="image"
+          content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="James Perkins" />
-        <meta property="og:description" content="James Perkins home, blog and Youtube content" />
+        <meta
+          property="og:description"
+          content="James Perkins home, blog and Youtube content"
+        />
         <meta property="og:title" content="Home | James Perkins" />
-        <meta property="og:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@james_r_perkins" />
         <meta name="twitter:title" content="Home | James Perkins" />
-        <meta name="twitter:description" content="James Perkins home, blog and Youtube content" />
-        <meta name="twitter:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
+        <meta
+          name="twitter:description"
+          content="James Perkins home, blog and Youtube content"
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg"
+        />
       </Head>
       <Flex
         maxWidth="1080px"
@@ -38,7 +61,12 @@ const Index = ({ results }) => {
         alignItems="center"
         mx="auto"
       >
-        <Grid p={6} columnGap={6} templateColumns="auto 1fr" alignItems="center">
+        <Grid
+          p={6}
+          columnGap={6}
+          templateColumns="auto 1fr"
+          alignItems="center"
+        >
           <Box display={["none", "block"]}>
             <Image
               rounded="50%"
@@ -50,14 +78,14 @@ const Index = ({ results }) => {
           <Box>
             <Heading as="h2" mb={6} size="2xl" textAlign="center">
               Hi, I'm James!
-          </Heading>
+            </Heading>
             <Text fontSize="lg" maxWidth="600px">
               I am a developer who specializes in JamStack Development.
-            <br />
               <br />
-            Most of the time you will find me on Twitter with hot takes, or
-            hanging out with my dogs and awesome wife.
-          </Text>
+              <br />
+              Most of the time you will find me on Twitter with hot takes, or
+              hanging out with my dogs and awesome wife.
+            </Text>
           </Box>
         </Grid>
         <Box>
@@ -77,17 +105,17 @@ const Index = ({ results }) => {
               color={colorMode === "light" ? "#98199F" : "#E883ED"}
             >
               YouTube Videos
-          </Heading>
+            </Heading>
             <Text fontSize="lg" maxWidth="850px" textAlign="left">
               I create JamStack videos every single week, and every other week a
               full crash course on a particular tech in conjunction with NextJS.
               This include FaunaDB, Firebase, NextAuth, WordPress and so much
               more!
-            <br />
               <br />
-            Below are my latest 3 videos, give it a look you won't be
-            disappointed!
-          </Text>
+              <br />
+              Below are my latest 3 videos, give it a look you won't be
+              disappointed!
+            </Text>
           </Box>
           <SimpleGrid columns={[1, 1, 3]} spacing={8} mt={8}>
             {results &&
@@ -119,16 +147,16 @@ const Index = ({ results }) => {
               color={colorMode === "light" ? "#98199F" : "#E883ED"}
             >
               I write occasionally
-          </Heading>
+            </Heading>
             <Text fontSize="lg" maxWidth="850px" textAlign="left">
               I do occasionally write blog posts about all sorts of things, from
               implementation of code. Improving your code, reviewing courses I
               have taken.
-            <br />
               <br />
-            Sometimes I even write about random things, like shows I am watching
-            and movies I really like!
-          </Text>
+              <br />
+              Sometimes I even write about random things, like shows I am
+              watching and movies I really like!
+            </Text>
           </Box>
         </Box>
       </Flex>
