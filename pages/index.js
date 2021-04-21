@@ -15,8 +15,6 @@ const Index = ({ results }) => {
   return (
     <>
       <Header
-        title="Home Page | James Perkins"
-        description="Jamesperkins.dev homepage"
       />
       <Flex
         maxWidth="1080px"
