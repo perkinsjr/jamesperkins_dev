@@ -1,6 +1,9 @@
 import React from "react";
 import { Link, Box, Flex, Text, Stack, useColorMode } from "@chakra-ui/react";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
 import Logo from "./logo";
+import Head from "next/head";
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -58,11 +61,11 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
-    <Link href={to}>
-      <Text display="block" {...rest}>
+    <NextLink href={to}>
+      <Link display="block" {...rest}>
         {children}
-      </Text>
-    </Link>
+      </Link>
+    </NextLink>
   );
 };
 
@@ -91,8 +94,18 @@ const MenuLinks = ({ isOpen }) => {
   );
 };
 
-const NavBarContainer = ({ children, ...props }) => {
+const NavBarContainer = (props) => {
   const { colorMode } = useColorMode();
+  const { children, ...customMeta } = props;
+  const router = useRouter();
+  const meta = {
+    title: "James Perkins – Developer, writer, creator.",
+    description: `James Perkins home, blog and Youtube content.`,
+    image:
+      "https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg",
+    type: "website",
+    ...customMeta,
+  };
   return (
     <Flex
       as="nav"
@@ -109,6 +122,32 @@ const NavBarContainer = ({ children, ...props }) => {
       color={colorMode === "light" ? "#98199F" : "#E883ED"}
       {...props}
     >
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
+        <meta
+          property="og:url"
+          content={`https://jamesperkins.dev${router.asPath}`}
+        />
+        <link
+          rel="canonical"
+          href={`https://jamesperkins.dev${router.asPath}`}
+        />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:site_name" content="James Perkins" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@james_r_perkins" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
+        {meta.date && (
+          <meta property="article:published_time" content={meta.date} />
+        )}
+      </Head>
       {children}
     </Flex>
   );

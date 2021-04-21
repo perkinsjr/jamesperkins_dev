@@ -9,51 +9,15 @@ import {
   Image,
   SimpleGrid,
 } from "@chakra-ui/react";
-import Head from "next/head";
+import Header from "@/components/header";
 const Index = ({ results }) => {
   const { colorMode } = useColorMode();
   return (
     <>
-      <Head>
-        <title>Home | James Perkins</title>
-        <meta name="robots" content="follow, index" />
-        <meta
-          content="James Perkins home, blog and Youtube content"
-          name="description"
-        />
-        <meta property="og:url" content={`https://jamesperkins.dev/`} />
-        <link rel="canonical" href={`https://jamesperkins.dev/`} />
-        <meta itemprop="name" content="James Perkins" />
-        <meta
-          itemprop="description"
-          content="James Perkins home, blog and Youtube content"
-        />
-        <meta
-          itemprop="image"
-          content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="James Perkins" />
-        <meta
-          property="og:description"
-          content="James Perkins home, blog and Youtube content"
-        />
-        <meta property="og:title" content="Home | James Perkins" />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Home | James Perkins" />
-        <meta
-          name="twitter:description"
-          content="James Perkins home, blog and Youtube content"
-        />
-        <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg"
-        />
-      </Head>
+      <Header
+        title="Home Page | James Perkins"
+        description="Jamesperkins.dev homepage"
+      />
       <Flex
         maxWidth="1080px"
         flexDirection="column"

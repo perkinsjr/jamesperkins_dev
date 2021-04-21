@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
 import YouTubeStat from "@/components/youtubestats";
-import Head from "next/head";
+import Header from "@/components/header";
 
 export default function Youtube({ results }) {
   const { data, error } = useSWR("/api/youtube", fetcher);
@@ -34,23 +34,10 @@ export default function Youtube({ results }) {
 
   return (
     <>
-      <Head>
-        <title>YouTube | James Perkins</title>
-        <meta name="robots" content="follow, index" />
-        <meta content="YouTube videos for James Perkins" name="description" />
-        <meta property="og:url" content={`https://jamesperkins.dev/youtube`} />
-        <link rel="canonical" href={`https://jamesperkins.dev/youtube`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="James Perkins" />
-        <meta property="og:description" content="YouTube videos for James Perkins" />
-        <meta property="og:title" content="YouTube | James Perkins" />
-        <meta property="og:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@james_r_perkins" />
-        <meta name="twitter:title" content="YouTube | James Perkins" />
-        <meta name="twitter:description" content="YouTube videos for James Perkins" />
-        <meta name="twitter:image" content="https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg" />
-      </Head>
+      <Header
+        title="Youtube Videos | James Perkins/"
+        description="Check out my latest videos from YouTube"
+      />
       <Box maxWidth="1080px" width="100%" mx="auto" my={4} px={4}>
         <Box
           width="100%"
@@ -68,7 +55,7 @@ export default function Youtube({ results }) {
         </Box>
         <Heading as="h1" my={10} textAlign="center">
           My Latest YouTube Videos
-      </Heading>
+        </Heading>
         <SimpleGrid columns={[1, 2, 3]} spacing={8}>
           {results &&
             results.map((video) => {

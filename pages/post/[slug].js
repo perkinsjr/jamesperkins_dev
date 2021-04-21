@@ -1,5 +1,5 @@
 import matter from "gray-matter";
-import Head from "next/head";
+import Header from "@/components/header";
 import ReactMarkdown from "react-markdown/with-html";
 import ChakraUIRenderer, { defaults } from "chakra-ui-markdown-renderer";
 import { Box, Code, Heading, Flex, useColorMode } from "@chakra-ui/react";
@@ -7,7 +7,6 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image";
 import OptInForm from "@/components/optinform";
-
 
 const glob = require("glob");
 const newTheme = {
@@ -67,24 +66,13 @@ export default function BlogTemplate({ frontmatter, markdownBody, slug }) {
 
   return (
     <>
-      <Head>
-        <title>{frontmatter.title}</title>
-        <meta name="robots" content="follow, index" />
-        <meta content={frontmatter.excerpt} name="description" />
-        <meta property="og:url" content={`https://jamesperkins.dev/post/${slug}`} />
-        <link rel="canonical" href={`https://jamesperkins.dev/post/${slug}`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="James Perkins" />
-        <meta property="og:description" content={frontmatter.excerpt} />
-        <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:image" content={frontmatter.hero_image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@james_r_perkins" />
-        <meta name="twitter:title" content={frontmatter.title} />
-        <meta name="twitter:description" content={frontmatter.excerpt} />
-        <meta name="twitter:image" content={frontmatter.hero_image} />
-      </Head>
-
+      <Header
+        title={`${frontmatter.title} – James Perkins`}
+        excerpt={frontmatter.summary}
+        image={frontmatter.hero_image}
+        date={new Date(frontmatter.date).toISOString()}
+        type="article"
+      />
       <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb={4} px={4}>
         <article>
           <Flex
@@ -121,7 +109,7 @@ export default function BlogTemplate({ frontmatter, markdownBody, slug }) {
         <Box maxWidth="720px" width="100%" mx="auto" my={6} px={4}>
           <Heading my={2} as="h4" fontSize="2xl" textAlign="center">
             Enjoying my content? Sign up for my newsletter!
-        </Heading>
+          </Heading>
           <OptInForm />
         </Box>
       </Box>
