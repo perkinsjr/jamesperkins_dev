@@ -9,6 +9,8 @@ import {
   Image,
   SimpleGrid,
 } from "@chakra-ui/react";
+
+import Seo from "@/components/seo"
 const Index = ({ results }) => {
   const { colorMode } = useColorMode();
   return (
