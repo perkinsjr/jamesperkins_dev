@@ -93,7 +93,7 @@ const MenuLinks = ({ isOpen }) => {
   );
 };
 
-const NavBarContainer = (props) => {
+const NavBarContainer = ({ children, props }) => {
   const { colorMode } = useColorMode();
 
   return (
