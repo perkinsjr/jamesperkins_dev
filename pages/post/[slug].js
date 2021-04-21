@@ -7,6 +7,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image";
 import OptInForm from "@/components/optinform";
+import Seo from "@/components/seo";
 
 const glob = require("glob");
 const newTheme = {
@@ -66,7 +67,7 @@ export default function BlogTemplate({ frontmatter, markdownBody, slug }) {
 
   return (
     <>
-      <Header
+      <Seo
         title={`${frontmatter.title} – James Perkins`}
         excerpt={frontmatter.summary}
         image={frontmatter.hero_image}

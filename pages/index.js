@@ -9,13 +9,11 @@ import {
   Image,
   SimpleGrid,
 } from "@chakra-ui/react";
-import Header from "@/components/header";
 const Index = ({ results }) => {
   const { colorMode } = useColorMode();
   return (
     <>
-      <Header
-      />
+      <Seo title="Home | James Perkins" description="Home page for James Perkins" />
       <Flex
         maxWidth="1080px"
         flexDirection="column"

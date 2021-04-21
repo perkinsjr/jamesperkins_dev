@@ -1,11 +1,11 @@
 import React from "react";
 import OptInForm from "@/components/optinform";
 import { Box, Heading } from "@chakra-ui/react";
-import Header from "@/components/header";
+import Seo from "@/components/seo";
 export default function Newsletter() {
   return (
     <>
-      <Header
+      <Seo
         title="Newsletter | James Perkins"
         description="Sign up to my newsletter"
       />

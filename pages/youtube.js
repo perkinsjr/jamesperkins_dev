@@ -12,6 +12,7 @@ import {
 import YoutubeVideoPlayer from "@/components/youtubevideoplayer";
 import YouTubeStat from "@/components/youtubestats";
 import Header from "@/components/header";
+import Seo from "@/components/seo";
 
 export default function Youtube({ results }) {
   const { data, error } = useSWR("/api/youtube", fetcher);
@@ -34,7 +35,7 @@ export default function Youtube({ results }) {
 
   return (
     <>
-      <Header
+      <Seo
         title="Youtube Videos | James Perkins/"
         description="Check out my latest videos from YouTube"
       />

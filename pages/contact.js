@@ -1,10 +1,10 @@
 import React from "react";
 import ContactForm from "@/components/contactform";
-import Header from "@/components/header";
+import Seo from "@/components/seo";
 export default function Contact() {
   return (
     <>
-      <Header
+      <Seo
         title="Contact | James Perkins"
         description="Contact James Perkins about anything"
       />

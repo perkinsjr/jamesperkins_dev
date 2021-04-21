@@ -2,11 +2,11 @@ import React from "react";
 import matter from "gray-matter";
 import BlogPosts from "@/components/blogposts";
 import { Heading, Flex } from "@chakra-ui/react";
-import Header from "@/components/header";
+import Seo from "@/components/seo";
 const Blog = (props) => {
   return (
     <>
-      <Header
+      <Seo
         title="Blog | James Perkins"
         description="Blog posts surrounding the tech industry or thoughts."
       />
