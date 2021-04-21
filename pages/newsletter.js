@@ -1,7 +1,7 @@
 import React from "react";
 import OptInForm from "@/components/optinform";
 import { Box, Heading } from "@chakra-ui/react";
-import Header from "@components/header";
+import Header from "@/components/header";
 export default function Newsletter() {
   return (
     <>
