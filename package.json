@@ -24,5 +24,10 @@
     "react-player": "^2.9.0",
     "react-syntax-highlighter": "^15.4.3",
     "swr": "^0.5.4"
+  },
+  "devDependencies": {
+    "globby": "^11.0.3",
+    "prettier": "^2.2.1",
+    "rss": "^1.2.2"
   }
 }

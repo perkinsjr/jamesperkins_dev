@@ -1,5 +1,4 @@
 import matter from "gray-matter";
-import Header from "@/components/header";
 import ReactMarkdown from "react-markdown/with-html";
 import ChakraUIRenderer, { defaults } from "chakra-ui-markdown-renderer";
 import { Box, Code, Heading, Flex, useColorMode } from "@chakra-ui/react";
