@@ -120,12 +120,10 @@ export default function BlogTemplate({ frontmatter, markdownBody, slug }) {
 export async function getStaticProps({ ...ctx }) {
   const { slug } = ctx.params;
   const content = await import(`../../posts/${slug}.md`);
-  const config = await import(`../../data/config.json`);
   const data = matter(content.default);
 
   return {
     props: {
-      siteTitle: config.title,
       frontmatter: data.data,
       markdownBody: data.content,
       slug: slug,

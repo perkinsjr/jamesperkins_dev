@@ -27,7 +27,6 @@ const Blog = (props) => {
 };
 export default Blog;
 export async function getStaticProps() {
-  const siteConfig = await import(`../data/config.json`);
   const posts = ((context) => {
     const keys = context.keys();
     const values = keys.map(context);
@@ -59,9 +58,7 @@ export async function getStaticProps() {
   );
   return {
     props: {
-      allBlogs: publishedOnly,
-      title: siteConfig.default.title,
-      description: siteConfig.default.description,
+      allBlogs: publishedOnly
     },
   };
 }
