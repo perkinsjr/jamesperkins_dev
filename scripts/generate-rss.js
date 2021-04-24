@@ -18,7 +18,6 @@ async function generate() {
         path.join(__dirname, '..', 'data', 'posts', name)
       );
       const frontmatter = matter(content);
-      console.log(frontmatter.data);
       feed.item({
         title: frontmatter.data.title,
         url: 'https://jamesperkins.dev/post/' + name.replace(/\.md?/, ''),
