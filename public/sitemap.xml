@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://jamesperkins.dev/blog</loc>
+        <loc>https://leerob.io/blog</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/contact</loc>
+        <loc>https://leerob.io/contact</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev</loc>
+        <loc>https://leerob.io</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/newsletter</loc>
+        <loc>https://leerob.io/newsletter</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/youtube</loc>
+        <loc>https://leerob.io/youtube</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/jsconfig-for-faster-nextjs-config</loc>
+        <loc>https://leerob.io/posts/jsconfig-for-faster-nextjs-config</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/nextjs-faunadb-crash-course</loc>
+        <loc>https://leerob.io/posts/nextjs-faunadb-crash-course</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/pick-a-language-and-do-something</loc>
+        <loc>https://leerob.io/posts/pick-a-language-and-do-something</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/why-flag-parameters-suck</loc>
+        <loc>https://leerob.io/posts/why-flag-parameters-suck</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/why-I-removed-analytics-and-used-nextjs</loc>
+        <loc>https://leerob.io/posts/why-I-removed-analytics-and-used-nextjs</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/you-dont-need-to-be-a-math-genius</loc>
+        <loc>https://leerob.io/posts/you-dont-need-to-be-a-math-genius</loc>
     </url>
 </urlset>

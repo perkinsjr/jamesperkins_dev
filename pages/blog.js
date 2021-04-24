@@ -1,9 +1,15 @@
 import React from "react";
-import matter from "gray-matter";
+import { getAllFilesFrontMatter } from '@/lib/mdx';
 import BlogPosts from "@/components/blogposts";
 import { Heading, Flex } from "@chakra-ui/react";
 import Seo from "@/components/seo";
 const Blog = (props) => {
+  const { posts } = props;
+  const filteredBlogPosts = posts
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    );
   return (
     <>
       <Seo
@@ -20,45 +26,14 @@ const Blog = (props) => {
         <Heading as="h1" mb={4} textAlign="center">
           Blog
         </Heading>
-        <BlogPosts allBlogs={props.allBlogs} />
+        <BlogPosts allBlogs={props.posts} />
       </Flex>
     </>
   );
 };
 export default Blog;
 export async function getStaticProps() {
-  const posts = ((context) => {
-    const keys = context.keys();
-    const values = keys.map(context);
+  const posts = await getAllFilesFrontMatter('posts');
 
-    const data = keys.map((key, index) => {
-      const slug = key
-        .replace(/^.*[\\\/]/, "")
-        .split(".")
-        .slice(0, -1)
-        .join(".");
-      const value = values[index];
-      const document = matter(value.default);
-      return {
-        frontmatter: document.data,
-        markdownBody: document.content,
-        slug,
-      };
-    });
-    return data;
-  })(require.context("../posts", true, /\.md$/));
-
-  const sortedPosts = posts
-    .slice()
-    .sort(
-      (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
-    );
-  const publishedOnly = sortedPosts.filter(
-    (item) => item.frontmatter.published === true
-  );
-  return {
-    props: {
-      allBlogs: publishedOnly
-    },
-  };
+  return { props: { posts } }
 }

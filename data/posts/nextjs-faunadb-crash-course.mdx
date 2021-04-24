@@ -22,7 +22,7 @@ Give your database a name, for this I am going to name it next-with-fauna and cl
 
 Open up your favorite editor and type in
 
-```
+```bash
 npx create-next-app next-with-fauna
 ```
 
@@ -38,7 +38,7 @@ export default function Home() {
 
 We also need to install fauna through NPM so we can use their great client.
 
-```sh
+```bash
 npm install faunadb
 ```
 
@@ -54,19 +54,19 @@ Add a .env file with the following name `FAUNADB_SECRET_KEY=<YOUR_SECRET_KEY>`
 
 Firstly we need to install vercel-cli to be able to use vercel dev(trust me its amazing).
 
-```sh
+```bash
 npm i -g vercel
 ```
 
 Then go ahead and login to your vercel account by typing
 
-```sh
+```bash
 vercel
 ```
 
 Once you have logged in, you can add the FAUNADB_SECRET_KEY so if you deploy it will automatically know to read this from your vercel account instead of .env
 
-```sh
+```bash
 vercel add secrets FAUNADB_SECRET_KEY <YOUR_SECRET_KEY>
 ```
 
@@ -239,7 +239,7 @@ Now Chakra UI is my choice of frameworks for React based frameworks, due to comp
 
 To install ChakraUI use the following:
 
-```sh
+```bash
 npm install @chakra-ui/core @emotion/core @emotion/styled emotion-theming
 ```
 

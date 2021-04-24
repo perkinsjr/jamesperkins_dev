@@ -4,10 +4,10 @@ const globby = require('globby');
 const prettier = require('prettier');
 
 (async () => {
-  const prettierConfig = await prettier.resolveConfig('./.prettierrc');
+  const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
   const pages = await globby([
     'pages/*.js',
-    'posts/*.md',
+    'data/**/*.mdx',
     '!pages/_*.js',
     '!pages/api'
   ]);
@@ -19,13 +19,13 @@ const prettier = require('prettier');
       .map((page) => {
         const path = page
           .replace('pages', '')
-          .replace('posts', '')
+          .replace('data', '')
           .replace('.js', '')
-          .replace('.md', '');
+          .replace('.mdx', '');
         const route = path === '/index' ? '' : path;
         return `
                         <url>
-                            <loc>${`https://jamesperkins.dev${route}`}</loc>
+                            <loc>${`https://leerob.io${route}`}</loc>
                         </url>
                     `;
       })

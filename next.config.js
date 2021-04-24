@@ -1,4 +1,5 @@
 module.exports = {
+
   webpack: function (config, { isServer }) {
     if (isServer) {
       require('./scripts/generate-sitemap');

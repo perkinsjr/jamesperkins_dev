@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const PostCard = ({ post }) => {
+  console.log(post.slug);
   function truncateSummary(content) {
     const contentTrunc = content.slice(0, 197).trimEnd();
     return `${contentTrunc}...`;
@@ -22,8 +23,8 @@ const PostCard = ({ post }) => {
           <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
             <Image
               loader={myLoader}
-              src={post.frontmatter.hero_image}
-              alt={post.frontmatter.hero_image}
+              src={post.hero_image}
+              alt={post.hero_image}
               height={250}
               quality={50}
               width={400}
@@ -36,14 +37,14 @@ const PostCard = ({ post }) => {
                 lineHeight="tight"
                 isTruncated
               >
-                {post.frontmatter.title}
+                {post.title}
               </Box>
 
-              <Box>{reformatDate(post.frontmatter.date)}</Box>
+              <Box>{reformatDate(post.date)}</Box>
 
               <Box d="flex" mt="2" alignItems="center">
                 <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                  {truncateSummary(post.frontmatter.excerpt)}
+                  {truncateSummary(post.excerpt)}
                 </Box>
               </Box>
             </Box>
