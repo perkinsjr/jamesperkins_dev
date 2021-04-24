@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import hydrate from 'next-mdx-remote/hydrate'
-import { Box, Heading, Flex } from "@chakra-ui/react";
+import { Box, HStack, Heading, Flex, Text, Divider, Avatar } from "@chakra-ui/react";
 import Image from "next/image";
 import OptInForm from "@/components/optinform";
 import Seo from "@/components/seo";
@@ -37,6 +37,26 @@ export default function BlogTemplate(params) {
       />
       <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb={4} px={4}>
         <article>
+          <Heading as="h2" size="3xl" textAlign="center" my={8}>
+            {frontMatter.title}
+          </Heading>
+          <Box my={[2, 4]}>
+
+            <HStack my={4} spacing={4} >
+              <Avatar name="James Perkins" src="https://res.cloudinary.com/dub20ptvt/image/upload/v1618489779/me_n7quph.jpg" />
+              <Text size="sm">James Perkins</Text>
+
+              <Text size="md" fontWeight="normal">
+                {reformatDate(frontMatter.date)}
+              </Text>
+              <Box justifyContent="flex-end" alignContent="flex-end">
+                <Text size="md" fontWeight="normal">
+                  {frontMatter.readingTime.text}
+                </Text>
+              </Box>
+            </HStack>
+            <Divider />
+          </Box>
           <Flex
             as="figure"
             alignContent="center"
@@ -52,14 +72,7 @@ export default function BlogTemplate(params) {
               height={384}
             />
           </Flex>
-          <Box my={[2, 4]}>
-            <Heading as="h2" size="3xl" textAlign="center">
-              {frontMatter.title}
-            </Heading>
-            <Heading as="h4" size="md" fontWeight="normal" my={4}>
-              {reformatDate(frontMatter.date)}
-            </Heading>
-          </Box>
+
           <Box width="100%">
             {content}
           </Box>
