@@ -4,15 +4,8 @@
         <description><![CDATA[James Perkins]]></description>
         <link>https://jamesperkins.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 24 Apr 2021 10:47:46 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 24 Apr 2021 21:16:54 GMT</lastBuildDate>
         <atom:link href="https://jamesperkins.dev/feed.xml" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
-            <description><![CDATA[I’ve heard and seen a lot of “What language should I pick first?” Questions in my time as a developer. It’s an interesting question that I seem to have the opposite response to most.]]></description>
-            <link>https://jamesperkins.dev/post/pick-a-language-and-do-somethingx</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/pick-a-language-and-do-somethingx</guid>
-            <pubDate>Tue, 17 Sep 2019 00:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
             <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.]]></description>
@@ -21,11 +14,16 @@
             <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why flag parameters suck]]></title>
-            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
-            <link>https://jamesperkins.dev/post/why-flag-parameters-suckx</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suckx</guid>
-            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
+            <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
+            <description><![CDATA[I’ve heard and seen a lot of “What language should I pick first?” Questions in my time as a developer. It’s an interesting question that I seem to have the opposite response to most.]]></description>
+            <link>https://jamesperkins.dev/post/pick-a-language-and-do-somethingx</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/pick-a-language-and-do-somethingx</guid>
+            <pubDate>Tue, 17 Sep 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videosx</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videosx</guid>
         </item>
         <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
@@ -33,6 +31,13 @@
             <link>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjsx</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjsx</guid>
             <pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why flag parameters suck]]></title>
+            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
+            <link>https://jamesperkins.dev/post/why-flag-parameters-suckx</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suckx</guid>
+            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>

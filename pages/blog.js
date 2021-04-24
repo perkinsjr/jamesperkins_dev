@@ -5,10 +5,10 @@ import { Heading, Flex } from "@chakra-ui/react";
 import Seo from "@/components/seo";
 const Blog = (props) => {
   const { posts } = props;
-  const filteredBlogPosts = posts
+  const filteredBlogPosts = props.posts
     .sort(
       (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+        Number(new Date(b.date)) - Number(new Date(a.date))
     );
   return (
     <>
@@ -26,7 +26,7 @@ const Blog = (props) => {
         <Heading as="h1" mb={4} textAlign="center">
           Blog
         </Heading>
-        <BlogPosts allBlogs={props.posts} />
+        <BlogPosts allBlogs={filteredBlogPosts} />
       </Flex>
     </>
   );
