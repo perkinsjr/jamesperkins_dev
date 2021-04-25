@@ -23,6 +23,7 @@ const prettier = require('prettier');
           .replace('.js', '')
           .replace('.mdx', '');
         const route = path === '/index' ? '' : path;
+
         return `
                         <url>
                             <loc>${`https://jamesperkins.dev${route}`}</loc>

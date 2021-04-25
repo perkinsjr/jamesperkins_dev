@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://leerob.io/blog</loc>
+        <loc>https://jamesperkins.dev/blog</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/contact</loc>
+        <loc>https://jamesperkins.dev/contact</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io</loc>
+        <loc>https://jamesperkins.dev</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/newsletter</loc>
+        <loc>https://jamesperkins.dev/newsletter</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/youtube</loc>
+        <loc>https://jamesperkins.dev/youtube</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/posts/jsconfig-for-faster-nextjs-config</loc>
+        <loc>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/posts/nextjs-faunadb-crash-course</loc>
+        <loc>https://jamesperkins.dev/post/nextjs-faunadb-crash-course</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/posts/pick-a-language-and-do-something</loc>
+        <loc>https://jamesperkins.dev/post/pick-a-language-and-do-something</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/posts/Retrieve-your-last-10-youtube-videos</loc>
+        <loc>https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/posts/why-flag-parameters-suck</loc>
+        <loc>https://jamesperkins.dev/post/why-flag-parameters-suck</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/posts/why-I-removed-analytics-and-used-nextjs</loc>
+        <loc>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</loc>
     </url>
 
     <url>
-        <loc>https://leerob.io/posts/you-dont-need-to-be-a-math-genius</loc>
+        <loc>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</loc>
     </url>
 </urlset>

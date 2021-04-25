@@ -89,7 +89,7 @@ export default function BlogTemplate(params) {
 }
 
 export async function getStaticPaths() {
-  const posts = await getFiles('posts');
+  const posts = await getFiles('post');
   return {
     paths: posts.map((p) => ({
       params: {
@@ -101,7 +101,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = await getFileBySlug('posts', params.slug);
+  const post = await getFileBySlug('post', params.slug);
 
   return { props: { ...post } };
 }
