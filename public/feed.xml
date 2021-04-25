@@ -4,53 +4,55 @@
         <description><![CDATA[James Perkins]]></description>
         <link>https://jamesperkins.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 24 Apr 2021 21:16:54 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 25 Apr 2021 11:02:12 GMT</lastBuildDate>
         <atom:link href="https://jamesperkins.dev/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[Why flag parameters suck]]></title>
+            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
+            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
+            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
-            <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.]]></description>
-            <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-configx</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-configx</guid>
+            <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.The jsconfig.json file allows you to denote things such what module system you are using, enabling type checking]]></description>
+            <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</guid>
             <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
             <description><![CDATA[I’ve heard and seen a lot of “What language should I pick first?” Questions in my time as a developer. It’s an interesting question that I seem to have the opposite response to most.]]></description>
-            <link>https://jamesperkins.dev/post/pick-a-language-and-do-somethingx</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/pick-a-language-and-do-somethingx</guid>
+            <link>https://jamesperkins.dev/post/pick-a-language-and-do-something</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/pick-a-language-and-do-something</guid>
             <pubDate>Tue, 17 Sep 2019 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[No title]]></title>
-            <link>https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videosx</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videosx</guid>
-        </item>
-        <item>
-            <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
-            <description><![CDATA[On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.I first decided its time to get rid of analytics, advertisements and other shit that no one really needs]]></description>
-            <link>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjsx</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjsx</guid>
-            <pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Why flag parameters suck]]></title>
-            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
-            <link>https://jamesperkins.dev/post/why-flag-parameters-suckx</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suckx</guid>
-            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>
             <description><![CDATA[When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra.]]></description>
-            <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-geniusx</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-geniusx</guid>
+            <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</guid>
             <pubDate>Mon, 27 Jul 2020 04:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Retrieve your last 10 YouTube Videos]]></title>
+            <description><![CDATA[I will show how to retrieve the last 10 videos from YouTube, so people never have to leave your digital garden. I have been retrieving the data from YouTube for a while, I have a live stat update on my site so you can see the latest subscriber and view count]]></description>
+            <link>https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</guid>
+            <pubDate>Sat, 24 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
+            <description><![CDATA[On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.I first decided its time to get rid of analytics, advertisements and other shit that no one really needs]]></description>
+            <link>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</guid>
+            <pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[NextJS + FaunaDB Crash Course]]></title>
             <description><![CDATA[Welcome to my latest blog post, which is a crash course on NextJS and Fauna, in this blog post I am going to show you how to Create a Database, Read from that database and finally update the collection.]]></description>
-            <link>https://jamesperkins.dev/post/nextjs-faunadb-crash-coursex</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/nextjs-faunadb-crash-coursex</guid>
+            <link>https://jamesperkins.dev/post/nextjs-faunadb-crash-course</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/nextjs-faunadb-crash-course</guid>
             <pubDate>Thu, 15 Oct 2020 00:00:00 GMT</pubDate>
         </item>
     </channel>
