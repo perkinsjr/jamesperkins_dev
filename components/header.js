@@ -75,7 +75,7 @@ const MenuLinks = ({ isOpen }) => {
       flexBasis={{ base: "100%", md: "auto" }}
     >
       <Stack
-        spacing={8}
+        spacing={[4, 8]}
         align="center"
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
@@ -104,9 +104,8 @@ const NavBarContainer = ({ children, props }) => {
       wrap="wrap"
       w="100%"
       mx="auto"
-      mt={8}
+      my={8}
       maxWidth="1080px"
-      mb={["0", "8"]}
       fontWeight="semibold"
       bg={"transparent"}
       color={colorMode === "light" ? "#98199F" : "#E883ED"}

@@ -4,15 +4,8 @@
         <description><![CDATA[James Perkins]]></description>
         <link>https://jamesperkins.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 25 Apr 2021 11:02:12 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 May 2021 21:45:39 GMT</lastBuildDate>
         <atom:link href="https://jamesperkins.dev/feed.xml" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Why flag parameters suck]]></title>
-            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
-            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
-            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
             <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.The jsconfig.json file allows you to denote things such what module system you are using, enabling type checking]]></description>
@@ -28,11 +21,11 @@
             <pubDate>Tue, 17 Sep 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>
-            <description><![CDATA[When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra.]]></description>
-            <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</guid>
-            <pubDate>Mon, 27 Jul 2020 04:00:00 GMT</pubDate>
+            <title><![CDATA[Create content to solidify your knowledge]]></title>
+            <description><![CDATA[Creating content on something you just learnt such as a youtube video or a blog post is another way to solidfy your knowledge.]]></description>
+            <link>https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</guid>
+            <pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Retrieve your last 10 YouTube Videos]]></title>
@@ -42,11 +35,25 @@
             <pubDate>Sat, 24 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[Why flag parameters suck]]></title>
+            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
+            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
+            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
             <description><![CDATA[On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.I first decided its time to get rid of analytics, advertisements and other shit that no one really needs]]></description>
             <link>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</guid>
             <pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>
+            <description><![CDATA[When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra.]]></description>
+            <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</guid>
+            <pubDate>Mon, 27 Jul 2020 04:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[NextJS + FaunaDB Crash Course]]></title>

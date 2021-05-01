@@ -6,7 +6,7 @@ export default function Logo(props) {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Box {...props}>
-      <Stack mx={[8, 0]} isInline>
+      <Stack mx={8} isInline>
         <IconButton
           aria-label="Toggle dark mode"
           onClick={toggleColorMode}
