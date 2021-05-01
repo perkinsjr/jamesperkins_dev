@@ -15,6 +15,7 @@ const Index = ({ results }) => {
                 flexDirection="column"
                 justifyContent="center"
                 alignItems="center"
+                px={6}
                 mx="auto">
                 <Grid p={6} columnGap={6} templateColumns="auto 1fr" alignItems="center">
                     <Box display={['none', 'block']}>
