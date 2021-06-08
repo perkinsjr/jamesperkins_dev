@@ -4,14 +4,14 @@
         <description><![CDATA[James Perkins]]></description>
         <link>https://jamesperkins.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 08 May 2021 18:19:50 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 08 Jun 2021 19:48:24 GMT</lastBuildDate>
         <atom:link href="https://jamesperkins.dev/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[I treat debugging as a murder mystery]]></title>
-            <description><![CDATA[I have spent so much of my career debugging code, whether its Production code in a large scale enterprise applications or in my own personal code. Every time I start debugging I treat it as a murder mystery. ]]></description>
-            <link>https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</guid>
-            <pubDate>Fri, 07 May 2021 00:00:00 GMT</pubDate>
+            <title><![CDATA[Create content to solidify your knowledge]]></title>
+            <description><![CDATA[Creating content on something you just learned such as a youtube video or a blog post is another way to solidify your knowledge. It allows for a greater understanding by teaching another about]]></description>
+            <link>https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</guid>
+            <pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
@@ -19,6 +19,13 @@
             <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</guid>
             <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[I treat debugging as a murder mystery]]></title>
+            <description><![CDATA[I have spent so much of my career debugging code, whether its Production code in a large scale enterprise applications or in my own personal code. Every time I start debugging I treat it as a murder mystery. ]]></description>
+            <link>https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</guid>
+            <pubDate>Fri, 07 May 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
@@ -35,18 +42,11 @@
             <pubDate>Sat, 24 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Create content to solidify your knowledge]]></title>
-            <description><![CDATA[Creating content on something you just learned such as a youtube video or a blog post is another way to solidify your knowledge. It allows for a greater understanding by teaching another about]]></description>
-            <link>https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</guid>
-            <pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>
-            <description><![CDATA[When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra.]]></description>
-            <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</guid>
-            <pubDate>Mon, 27 Jul 2020 04:00:00 GMT</pubDate>
+            <title><![CDATA[Why flag parameters suck]]></title>
+            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
+            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
+            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
@@ -56,11 +56,11 @@
             <pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why flag parameters suck]]></title>
-            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
-            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
-            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
+            <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>
+            <description><![CDATA[When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra.]]></description>
+            <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</guid>
+            <pubDate>Mon, 27 Jul 2020 04:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[NextJS + FaunaDB Crash Course]]></title>
