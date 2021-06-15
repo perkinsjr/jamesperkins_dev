@@ -1,12 +1,10 @@
 import YoutubeVideoPlayer from '@/components/youtubevideoplayer';
 import { Flex, Grid, Heading, Box, Text, useColorMode, SimpleGrid } from '@chakra-ui/react';
 import Image from 'next/image';
+import author from '../public/me.jpg';
 import Seo from '@/components/seo';
 const Index = ({ results }) => {
     const { colorMode } = useColorMode();
-    const myLoader = ({ src, width, quality }) => {
-        return `${src}?w=${width}&q=${quality || 75}`;
-    };
     return (
         <>
             <Seo title="Home | James Perkins" description="Home page for James Perkins" />
@@ -20,12 +18,12 @@ const Index = ({ results }) => {
                 <Grid p={6} columnGap={6} templateColumns="auto 1fr" alignItems="center">
                     <Box display={['none', 'block']}>
                         <Image
-                            loader={myLoader}
-                            src="https://res.cloudinary.com/dub20ptvt/image/upload/v1618489779/me_n7quph.jpg"
-                            alt="James Perkins"
+                            src={author}
                             width={250}
-                            quality={25}
                             height={250}
+                            quality={100}
+                            alt="James Perkins"
+                            placeholder="blur"
                             className="avatar"
                         />
                         <style jsx global>{`
@@ -36,7 +34,7 @@ const Index = ({ results }) => {
                     </Box>
                     <Box>
                         <Heading as="h2" mb={6} size="2xl" textAlign="center">
-                            Hi, I'm James!
+                            Hi, I&apos;m James!
                         </Heading>
                         <Text fontSize="lg" maxWidth="600px">
                             I am a developer who specializes in JamStack Development.
@@ -69,7 +67,8 @@ const Index = ({ results }) => {
                             include FaunaDB, Firebase, NextAuth, WordPress and so much more!
                             <br />
                             <br />
-                            Below are my latest 3 videos, give it a look you won't be disappointed!
+                            Below are my latest 3 videos, give it a look you won&apos;t be
+                            disappointed!
                         </Text>
                     </Box>
                     <SimpleGrid columns={[1, 1, 3]} spacing={8} mt={8}>

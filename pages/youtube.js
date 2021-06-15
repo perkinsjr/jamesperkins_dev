@@ -28,7 +28,7 @@ export default function Youtube({ results }) {
             </Center>
         );
     }
-    if (error) return <div>Sorry, we couldn't load the </div>;
+    if (error) return <div>Sorry, we couldn&apos;t load the </div>;
     const { subscriberCount, viewCount } = data;
 
     return (
