@@ -1,7 +1,8 @@
 import { Box, Text } from "@chakra-ui/layout";
 import Link from "next/link";
 import Image from "next/image";
-
+import { shimmer } from '@components/Icons/Shimmer';
+import { toBase64 } from '@utils/toBase64';
 const PostCard = ({ post }) => {
   function truncateSummary(content) {
     const contentTrunc = content.slice(0, 197).trimEnd();
@@ -27,6 +28,10 @@ const PostCard = ({ post }) => {
               height={250}
               quality={50}
               width={400}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(60, 60),
+            )}`}
             />
             <Box p="6">
               <Box

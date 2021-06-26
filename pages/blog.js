@@ -4,7 +4,6 @@ import BlogPosts from "@/components/blogposts";
 import { Heading, Flex } from "@chakra-ui/react";
 import Seo from "@/components/seo";
 const Blog = (props) => {
-  const { posts } = props;
   const filteredBlogPosts = props.posts
     .sort(
       (a, b) =>

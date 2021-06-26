@@ -6,6 +6,8 @@ import Image from 'next/image';
 import YoutubeVideoPlayer from '@/components/youtubevideoplayer';
 import YouTubeStat from '@/components/youtubestats';
 import Seo from '@/components/seo';
+import { shimmer } from '@components/Icons/Shimmer';
+import { toBase64 } from '@utils/toBase64';
 
 const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -71,6 +73,10 @@ export default function Youtube({ results }) {
                                         width={1280}
                                         height={720}
                                         alt={video.snippet.title}
+                                        placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(60, 60),
+            )}`}
                                     />
                                     <Heading
                                         as="h5"
