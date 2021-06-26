@@ -6,7 +6,7 @@ import Image from 'next/image';
 import YoutubeVideoPlayer from '@/components/youtubevideoplayer';
 import YouTubeStat from '@/components/youtubestats';
 import Seo from '@/components/seo';
-import { shimmer } from '@components/Icons/Shimmer';
+import { shimmer } from '@components/shimmer';
 import { toBase64 } from '@utils/toBase64';
 
 const scrollTop = () => {

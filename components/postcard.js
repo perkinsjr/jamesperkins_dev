@@ -1,7 +1,7 @@
 import { Box, Text } from "@chakra-ui/layout";
 import Link from "next/link";
 import Image from "next/image";
-import { shimmer } from '@components/Icons/Shimmer';
+import { shimmer } from '@components/shimmer';
 import { toBase64 } from '@utils/toBase64';
 const PostCard = ({ post }) => {
   function truncateSummary(content) {
