@@ -7,7 +7,7 @@ import YoutubeVideoPlayer from '@/components/youtubevideoplayer';
 import YouTubeStat from '@/components/youtubestats';
 import Seo from '@/components/seo';
 import { shimmer } from '@/components/shimmer';
-import { toBase64 } from '@utils/toBase64';
+import { toBase64 } from '@/lib/toBase64';
 
 const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
