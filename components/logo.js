@@ -7,11 +7,7 @@ export default function Logo(props) {
   return (
     <Box {...props}>
       <Stack mx={8} isInline>
-        <IconButton
-          aria-label="Toggle dark mode"
-          onClick={toggleColorMode}
-          icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-        ></IconButton>
+        
       </Stack>
     </Box>
   );
