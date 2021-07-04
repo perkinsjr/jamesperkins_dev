@@ -60,7 +60,7 @@ const OptInForm = () => {
       >
         <Box maxW="md" mx="auto">
           <Heading mt="4" fontWeight="extrabold">
-            Get new content every week on your inbox!
+            Get new content every week in your inbox!
           </Heading>
           <Box mt="6">
             <form onSubmit={subscribe}>
