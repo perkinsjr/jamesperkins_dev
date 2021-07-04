@@ -8,7 +8,7 @@ export const shimmer = (w, h) => {
             <stop stop-color="#E883ED" offset="70%" />
           </linearGradient>
         </defs>
-        <rect width="${w}" height="${h}" fill="#E883ED" />
+        <rect width="${w}" height="${h}" fill="#333" />
         <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
         <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
       </svg>`;
