@@ -78,9 +78,6 @@ export default function BlogTemplate(params) {
           </Box>
         </article>
         <Box maxWidth="720px" width="100%" mx="auto" my={6} px={4}>
-          <Heading my={2} as="h4" fontSize="2xl" textAlign="center">
-            Enjoying my content? Sign up for my newsletter!
-          </Heading>
           <OptInForm />
         </Box>
       </Box>

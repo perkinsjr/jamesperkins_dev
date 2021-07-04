@@ -10,6 +10,7 @@ const StyledButton = ({ type, text }) => {
         type={type}
         mt={8}
         width="50%"
+        shadow="md"
         fontWeight="bold"
         fontSize="xl"
         borderRadius="md"
