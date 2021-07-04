@@ -84,10 +84,7 @@ const MenuLinks = ({ isOpen }) => {
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/blog">Blog</MenuItem>
         <MenuItem to="/youtube">YouTube </MenuItem>
-        <MenuItem to="/contact">Contact </MenuItem>
-        <MenuItem to="/newsletter" isLast>
-          Newsletter
-        </MenuItem>
+        <MenuItem to="/contact" isLast >Contact</MenuItem>
       </Stack>
     </Box>
   );
