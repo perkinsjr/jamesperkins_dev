@@ -15,18 +15,7 @@ const Blog = (props) => {
         title="Blog | James Perkins"
         description="Blog posts surrounding the tech industry or thoughts."
       />
-      <Flex
-        maxWidth="1080px"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        mx="auto"
-      >
-        <Heading as="h1" mb={4} textAlign="center">
-          Blog
-        </Heading>
         <BlogPosts allBlogs={filteredBlogPosts} />
-      </Flex>
     </>
   );
 };

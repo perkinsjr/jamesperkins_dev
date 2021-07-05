@@ -4,7 +4,7 @@
         <description><![CDATA[James Perkins]]></description>
         <link>https://jamesperkins.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 04 Jul 2021 20:49:28 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 05 Jul 2021 00:08:31 GMT</lastBuildDate>
         <atom:link href="https://jamesperkins.dev/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Create content to solidify your knowledge]]></title>
@@ -21,25 +21,11 @@
             <pubDate>Fri, 07 May 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
-            <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.The jsconfig.json file allows you to denote things such what module system you are using, enabling type checking]]></description>
-            <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</guid>
-            <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Why I embraced Typescript for development.]]></title>
             <description><![CDATA[I've been very much avoiding using Typescript for quite a while, not because I don't believe in statically typed software, I spent a decade in production Java and was a certified PERL developer. I just never found a reason to use it, being a content creator and Jamstack developer for the past 3 years I have just been using JavaScript without much issue. If I ended up working on a project with typescript I just understood the system coded and moved on. ]]></description>
             <link>https://jamesperkins.dev/post/embracing-typescript</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/embracing-typescript</guid>
             <pubDate>Sat, 26 Jun 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Why flag parameters suck]]></title>
-            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
-            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
-            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Retrieve your last 10 YouTube Videos]]></title>
@@ -49,18 +35,32 @@
             <pubDate>Sat, 24 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why I created Developers Hangout podcast.]]></title>
-            <description><![CDATA[Last month I created a new podcast / livestream called Developers Hangout which is a weekly livestreamed podcast where I hangout with guests and chat for 90 minutes. I thought now would be the time to how this ended up happening and why.]]></description>
-            <link>https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</guid>
-            <pubDate>Sat, 03 Jul 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
             <description><![CDATA[I’ve heard and seen a lot of “What language should I pick first?” Questions in my time as a developer. It’s an interesting question that I seem to have the opposite response to most.]]></description>
             <link>https://jamesperkins.dev/post/pick-a-language-and-do-something</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/pick-a-language-and-do-something</guid>
             <pubDate>Tue, 17 Sep 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
+            <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.The jsconfig.json file allows you to denote things such what module system you are using, enabling type checking]]></description>
+            <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</guid>
+            <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why flag parameters suck]]></title>
+            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
+            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
+            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why I created Developers Hangout podcast.]]></title>
+            <description><![CDATA[Last month I created a new podcast / livestream called Developers Hangout which is a weekly livestreamed podcast where I hangout with guests and chat for 90 minutes. I thought now would be the time to how this ended up happening and why.]]></description>
+            <link>https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</guid>
+            <pubDate>Sat, 03 Jul 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
