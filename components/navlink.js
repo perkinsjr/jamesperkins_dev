@@ -25,7 +25,6 @@ const DesktopNavLink = (props) => {
 }
 
 const MobileNavLink = (props) => {
-  console.log(props.href)
   return (
     
 <NextLink href={props.href} passHref>
