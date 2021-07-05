@@ -1,116 +1,50 @@
-import React from "react";
-import { Link, Box, Flex, Text, Stack, useColorMode } from "@chakra-ui/react";
-import NextLink from "next/link";
-import Logo from "./logo";
+import { Box, Flex, useColorModeValue, VisuallyHidden } from '@chakra-ui/react'
+import { NavContent } from './navcontent'
 
-
-const NavBar = (props) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const { colorMode } = useColorMode();
-  const toggle = () => setIsOpen(!isOpen);
-
+const NavBar = () => {
   return (
-    <NavBarContainer {...props}>
-      <Logo w="100px" color={colorMode === "light" ? "#98199F" : "#E883ED"} />
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
-    </NavBarContainer>
-  );
-};
-
-const CloseIcon = () => {
-  const { colorMode } = useColorMode();
-  return (
-    <Box mx={8}>
-      <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-        <title>Close</title>
-        <path
-          fill={colorMode === "light" ? "#98199F" : "#E883ED"}
-          d="M9.00023 7.58599L13.9502 2.63599L15.3642 4.04999L10.4142 8.99999L15.3642 13.95L13.9502 15.364L9.00023 10.414L4.05023 15.364L2.63623 13.95L7.58623 8.99999L2.63623 4.04999L4.05023 2.63599L9.00023 7.58599Z"
-        />
-      </svg>
-    </Box>
-  );
-};
-
-const MenuIcon = () => {
-  const { colorMode } = useColorMode();
-  return (
-    <Box mx={8}>
-      <svg
-        width="24px"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        fill={colorMode === "light" ? "#98199F" : "#E883ED"}
+    <Box zIndex="10000">
+    <Box as="header" height="16" bg={useColorModeValue('white', 'gray.800')} position="relative">
+      <Box
+        height="100%"
+        maxW="7xl"
+        mx="auto"
+        ps={{
+          base: '6',
+          md: '8',
+        }}
+        pe={{
+          base: '5',
+          md: '0',
+        }}
       >
-        <title>Menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-      </svg>
+        <Flex
+          as="nav"
+          aria-label="Site navigation"
+          align="center"
+          justify="space-between"
+          height="100%"
+        >
+          <Box as="a" href="/" rel="home">
+            <VisuallyHidden>James Perkins</VisuallyHidden>
+          </Box>
+          <NavContent.Desktop
+            display={{
+              base: 'none',
+              md: 'flex',
+            }}
+          />
+          <NavContent.Mobile
+            display={{
+              base: 'flex',
+              md: 'none',
+            }}
+            zIndex="100000000000000"
+          />
+        </Flex>
+      </Box>
     </Box>
-  );
-};
-
-const MenuToggle = ({ toggle, isOpen }) => {
-  return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
-      {isOpen ? <CloseIcon /> : <MenuIcon />}
-    </Box>
-  );
-};
-
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
-  return (
-    <NextLink href={to}>
-      <Link display="block" {...rest}>
-        {children}
-      </Link>
-    </NextLink>
-  );
-};
-
-const MenuLinks = ({ isOpen }) => {
-  return (
-    <Box
-      display={{ base: isOpen ? "block" : "none", md: "block" }}
-      flexBasis={{ base: "100%", md: "auto" }}
-    >
-      <Stack
-        spacing={[4, 8]}
-        align="center"
-        justify={["center", "space-between", "flex-end", "flex-end"]}
-        direction={["column", "row", "row", "row"]}
-        pt={[4, 4, 0, 0]}
-      >
-        <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/blog">Blog</MenuItem>
-        <MenuItem to="/youtube">YouTube </MenuItem>
-        <MenuItem to="/contact" isLast >Contact</MenuItem>
-      </Stack>
-    </Box>
-  );
-};
-
-const NavBarContainer = ({ children, props }) => {
-  const { colorMode } = useColorMode();
-
-  return (
-    <Flex
-      as="nav"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
-      w="100%"
-      mx="auto"
-      my={8}
-      maxWidth="1080px"
-      fontWeight="semibold"
-      bg={"transparent"}
-      color={colorMode === "light" ? "#98199F" : "#E883ED"}
-      {...props}
-    >
-
-      {children}
-    </Flex>
+  </Box>
   );
 };
 
