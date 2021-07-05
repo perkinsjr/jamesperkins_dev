@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useSWR from 'swr';
 import fetcher from '@/lib/fetcher';
-import { Box, Heading, SimpleGrid, Center, Spinner, useColorMode, Button } from '@chakra-ui/react';
+import { Box, Button, Center, Heading, SimpleGrid ,Spinner, Stack, StackDivider } from '@chakra-ui/react'
 import Image from 'next/image';
 import YoutubeVideoPlayer from '@/components/youtubevideoplayer';
 import YouTubeStat from '@/components/youtubestats';
@@ -16,7 +16,6 @@ export default function Youtube({ results }) {
     const { data, error } = useSWR('/api/youtube', fetcher);
     const [playing, setPlaying] = useState(false);
     const [currentVideo, setCurrentVideo] = useState(results[0]);
-    const { colorMode } = useColorMode();
     if (!data) {
         return (
             <Center h="100vh">
@@ -24,7 +23,7 @@ export default function Youtube({ results }) {
                     thickness="4px"
                     speed="0.65s"
                     emptyColor="gray.200"
-                    color={colorMode === 'light' ? '#98199F' : '#E883ED'}
+                    color={'#98199F'}
                     size="xl"
                 />
             </Center>
@@ -40,19 +39,35 @@ export default function Youtube({ results }) {
                 description="Check out my latest videos from YouTube"
             />
             <Box maxWidth="1080px" width="100%" mx="auto" my={4} px={4}>
-                <Box
-                    width="100%"
-                    mt={[0, 8]}
-                    mb={12}
-                    mx="auto"
-                    justifyItems="center"
-                    alignItems="center"
-                    columns={{ sm: 1, lg: 2 }}>
-                    <Center>
-                        <YouTubeStat label="Subscriber Count" number={subscriberCount} />
+            <Box as="section" p="6">
+      <Box
+        maxW={{
+          base: 'xl',
+          md: '7xl',
+        }}
+        mx="auto"
+        px={{
+          base: '6',
+          md: '8',
+        }}
+      >
+        <Box bg='white' p="10" rounded="xl" shadow="lg" border="1px">
+          <Stack
+            spacing="8"
+            justify="space-between"
+            direction={{
+              base: 'column',
+              md: 'row',
+            }}
+            divider={<StackDivider />}
+          >
+        <YouTubeStat label="Subscriber Count" number={subscriberCount} />
                         <YouTubeStat label="View Count" number={viewCount} />
-                    </Center>
-                </Box>
+        
+          </Stack>
+        </Box>
+      </Box>
+    </Box>
                 <Heading as="h1" my={10} textAlign="center">
                     My Latest YouTube Videos
                 </Heading>
