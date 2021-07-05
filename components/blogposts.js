@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, Heading, Text, useColorModeValue as mode } from '@chakra-ui/react';
 import { BlogAuthor } from './blogauthor';
-import { BlogMedia } from './BlogMedia';
-import { BlogMeta } from './BlogMeta';
+import { BlogMedia } from './blogmedia';
+import { BlogMeta } from './blogmeta';
 import Link from 'next/link';
 const BlogPosts = (props) => {
     const { allBlogs } = props;
