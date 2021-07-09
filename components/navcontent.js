@@ -78,7 +78,7 @@ import {
           </NavLink.Desktop>
         ))}
         <HStack spacing="0">
-        <Button as="a" href="https://twitch.tv/jamesperkins"spacing="0" leftIcon={<ImTwitch/>} height="16" rounded="0" colorScheme="purple" minW="10rem">
+        <Button as="a" href="https://twitch.tv/jamesperkins" spacing="0" leftIcon={<ImTwitch/>} height="16" rounded="0" colorScheme="purple" minW="10rem">
           Twitch
         </Button>
         <Button as="a" href="https://youtube.com/c/learntocodewithjames" spacing="0" leftIcon={<ImYoutube/>} height="16" rounded="0" colorScheme="red" minW="10rem">
