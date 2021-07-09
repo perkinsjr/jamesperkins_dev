@@ -23,10 +23,6 @@ import {
       href: '/blog',
     },
     {
-      label: 'Youtube',
-      href: '/youtube',
-    },
-    {
       label: 'Contact',
       href: '/contact',
     },
