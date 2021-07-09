@@ -12,7 +12,7 @@ import {
   import { NavLink } from './navlink'
   import { NavList } from './navlist'
   import { NavListItem } from './navlistitem'
-  import {ImTwitch} from "react-icons/im"
+  import {ImTwitch, ImYoutube} from "react-icons/im"
   const links = [
     {
       label: 'Home',
@@ -60,6 +60,7 @@ import {
               }}
             >
               <NavLink.Mobile href="https://twitch.tv/jamesperkins">Twitch</NavLink.Mobile>
+              <NavLink.Mobile href="https://youtube.com/c/learntocodewithjames">YouTube</NavLink.Mobile>
             </NavListItem>
           </Stack>
         </NavList>
@@ -69,16 +70,23 @@ import {
   
   const DesktopNavContent = (props) => {
     return (
+      <>
       <HStack spacing="8" align="stretch" {...props}>
         {links.map((link, index) => (
           <NavLink.Desktop key={index} href={link.href}>
             {link.label}
           </NavLink.Desktop>
         ))}
-        <Button leftIcon={<ImTwitch/>} height="16" rounded="0" colorScheme="purple" minW="10rem">
+        <HStack spacing="0">
+        <Button spacing="0" leftIcon={<ImTwitch/>} height="16" rounded="0" colorScheme="purple" minW="10rem">
           Twitch
         </Button>
+        <Button spacing="0" leftIcon={<ImYoutube/>} height="16" rounded="0" colorScheme="red" minW="10rem">
+          YouTube
+        </Button>
       </HStack>
+      </HStack>
+      </>
     )
   }
   
