@@ -4,7 +4,7 @@
         <description><![CDATA[James Perkins]]></description>
         <link>https://jamesperkins.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 17 Jul 2021 19:53:35 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Jul 2021 20:10:53 GMT</lastBuildDate>
         <atom:link href="https://jamesperkins.dev/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Create content to solidify your knowledge]]></title>
@@ -21,13 +21,6 @@
             <pubDate>Sat, 26 Jun 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
-            <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.The jsconfig.json file allows you to denote things such what module system you are using, enabling type checking]]></description>
-            <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</guid>
-            <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[I treat debugging as a murder mystery]]></title>
             <description><![CDATA[I have spent so much of my career debugging code, whether its Production code in a large scale enterprise applications or in my own personal code. Every time I start debugging I treat it as a murder mystery. ]]></description>
             <link>https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</link>
@@ -35,11 +28,11 @@
             <pubDate>Fri, 07 May 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
-            <description><![CDATA[I’ve heard and seen a lot of “What language should I pick first?” Questions in my time as a developer. It’s an interesting question that I seem to have the opposite response to most.]]></description>
-            <link>https://jamesperkins.dev/post/pick-a-language-and-do-something</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/pick-a-language-and-do-something</guid>
-            <pubDate>Tue, 17 Sep 2019 00:00:00 GMT</pubDate>
+            <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
+            <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.The jsconfig.json file allows you to denote things such what module system you are using, enabling type checking]]></description>
+            <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</guid>
+            <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Retrieve your last 10 YouTube Videos]]></title>
@@ -49,11 +42,11 @@
             <pubDate>Sat, 24 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why I created Developers Hangout podcast.]]></title>
-            <description><![CDATA[Last month I created a new podcast / livestream called Developers Hangout which is a weekly livestreamed podcast where I hangout with guests and chat for 90 minutes. I thought now would be the time to how this ended up happening and why.]]></description>
-            <link>https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</guid>
-            <pubDate>Sat, 03 Jul 2021 00:00:00 GMT</pubDate>
+            <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
+            <description><![CDATA[I’ve heard and seen a lot of “What language should I pick first?” Questions in my time as a developer. It’s an interesting question that I seem to have the opposite response to most.]]></description>
+            <link>https://jamesperkins.dev/post/pick-a-language-and-do-something</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/pick-a-language-and-do-something</guid>
+            <pubDate>Tue, 17 Sep 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why flag parameters suck]]></title>
@@ -75,6 +68,13 @@
             <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</guid>
             <pubDate>Mon, 27 Jul 2020 04:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why I created Developers Hangout podcast.]]></title>
+            <description><![CDATA[Last month I created a new podcast / livestream called Developers Hangout which is a weekly livestreamed podcast where I hangout with guests and chat for 90 minutes. I thought now would be the time to how this ended up happening and why.]]></description>
+            <link>https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</guid>
+            <pubDate>Sat, 03 Jul 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[NextJS + FaunaDB Crash Course]]></title>

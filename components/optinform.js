@@ -46,23 +46,23 @@ const OptInForm = () => {
     });
   };
   return (
-    <Box as="section"py="12">
+    <Box as="section"py="6">
       <Box
         textAlign="center"
         bg={mode('white', 'gray.800')}
         shadow="lg"
         border="1px"
-        maxW={{ base: 'xl', md: '3xl' }}
+        maxW={{ base: 'lg', md: '2xl' }}
         mx="auto"
-        px={{ base: '6', md: '8' }}
-        py="6"
+        px={{ base: '4', md: '6' }}
+        py="4"
         rounded="lg"
       >
         <Box maxW="md" mx="auto">
           <Heading mt="4" fontWeight="extrabold">
             Get new content every week in your inbox!
           </Heading>
-          <Box mt="6">
+          <Box mt="4">
             <form onSubmit={subscribe}>
               <Stack>
                 <Input

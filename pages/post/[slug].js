@@ -6,6 +6,7 @@ import OptInForm from "@/components/optinform";
 import Seo from "@/components/seo";
 import { getFiles, getFileBySlug } from '@/lib/mdx';
 import Markdown from '@/components/markdown'
+import Comments from "@/components/comments";
 import Prism from "prismjs";
 export default function BlogTemplate(params) {
 
@@ -72,12 +73,16 @@ export default function BlogTemplate(params) {
               height={384}
             />
           </Flex>
-
+          
           <Box width="100%">
             {content}
           </Box>
         </article>
+        <Divider my={4} border="8px"/>
         <Box maxWidth="720px" width="100%" mx="auto" my={6} px={4}>
+        <Comments/>
+        </Box>
+        <Box maxWidth="720px" width="100%" mx="auto" my={6} >
           <OptInForm />
         </Box>
       </Box>
