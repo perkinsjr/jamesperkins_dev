@@ -3,6 +3,7 @@ import { BlogAuthor } from './blogauthor';
 import { BlogMedia } from './blogmedia';
 import { BlogMeta } from './blogmeta';
 import Link from 'next/link';
+import { Fragment } from 'react';
 const BlogPosts = (props) => {
     const { allBlogs } = props;
     function truncateSummary(content) {
@@ -10,7 +11,7 @@ const BlogPosts = (props) => {
         return `${contentTrunc}...`;
     }
     return (
-        <Box as="section" py="24" width="100%" maxW="1200px">
+        <Box as="section" py="24" width="100%" maxW="1200px" mx="auto">
             <Box
                 mx="auto"
                 px={{
@@ -30,7 +31,7 @@ const BlogPosts = (props) => {
                     {allBlogs.length > 0 &&
                         allBlogs.map((post) => {
                           return(
-                            <>
+                            <Fragment key={post.slug}>
                                 <Link href={{ pathname: `/post/${post.slug}` }} passHref>
                                     <a>
                                         <BlogMedia alt={post.title} src={post.hero_image} />
@@ -57,7 +58,7 @@ const BlogPosts = (props) => {
                                         role="Developer Advocate"
                                     />
                                 </Flex>
-                            </>
+                                </Fragment>
                           )
 })}
                 </Grid>

@@ -4,28 +4,14 @@
         <description><![CDATA[James Perkins]]></description>
         <link>https://jamesperkins.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 09 Jul 2021 22:57:41 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Jul 2021 19:53:35 GMT</lastBuildDate>
         <atom:link href="https://jamesperkins.dev/feed.xml" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[I treat debugging as a murder mystery]]></title>
-            <description><![CDATA[I have spent so much of my career debugging code, whether its Production code in a large scale enterprise applications or in my own personal code. Every time I start debugging I treat it as a murder mystery. ]]></description>
-            <link>https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</guid>
-            <pubDate>Fri, 07 May 2021 00:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[Create content to solidify your knowledge]]></title>
             <description><![CDATA[Creating content on something you just learned such as a youtube video or a blog post is another way to solidify your knowledge. It allows for a greater understanding by teaching another about]]></description>
             <link>https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</guid>
             <pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
-            <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.The jsconfig.json file allows you to denote things such what module system you are using, enabling type checking]]></description>
-            <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</guid>
-            <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why I embraced Typescript for development.]]></title>
@@ -35,6 +21,20 @@
             <pubDate>Sat, 26 Jun 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[Using jsconfig for faster nextjs development]]></title>
+            <description><![CDATA[I spend a lot of time in NextJS projects, my whole YouTube channel is built around it. One small change to my workflow is adding a jsconfig.json file to each project.The jsconfig.json file allows you to denote things such what module system you are using, enabling type checking]]></description>
+            <link>https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/jsconfig-for-faster-nextjs-config</guid>
+            <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[I treat debugging as a murder mystery]]></title>
+            <description><![CDATA[I have spent so much of my career debugging code, whether its Production code in a large scale enterprise applications or in my own personal code. Every time I start debugging I treat it as a murder mystery. ]]></description>
+            <link>https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/i-treat-debugging-as-a-murder-mystery</guid>
+            <pubDate>Fri, 07 May 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
             <description><![CDATA[I’ve heard and seen a lot of “What language should I pick first?” Questions in my time as a developer. It’s an interesting question that I seem to have the opposite response to most.]]></description>
             <link>https://jamesperkins.dev/post/pick-a-language-and-do-something</link>
@@ -42,11 +42,11 @@
             <pubDate>Tue, 17 Sep 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Why flag parameters suck]]></title>
-            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
-            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
-            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
+            <title><![CDATA[Retrieve your last 10 YouTube Videos]]></title>
+            <description><![CDATA[I will show how to retrieve the last 10 videos from YouTube, so people never have to leave your digital garden. I have been retrieving the data from YouTube for a while, I have a live stat update on my site so you can see the latest subscriber and view count]]></description>
+            <link>https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</guid>
+            <pubDate>Sat, 24 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why I created Developers Hangout podcast.]]></title>
@@ -56,18 +56,18 @@
             <pubDate>Sat, 03 Jul 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[Why flag parameters suck]]></title>
+            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
+            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
+            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Why I removed analytics and and ended up with NextJs]]></title>
             <description><![CDATA[On a early Saturday morning of my first day of Staycation I decided to fix my blog performance and usability.I first decided its time to get rid of analytics, advertisements and other shit that no one really needs]]></description>
             <link>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</guid>
             <pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Retrieve your last 10 YouTube Videos]]></title>
-            <description><![CDATA[I will show how to retrieve the last 10 videos from YouTube, so people never have to leave your digital garden. I have been retrieving the data from YouTube for a while, I have a live stat update on my site so you can see the latest subscriber and view count]]></description>
-            <link>https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</guid>
-            <pubDate>Sat, 24 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>
