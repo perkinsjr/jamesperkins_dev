@@ -9,10 +9,11 @@ const Seo = (props) => {
     title: "James Perkins – Developer, writer, creator.",
     description: `James Perkins home, blog and Youtube content.`,
     image:
-      "https://res.cloudinary.com/dub20ptvt/image/upload/c_thumb,w_200,g_face/v1618489779/me_n7quph.jpg",
+      "https://res.cloudinary.com/dub20ptvt/image/upload/v1627762885/learn_to_code_home_bufala.png",
     type: "website",
     ...customMeta,
   };
+  console.log(props)
   return (
     <Head>
       <title>{meta.title}</title>

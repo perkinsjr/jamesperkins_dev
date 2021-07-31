@@ -15,7 +15,7 @@ const Index = () => {
       };
     return (
         <>
-            <Seo title="Home | James Perkins" description="Home page for James Perkins" image="/learn_to_code_home.PNG" />
+            <Seo title="Home | James Perkins" description="Home page for James Perkins"/>
             <Box as="section" bg={'gray.50'} pt="16" pb="24">
       <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
         <Stack
