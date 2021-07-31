@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "prismjs/themes/prism-tomorrow.css";
 import theme from "../utils/theme";
 import Header from "@/components/header"
+import Footer from "@/components/footer"
 import { ChakraProvider } from "@chakra-ui/react";
 
 export function AppThemeProvider({ children }) {
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
     <AppThemeProvider>
       <Header />
       <Component {...pageProps} />
+      <Footer/>
     </AppThemeProvider>
   );
 }
