@@ -1,4 +1,4 @@
-import { Link } from '@chakra-ui/react'
+import { chakra } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
 export const CustomLink = (props) => {
@@ -9,10 +9,27 @@ export const CustomLink = (props) => {
   if (isInternalLink) {
     return (
       <NextLink href={href} passHref>
-        <Link {...props} />
+        <chakra.a
+      fontWeight="bold"
+      fontSize="lg"
+      color="primary.400"
+      w="full"
+      _hover={{
+        color: 'primary.200',
+      }}
+      {...props}
+    />
       </NextLink>
     )
   }
 
-  return <Link isExternal {...props} />
+  return <chakra.a
+  fontWeight="bold"
+  fontSize="lg"
+  color="primary.400"
+  w="full"
+  _hover={{
+    color: 'primary.200',
+  }}
+ isExternal {...props} />
 }
