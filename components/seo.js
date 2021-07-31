@@ -13,7 +13,6 @@ const Seo = (props) => {
     type: "website",
     ...customMeta,
   };
-  console.log(props)
   return (
     <Head>
       <title>{meta.title}</title>
