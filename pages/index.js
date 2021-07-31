@@ -38,7 +38,7 @@ const Index = () => {
               Learn to Code with James
             </Heading>
             <Text color={'gray.600'} mt="4" fontSize="lg" fontWeight="medium">
-              James provides web development educational courses for both beginners and intermediate developers. Almost all of James' tutorials and courses can be found for free on YouTube.
+              James provides web development educational courses for both beginners and intermediate developers. Almost all of the tutorials and courses can be found for free on YouTube.
 
             </Text>
             <Text color={'gray.600'} mt="4" fontSize="lg" fontWeight="medium">
