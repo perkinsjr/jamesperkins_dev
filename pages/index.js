@@ -15,7 +15,7 @@ const Index = () => {
       };
     return (
         <>
-            <Seo title="Home | James Perkins" description="Home page for James Perkins"/>
+            <Seo title="Home | James Perkins" description="Home page for James Perkins" image="https://res.cloudinary.com/dub20ptvt/image/upload/q_auto:best/learn_to_code_home_bufala.png"/>
             <Box as="section" bg={'gray.50'} pt="16" pb="24">
       <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
         <Stack

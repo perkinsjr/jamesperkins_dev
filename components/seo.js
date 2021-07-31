@@ -9,7 +9,7 @@ const Seo = (props) => {
     title: "James Perkins – Developer, writer, creator.",
     description: `James Perkins home, blog and Youtube content.`,
     image:
-      "https://res.cloudinary.com/dub20ptvt/image/upload/v1627762885/learn_to_code_home_bufala.png",
+      "https://res.cloudinary.com/dub20ptvt/image/upload/q_auto:best/learn_to_code_home_bufala.png",
     type: "website",
     ...customMeta,
   };
