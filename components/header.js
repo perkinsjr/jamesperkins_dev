@@ -4,10 +4,9 @@ import { NavContent } from './navcontent'
 const NavBar = () => {
   return (
     <Box zIndex="10000">
-    <Box as="header" height="16" bg={useColorModeValue('white', 'gray.800')} position="relative">
+    <Box as="header" height="16" bg={'white'} position="relative">
       <Box
         height="100%"
-        //maxW="7xl"
         mx="auto"
         ps={{
           base: '6',
