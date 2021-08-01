@@ -46,7 +46,9 @@ const Index = () => {
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing="4" mt="8">
             <NextLink href="/blog" passHref>
-              <Button as="a" size="lg" minW="210px" bg="primary.400" color="white" height="14" px="8">
+              <Button as="a" size="lg" minW="210px" bg="primary.400" color="white" height="14" px="8"  _hover={{
+    bg: 'primary.100', color:"black",
+  }}>
                 To Blog posts
               </Button>
             </NextLink>
