@@ -11,7 +11,7 @@ const BlogPosts = (props) => {
         return `${contentTrunc}...`;
     }
     return (
-        <Box as="section" py="24" width="100%" maxW="1200px" mx="auto">
+        <Box as="section" py={[4,24]} width="100%" maxW="1200px" mx="auto">
             <Box
                 mx="auto"
                 px={{
