@@ -1,6 +1,5 @@
 import {
     Box,
-    Button,
     Center,
     HStack,
     Stack,
@@ -12,7 +11,6 @@ import {
   import { NavLink } from './navlink'
   import { NavList } from './navlist'
   import { NavListItem } from './navlistitem'
-  import {ImTwitch, ImYoutube} from "react-icons/im"
   const links = [
     {
       label: 'Home',
@@ -25,6 +23,14 @@ import {
     {
       label: 'Contact',
       href: '/contact',
+    },
+    {
+      label: 'YouTube',
+      href: 'https://youtube.com/c/learntocodewithjames',
+    },
+    {
+      label: 'Twitch',
+      href: 'https://twitch.tv/jamesperkins',
     },
   ]
   
@@ -59,8 +65,7 @@ import {
                 flex: '1',
               }}
             >
-              <NavLink.Mobile href="https://twitch.tv/jamesperkins">Twitch</NavLink.Mobile>
-              <NavLink.Mobile href="https://youtube.com/c/learntocodewithjames">YouTube</NavLink.Mobile>
+
             </NavListItem>
           </Stack>
         </NavList>
@@ -71,20 +76,12 @@ import {
   const DesktopNavContent = (props) => {
     return (
       <>
-      <HStack spacing="8" align="stretch" {...props}>
+      <HStack spacing="8" align="stretch" {...props} px={4}>
         {links.map((link, index) => (
           <NavLink.Desktop key={index} href={link.href}>
             {link.label}
           </NavLink.Desktop>
         ))}
-        <HStack spacing="0">
-        <Button as="a" href="https://twitch.tv/jamesperkins" spacing="0" leftIcon={<ImTwitch/>} height="16" rounded="0" colorScheme="purple" minW="10rem">
-          Twitch
-        </Button>
-        <Button as="a" href="https://youtube.com/c/learntocodewithjames" spacing="0" leftIcon={<ImYoutube/>} height="16" rounded="0" colorScheme="red" minW="10rem">
-          YouTube
-        </Button>
-      </HStack>
       </HStack>
       </>
     )

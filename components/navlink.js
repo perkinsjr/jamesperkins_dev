@@ -1,51 +1,87 @@
-import NextLink from 'next/link'
-import { chakra, useColorModeValue } from '@chakra-ui/react'
-import * as React from 'react'
+import NextLink from 'next/link';
+import { chakra } from '@chakra-ui/react';
+import * as React from 'react';
 
 const DesktopNavLink = (props) => {
-  return (
-    <NextLink href={props.href} passHref>
-    <chakra.a
-      fontWeight="medium"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      borderBottom="2px"
-      borderColor="transparent"
-      transition="all 0.2s"
-      _hover={{
-        borderColor: 'currentcolor',
-        color: useColorModeValue('primary.100', 'blue.200'),
-      }}
-      {...props}
-      
-    />
-    </NextLink>
-  )
-}
+    const { href } = props;
+    const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
+
+    if (isInternalLink) {
+        return (
+            <NextLink href={href} passHref>
+                <chakra.a
+                    fontSize="lg"
+                    color="primary.400"
+                    w="full"
+                    _hover={{
+                        color: 'primary.200'
+                    }}
+                    {...props}
+                />
+            </NextLink>
+        );
+    }
+
+    return (
+        <chakra.a
+            target="_blank"
+            rel="noopener noreferrer"
+            fontSize="lg"
+            color="primary.400"
+            w="full"
+            _hover={{
+                color: 'primary.200'
+            }}
+            isExternal
+            {...props}
+        />
+    );
+};
 
 const MobileNavLink = (props) => {
-  return (
-    
-<NextLink href={props.href} passHref>
-    <chakra.a
-      display="block"
-      textAlign="center"
-      fontWeight="bold"
-      py="5"
-      fontSize="lg"
-      color="white"
-      w="full"
-      _hover={{
-        bg: 'blackAlpha.200',
-      }}
-      {...props}
-    />
-   </NextLink>
-  )
-}
+    const { href } = props;
+    const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
+
+    if (isInternalLink) {
+        return (
+            <NextLink href={href} passHref>
+                <chakra.a
+                    display="block"
+                    textAlign="center"
+                    fontWeight="bold"
+                    py="5"
+                    fontSize="lg"
+                    color="white"
+                    w="full"
+                    _hover={{
+                        color: 'blackAlpha.200'
+                    }}
+                    {...props}
+                />
+            </NextLink>
+        );
+    }
+
+    return (
+        <chakra.a
+            target="_blank"
+            rel="noopener noreferrer"
+            display="block"
+            textAlign="center"
+            fontWeight="bold"
+            py="5"
+            fontSize="lg"
+            color="white"
+            w="full"
+            _hover={{
+                color: 'blackAlpha.200'
+            }}
+            {...props}
+        />
+    );
+};
 
 export const NavLink = {
-  Mobile: MobileNavLink,
-  Desktop: DesktopNavLink,
-}
+    Mobile: MobileNavLink,
+    Desktop: DesktopNavLink
+};
