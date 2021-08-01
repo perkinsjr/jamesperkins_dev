@@ -16,12 +16,12 @@ const Index = () => {
     return (
         <>
             <Seo title="Home | James Perkins" description="Home page for James Perkins" image="https://res.cloudinary.com/dub20ptvt/image/upload/q_auto:best/learn_to_code_home_bufala.png"/>
-            <Box as="section" bg={'gray.50'} pt="16" pb="24">
+            <Box as="section" bg={'gray.50'} pt={[2,16]} pb={{base: '16', sm:'8' }}>
       <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
         <Stack
           direction={{ base: 'column', lg: 'row' }}
           spacing={{ base: '3rem', lg: '2rem' }}
-          mt="8"
+          mt={[2,8]}
           align={{ lg: 'center' }}
           justify="space-between"
         >
@@ -38,7 +38,7 @@ const Index = () => {
               Learn to Code with James
             </Heading>
             <Text color={'gray.600'} mt="4" fontSize="lg" fontWeight="medium">
-              James provides web development educational courses for both beginners and intermediate developers. Almost all of the tutorials and courses can be found for free on YouTube.
+              James provides web development educational courses for both beginners and intermediate developers, the focus of the content is JavaScript and JAMStack. Almost all of the tutorials and courses can be found for free on YouTube.
 
             </Text>
             <Text color={'gray.600'} mt="4" fontSize="lg" fontWeight="medium">
