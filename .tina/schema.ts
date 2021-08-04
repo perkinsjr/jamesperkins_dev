@@ -34,7 +34,7 @@ export default defineSchema({
           },
         },
         {
-          type: "string",
+          type: 'image',
           label: "Image",
           name: "hero_image",
         },

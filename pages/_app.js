@@ -5,6 +5,7 @@ import Footer from '@/components/footer';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from "../utils/theme";
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
+import { TinaCloudCloudinaryMediaStore } from 'next-tinacms-cloudinary'
 import '../styles/globals.css';
 
 export function AppThemeProvider({ children }) {
@@ -23,6 +24,7 @@ const App = ({ Component, pageProps }) => {
                         isLocalClient={Boolean(
                             Number(process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT ?? true)
                         )}
+                        mediaStore={TinaCloudCloudinaryMediaStore}
                         cmsCallback={cms => {
                                             import('react-tinacms-editor').then((field)=>{
                                               cms.plugins.add(field.MarkdownFieldPlugin)

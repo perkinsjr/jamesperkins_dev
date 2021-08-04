@@ -47,7 +47,7 @@
           ]
         },
         {
-          "type": "string",
+          "type": "image",
           "label": "Image",
           "name": "hero_image",
           "namespace": [
