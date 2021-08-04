@@ -20,7 +20,7 @@ async function generate() {
       const frontmatter = matter(content);
       feed.item({
         title: frontmatter.data.title,
-        url: 'https://jamesperkins.dev/post/' + name.replace(/\.mdx?/, ''),
+        url: 'https://jamesperkins.dev/post/' + name.replace(/\.md?/, ''),
         date: frontmatter.data.date,
         description: frontmatter.data.excerpt
       });

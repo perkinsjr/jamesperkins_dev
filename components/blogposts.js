@@ -4,8 +4,8 @@ import { BlogMedia } from './blogmedia';
 import { BlogMeta } from './blogmeta';
 import Link from 'next/link';
 import { Fragment } from 'react';
-const BlogPosts = (props) => {
-    const { allBlogs } = props;
+const BlogPosts = (allPosts, ) => {
+    const { allBlogs } = allPosts;
     function truncateSummary(content) {
         const contentTrunc = content.slice(0, 197).trimEnd();
         return `${contentTrunc}...`;

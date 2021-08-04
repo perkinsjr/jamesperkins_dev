@@ -1,59 +1,56 @@
-import React, { useEffect } from "react"
-import hydrate from 'next-mdx-remote/hydrate'
 import { Box, HStack, Heading, Flex, Text, Divider, Avatar } from "@chakra-ui/react";
 import Image from "next/image";
 import OptInForm from "@/components/optinform";
 import Seo from "@/components/seo";
-import { getFiles, getFileBySlug } from '@/lib/mdx';
-import Markdown from '@/components/markdown'
+import { staticRequest,getStaticPropsForTina } from "tinacms";
 import Comments from "@/components/comments";
-import Prism from "prismjs";
-export default function BlogTemplate(params) {
+import ReactMarkdown from "react-markdown"
+import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+export default function Post({ data }) {
+  const {
+    author,
+    date,
+    title,
+    excerpt,
+    hero_image,
+    body
+  } = data.getPostsDocument.data
 
-  const { frontMatter, mdxSource } = params;
-  const content = hydrate(mdxSource, { components: Markdown })
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
+  };
   function reformatDate(fullDate) {
     const date = new Date(fullDate);
     return date.toDateString().slice(4);
   }
 
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
-
-  if (!frontMatter) return <></>;
-
+  if (!body) return <></>;
+   
   return (
     <>
       <Seo
-        title={`${frontMatter.title} – James Perkins`}
-        excerpt={frontMatter.summary}
-        image={frontMatter.hero_image}
-        date={new Date(frontMatter.date).toISOString()}
+        title={`${title} – James Perkins`}
+        excerpt={excerpt}
+        image={hero_image}
+        date={reformatDate(date)}
         type="article"
       />
       <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb={4} px={4}>
         <article>
           <Heading as="h2" size="3xl" textAlign="center" my={8}>
-            {frontMatter.title}
+            {title}
           </Heading>
           <Box my={[2, 4]}>
 
             <HStack my={4} spacing={4} >
               <Avatar name="James Perkins" src="https://res.cloudinary.com/dub20ptvt/image/upload/v1618489779/me_n7quph.jpg" />
-              <Text size="sm">James Perkins</Text>
+              <Text size="sm">{author}</Text>
 
               <Text size="md" fontWeight="normal">
-                {reformatDate(frontMatter.date)}
+              {reformatDate(date)}
               </Text>
               <Box justifyContent="flex-end" alignContent="flex-end">
-                <Text size="md" fontWeight="normal">
-                  {frontMatter.readingTime.text}
-                </Text>
               </Box>
             </HStack>
             <Divider />
@@ -66,8 +63,8 @@ export default function BlogTemplate(params) {
           >
             <Image
               loader={myLoader}
-              src={frontMatter.hero_image}
-              alt={frontMatter.hero_image}
+              src={hero_image}
+              alt={hero_image}
               width={720}
               quality={50}
               height={384}
@@ -75,7 +72,10 @@ export default function BlogTemplate(params) {
           </Flex>
           
           <Box width="100%">
-            {content}
+          <ReactMarkdown
+  components={ChakraUIRenderer()}
+  escapeHtml={false}
+>{body}</ReactMarkdown>;
           </Box>
         </article>
         <Divider my={4} border="8px"/>
@@ -91,19 +91,55 @@ export default function BlogTemplate(params) {
 }
 
 export async function getStaticPaths() {
-  const posts = await getFiles('post');
-  return {
-    paths: posts.map((p) => ({
-      params: {
-        slug: p.replace(/\.mdx/, '')
+  const postsListData = await staticRequest({
+    query: `
+      query {
+        getPostsList {
+          edges {
+            node {
+            sys {
+              filename
+              }
+            }
+          }
       }
+    }
+    `,
+    variables: {},
+  })
+  return {
+    paths: postsListData.getPostsList.edges.map(edge => ({
+      params: { slug: edge.node.sys.filename },
     })),
-    fallback: false
-  };
+    fallback: false,
+  }
 }
 
-export async function getStaticProps({ params }) {
-  const post = await getFileBySlug('post', params.slug);
-
-  return { props: { ...post } };
+export const getStaticProps = async ({ params }) => {
+  const { slug } = params
+  const variables = { relativePath: `${slug}.md` }
+  const tinaProps = await getStaticPropsForTina({
+    query: `query BlogPostQuery($relativePath: String!) {
+      getPostsDocument(relativePath: $relativePath) {
+        data {
+          author
+          date
+          title
+          excerpt
+          hero_image
+          tags
+          published
+          body
+        }
+      }
+    }
+    `,
+    variables: variables,
+  })
+  return {
+    props: {
+      ...tinaProps, // {data: {...}, query: '...', variables: {...}}
+      slug,
+    },
+  }
 }
