@@ -4,7 +4,6 @@ import {
   Heading,
   HStack,
   Stack,
-  useColorModeValue as mode,
 } from '@chakra-ui/react'
 export default function YouTubeStat({ label, number }) {
 
@@ -14,7 +13,7 @@ export default function YouTubeStat({ label, number }) {
 
   return (
         <Stack mx="auto" spacing="3">
-          <Box color={mode('gray.600', 'gray.400')} fontWeight="medium">
+          <Box color='gray.600' fontWeight="medium">
             {label}
           </Box>
           <HStack spacing="3">

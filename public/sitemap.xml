@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+        <loc>https://jamesperkins.dev/admin</loc>
+    </url>
+
+    <url>
         <loc>https://jamesperkins.dev/blog</loc>
     </url>
 
@@ -10,6 +14,10 @@
 
     <url>
         <loc>https://jamesperkins.dev</loc>
+    </url>
+
+    <url>
+        <loc>https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</loc>
     </url>
 
     <url>
@@ -41,11 +49,11 @@
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/post/Retrieve-your-last-10-youtube-videos</loc>
+        <loc>https://jamesperkins.dev/post/ssg-vs-srr</loc>
     </url>
 
     <url>
-        <loc>https://jamesperkins.dev/post/ssg-vs-srr</loc>
+        <loc>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</loc>
     </url>
 
     <url>
@@ -54,10 +62,6 @@
 
     <url>
         <loc>https://jamesperkins.dev/post/why-i-created-developers-hangout-podcast</loc>
-    </url>
-
-    <url>
-        <loc>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</loc>
     </url>
 
     <url>

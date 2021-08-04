@@ -4,7 +4,6 @@ import {
     HStack,
     Stack,
     StackDivider,
-    useColorModeValue as mode,
   } from '@chakra-ui/react'
   
   export const BlogMeta = (props) => {
@@ -30,7 +29,7 @@ import {
         <HStack
           divider={<StackDivider h="3" alignSelf="center" />}
           spacing="3"
-          color={mode('gray.600', 'gray.400')}
+          color='gray.600'
         >
           {tags.map((tag, index) => (
             <Box key={index}>{tag}</Box>

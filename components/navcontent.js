@@ -4,7 +4,6 @@ import {
     HStack,
     Stack,
     StackDivider,
-    useColorModeValue,
     useDisclosure,
   } from '@chakra-ui/react'
   import { HiOutlineMenu, HiX } from 'react-icons/hi'
@@ -42,7 +41,7 @@ import {
           as="button"
           p="2"
           fontSize="2xl"
-          color={useColorModeValue('gray.600', 'gray.400')}
+          color='gray.600'
           onClick={onToggle}
         >
           {isOpen ? <HiX /> : <HiOutlineMenu />}

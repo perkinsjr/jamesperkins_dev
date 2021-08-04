@@ -1,7 +1,6 @@
 import React from "react";
 import { getAllFilesFrontMatter } from '@/lib/mdx';
 import BlogPosts from "@/components/blogposts";
-import { Heading, Flex } from "@chakra-ui/react";
 import Seo from "@/components/seo";
 const Blog = (props) => {
   const filteredBlogPosts = props.posts
