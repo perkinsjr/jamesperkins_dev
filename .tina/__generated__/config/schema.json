@@ -4,7 +4,6 @@
       "label": "Blog Posts",
       "name": "posts",
       "path": "data/post",
-      "format": "markdown",
       "fields": [
         {
           "type": "string",

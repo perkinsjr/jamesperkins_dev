@@ -7,7 +7,6 @@ export default defineSchema({
       label: "Blog Posts",
       name: "posts",
       path: "data/post",
-      format: "md",
       fields: [
         {
           type: "string",
