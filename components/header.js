@@ -1,4 +1,4 @@
-import { Box, Flex, useColorModeValue, VisuallyHidden } from '@chakra-ui/react'
+import { Box, Flex, VisuallyHidden } from '@chakra-ui/react'
 import { NavContent } from './navcontent'
 
 const NavBar = () => {

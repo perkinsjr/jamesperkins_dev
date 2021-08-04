@@ -7,7 +7,6 @@ import {
   Input,
   Stack,
   Text,
-  useColorModeValue as mode,
 } from '@chakra-ui/react'
 import StyledButton from "./button";
 
@@ -49,7 +48,7 @@ const OptInForm = () => {
     <Box as="section"py="6">
       <Box
         textAlign="center"
-        bg={mode('white', 'gray.800')}
+        bg='white'
         shadow="lg"
         border="1px"
         maxW={{ base: 'lg', md: '2xl' }}
@@ -82,7 +81,7 @@ const OptInForm = () => {
         />
               </Stack>
             </form>
-            <Text color={mode('gray.600', 'gray.400')} fontSize="sm" mt="5">
+            <Text color='gray.600' fontSize="sm" mt="5">
               I only send you relevant content
             </Text>
             {form.state === "error" ? (

@@ -1,6 +1,6 @@
 import { ButtonGroup, IconButton } from '@chakra-ui/react'
 import * as React from 'react'
-import { FaGithub, FaLinkedin, FaTwitch, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaTwitch, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 export const SocialMediaLinks = (props) => (
   <ButtonGroup variant="ghost" color="gray.600" {...props}>

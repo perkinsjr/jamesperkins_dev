@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Heading, Text, useColorModeValue as mode } from '@chakra-ui/react';
+import { Box, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import { BlogAuthor } from './blogauthor';
 import { BlogMedia } from './blogmedia';
 import { BlogMeta } from './blogmeta';
@@ -45,7 +45,7 @@ const BlogPosts = (allPosts, ) => {
                                         </Heading>
                                         <Text
                                             fontSize="lg"
-                                            color={mode('gray.600', 'gray.400')}
+                                            color='gray.600'
                                             lineHeight="tall">
                                             {truncateSummary(post.excerpt)}
                                         </Text>
