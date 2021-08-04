@@ -75,7 +75,7 @@ export default function Post({ data }) {
           <ReactMarkdown
   components={ChakraUIRenderer()}
   escapeHtml={false}
->{body}</ReactMarkdown>;
+>{body}</ReactMarkdown>
           </Box>
         </article>
         <Divider my={4} border="8px"/>
