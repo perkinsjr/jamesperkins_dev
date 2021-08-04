@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 
-import { Box, Heading, Input, Textarea, useColorMode } from "@chakra-ui/react";
+import { Box, Heading, Input, Textarea } from "@chakra-ui/react";
 import StyledButton from "./button";
 
 const ContactForm = () => {
-  const { colorMode } = useColorMode();
   useEffect(() => {
     const kwesScript = document.createElement("script");
     kwesScript.setAttribute("src", "https://kwes.io/v2/kwes-script.js");
@@ -32,7 +31,7 @@ const ContactForm = () => {
           id="email"
           type="email"
           name="email"
-          focusBorderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
+          focusBorderColor={"#98199F"}
           mt={8}
           placeholder="batman@gmail.com"
           color="white"
@@ -42,7 +41,7 @@ const ContactForm = () => {
           id="message"
           name="message"
           placeholder="Tell me what you are looking for"
-          focusBorderColor={colorMode === "light" ? "#98199F" : "#E883ED"}
+          focusBorderColor={"#98199F"}
           mt={8}
           required
         />
