@@ -8,12 +8,14 @@ import ExitTina from "@/components/exitTina"
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 import { TinaCloudCloudinaryMediaStore } from 'next-tinacms-cloudinary'
 import '../styles/globals.css';
+import { useRouter } from 'next/router';
 
 export function AppThemeProvider({ children }) {
     return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
 }
 
 const App = ({ Component, pageProps }) => {    
+    const router = useRouter();
     return (
         <>
             <TinaEditProvider
@@ -37,7 +39,7 @@ const App = ({ Component, pageProps }) => {
                                              */
                         onNewDocument: ({ collection: { slug }, breadcrumbs }) => {
                                               const relativeUrl = `/post/${breadcrumbs}`;
-                                              return (window.location.href = relativeUrl);
+                                              return (router.push(relativeUrl));
                                             },
                                             /**
                                              * Only allows documents to be created to the `Blog Posts` Collection
