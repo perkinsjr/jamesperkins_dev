@@ -9,9 +9,6 @@
           "type": "string",
           "label": "Author",
           "name": "author",
-          "ui": {
-            "defaultItem": "James Perkins"
-          },
           "namespace": [
             "posts",
             "author"
@@ -22,9 +19,6 @@
           "dateFormat": "MM/DD/YY",
           "label": "Date",
           "name": "date",
-          "ui": {
-            "default": "08/01/2021"
-          },
           "namespace": [
             "posts",
             "date"
@@ -34,9 +28,6 @@
           "type": "string",
           "label": "Title",
           "name": "title",
-          "ui": {
-            "default": "A New Blog Post"
-          },
           "namespace": [
             "posts",
             "title"
@@ -47,8 +38,7 @@
           "label": "Excerpt",
           "name": "excerpt",
           "ui": {
-            "component": "textarea",
-            "default": "A new excerpt"
+            "component": "textarea"
           },
           "namespace": [
             "posts",
@@ -59,9 +49,6 @@
           "type": "image",
           "label": "Image",
           "name": "hero_image",
-          "ui": {
-            "default": "https://res.cloudinary.com/dub20ptvt/image/upload/v1626563323/Adding_comments_iswtsn.png"
-          },
           "namespace": [
             "posts",
             "hero_image"
@@ -72,12 +59,6 @@
           "name": "tags",
           "type": "string",
           "list": true,
-          "ui": {
-            "default": [
-              "Tutorial",
-              "Next"
-            ]
-          },
           "namespace": [
             "posts",
             "tags"
@@ -87,9 +68,6 @@
           "type": "boolean",
           "label": "Published",
           "name": "published",
-          "ui": {
-            "default": false
-          },
           "namespace": [
             "posts",
             "published"
@@ -101,8 +79,7 @@
           "name": "body",
           "isBody": true,
           "ui": {
-            "component": "markdown",
-            "default": "A super long body"
+            "component": "markdown"
           },
           "namespace": [
             "posts",

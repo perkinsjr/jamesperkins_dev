@@ -8,64 +8,42 @@
         {
           "type": "string",
           "label": "Author",
-          "name": "author",
-          "ui": {
-            "defaultItem": "James Perkins"
-          }
+          "name": "author"
         },
         {
           "type": "datetime",
           "dateFormat": "MM/DD/YY",
           "label": "Date",
-          "name": "date",
-          "ui": {
-            "default": "08/01/2021"
-          }
+          "name": "date"
         },
         {
           "type": "string",
           "label": "Title",
-          "name": "title",
-          "ui": {
-            "default": "A New Blog Post"
-          }
+          "name": "title"
         },
         {
           "type": "string",
           "label": "Excerpt",
           "name": "excerpt",
           "ui": {
-            "component": "textarea",
-            "default": "A new excerpt"
+            "component": "textarea"
           }
         },
         {
           "type": "image",
           "label": "Image",
-          "name": "hero_image",
-          "ui": {
-            "default": "https://res.cloudinary.com/dub20ptvt/image/upload/v1626563323/Adding_comments_iswtsn.png"
-          }
+          "name": "hero_image"
         },
         {
           "label": "Tags",
           "name": "tags",
           "type": "string",
-          "list": true,
-          "ui": {
-            "default": [
-              "Tutorial",
-              "Next"
-            ]
-          }
+          "list": true
         },
         {
           "type": "boolean",
           "label": "Published",
-          "name": "published",
-          "ui": {
-            "default": false
-          }
+          "name": "published"
         },
         {
           "type": "string",
@@ -73,8 +51,7 @@
           "name": "body",
           "isBody": true,
           "ui": {
-            "component": "markdown",
-            "default": "A super long body"
+            "component": "markdown"
           }
         }
       ]

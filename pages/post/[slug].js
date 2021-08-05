@@ -7,7 +7,20 @@ import Comments from "@/components/comments";
 import ReactMarkdown from "react-markdown"
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 
+const defaultPost = {
+  author: 'James Perkins',
+  date: '08/01/2021',
+  title: 'A New Blog Post',
+  excerpt: 'A new excerpt',
+  hero_image:
+      'https://res.cloudinary.com/dub20ptvt/image/upload/v1626563323/Adding_comments_iswtsn.png',
+  tags: ['Tutorial', 'Next'],
+  published: false,
+  body: 'A super long body'
+};
+
 export default function Post({ data }) {
+  if(data?.getPostsDocument?.data){
   const {
     author,
     date,
@@ -16,7 +29,16 @@ export default function Post({ data }) {
     hero_image,
     body
   } = data?.getPostsDocument?.data;
-
+  } else{
+    const {
+      author,
+    date,
+    title,
+    excerpt,
+    hero_image,
+    body
+    } = defaultPost;
+  }
   const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
   };
@@ -25,30 +47,28 @@ export default function Post({ data }) {
     return date.toDateString().slice(4);
   }
 
-  if (!body) return <></>;
-   
   return (
     <>
       <Seo
-        title={`${title} – James Perkins`}
-        excerpt={excerpt}
-        image={hero_image}
-        date={reformatDate(date)}
+        title={`${data?.getPostsDocument?.data?.title || defaultPost.title} – James Perkins`}
+        excerpt={data?.getPostsDocument?.data?.excerpt || defaultPost.excerpt}
+        image={data?.getPostsDocument?.data?.hero_image || defaultPost.hero_image}
+        date={reformatDate(data?.getPostsDocument?.data?.date || defaultPost.date)}
         type="article"
       />
       <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb={4} px={4}>
         <article>
           <Heading as="h2" size="3xl" textAlign="center" my={8}>
-            {title}
+            {data?.getPostsDocument?.data?.title || defaultPost.title}
           </Heading>
           <Box my={[2, 4]}>
 
             <HStack my={4} spacing={4} >
               <Avatar name="James Perkins" src="https://res.cloudinary.com/dub20ptvt/image/upload/v1618489779/me_n7quph.jpg" />
-              <Text size="sm">{author}</Text>
+              <Text size="sm">{data?.getPostsDocument?.data?.author || defaultPost.author}</Text>
 
               <Text size="md" fontWeight="normal">
-              {reformatDate(date)}
+              {reformatDate(data?.getPostsDocument?.data?.date || defaultPost.date)}
               </Text>
               <Box justifyContent="flex-end" alignContent="flex-end">
               </Box>
@@ -63,8 +83,8 @@ export default function Post({ data }) {
           >
             <Image
               loader={myLoader}
-              src={hero_image}
-              alt={hero_image}
+              src={data?.getPostsDocument?.data?.hero_image || defaultPost.hero_image}
+              alt={data?.getPostsDocument?.data?.hero_image || defaultPost.hero_image}
               width={720}
               quality={50}
               height={384}
@@ -75,7 +95,7 @@ export default function Post({ data }) {
           <ReactMarkdown
   components={ChakraUIRenderer()}
   escapeHtml={false}
->{body}</ReactMarkdown>
+>{data?.getPostsDocument?.data?.body || defaultPost.body}</ReactMarkdown>
           </Box>
         </article>
         <Divider my={4} border="8px"/>
