@@ -11,4 +11,6 @@ tags:
   - tutorial
 published: false
 ---
-## Here is my body of text.
+## What is developer relations?
+
+In my opinon developer relations is a way of marketing, educating and more! 
