@@ -54,8 +54,8 @@ const App = ({ Component, pageProps }) => {
                         {(livePageProps) => (
                             <AppThemeProvider>
                                 <Header />
-                                <ExitTina/>
                                 <Component {...livePageProps} />
+                                <ExitTina/>
                                 <Footer />
                             </AppThemeProvider>
                         )}
