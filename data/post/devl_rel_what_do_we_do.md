@@ -11,16 +11,14 @@ tags:
   - tutorial
 published: false
 ---
-## What is developer relations?
+## What is developer Relations?
 
-In my opinion developer relations is a way of marketing, educating and more!  
+Developer relation is doing cool stuff!  
   
-This is incredible that you can edit and have context.  
-With one click I can have this published ready for your eye.  
-  
-**What about some bold text?**
+**Maybe some bold text to really highlight?**
+
+Prefer straight markdown?
 
 ```
-for loops are hard
-don't you think'?
+Maybe some code could go here?
 ```
