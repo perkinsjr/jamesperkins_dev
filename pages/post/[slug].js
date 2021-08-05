@@ -111,7 +111,7 @@ export async function getStaticPaths() {
     paths: postsListData.getPostsList.edges.map(edge => ({
       params: { slug: edge.node.sys.filename },
     })),
-    fallback: false,
+    fallback: true,
   }
 }
 
