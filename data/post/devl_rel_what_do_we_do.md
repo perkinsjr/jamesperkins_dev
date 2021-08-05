@@ -13,4 +13,14 @@ published: false
 ---
 ## What is developer relations?
 
-In my opinon developer relations is a way of marketing, educating and more!
+In my opinion developer relations is a way of marketing, educating and more!  
+  
+This is incredible that you can edit and have context.  
+With one click I can have this published ready for your eye.  
+  
+**What about some bold text?**
+
+```
+for loops are hard
+don't you think'?
+```
