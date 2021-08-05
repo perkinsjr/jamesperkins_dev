@@ -8,13 +8,14 @@ const Blog = (props) => {
       (a, b) =>
         Number(new Date(b.date)) - Number(new Date(a.date))
     );
+  const publishedPosts = filteredBlogPosts.filter(d => d.published);
   return (
     <>
       <Seo
         title="Blog | James Perkins"
         description="Blog posts surrounding the tech industry or thoughts."
       />
-        <BlogPosts allBlogs={filteredBlogPosts} />
+        <BlogPosts allBlogs={publishedPosts} />
     </>
   );
 };
