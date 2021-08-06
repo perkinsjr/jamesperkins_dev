@@ -13,3 +13,16 @@ published: false
 ## What is Developer Relations?
 
 Developers relations / advocacy is a role that is a mix of Sales, Marketing, Developer and Educator. Our role at any company is too encourage developers to adopt a platform, but, more importantly in my opinion is making developers successful. 
+
+### What do developers relations do?
+
+Each dev rel might have different goals but for me and quite a few people I know in the space do the following week to week:
+
+1. Check GitHub issues
+2. Communicate via Discord, forums, Slack and Twitter.
+3. Create content through YouTube, Twitch, Blog posts
+4. Update guides and documentation 
+5. Feed the feedback loop machine
+6. Test new features to be up to date 
+7. Collaborate with others 
+8. Conferences 
