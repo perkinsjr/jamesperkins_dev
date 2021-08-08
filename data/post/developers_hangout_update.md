@@ -17,6 +17,7 @@ hero_image: >-
 tags:
   - developers hangout
   - podcast
+published: true
 ---
 The Developers Hangout podcast has been rocking and rolling for almost two months. I've had some fantastic guests and have some even greater ones coming in the future.
 
