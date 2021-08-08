@@ -13,7 +13,7 @@ excerpt: >-
   sustainable, as only a few of the thousands of developers in the world could
   be available at 3.30PM EST.
 hero_image: >-
-  http://res.cloudinary.com/dub20ptvt/image/upload/v1628455828/Developers_Hangout_Update_kwfwf3.png
+  https://res.cloudinary.com/dub20ptvt/image/upload/v1628455828/Developers_Hangout_Update_kwfwf3.png
 tags:
   - developers hangout
   - podcast
