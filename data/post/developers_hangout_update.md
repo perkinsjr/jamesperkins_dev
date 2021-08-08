@@ -24,7 +24,7 @@ When I first started Developers Hangout podcast, I wanted it to be a live show t
 
 ### What is happening now?
 
-The Developers Hangout podcast is going to go from a Livestreamed show to prerecorded. It is also getting it's own YouTube Channel, so people can watch the episodes as they wish without filling my own YouTube channel of podcast episodes.
+The Developers Hangout podcast is going to go from a Livestreamed show to prerecorded. It is also getting it's own YouTube Channel, so people can watch the episodes as they wish without filling my own [YouTube channel](https://www.youtube.com/channel/UCYdDqh_PytPOGznQ1RxzW8g) of podcast episodes.
 
 The show now has it's own [website](https://developershangoutpodcast.com/) which you can listen to the audio versions of and find show notes and links to the developers projects or socials. 
 
@@ -32,4 +32,4 @@ The show now has it's own [website](https://developershangoutpodcast.com/) which
 
 Well first leave a review if you have listened to the show on Apple podcast or whevever you listen to the show! If you aren't listening, how about considering checking it out, we have had some interesting stories so far and I think you'd learn a lot. 
 
-Considering support both the YouTube Channel and Podcast via Buy Me a Coffee. 
+Considering support both the YouTube Channel and Podcast via [Buy Me a Coffee](https://www.buymeacoffee.com/jamesperkins). 
