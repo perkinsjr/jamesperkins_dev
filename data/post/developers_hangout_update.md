@@ -1,6 +1,6 @@
 ---
 author: James Perkins
-date: 'Sat, 07 Aug 2021 00:00:00 GMT'
+date: 'Mon, 09 Aug 2021 00:00:00 GMT'
 title: Developers Hangout Podcast Update
 excerpt: >-
   The Developers Hangout podcast has been rocking and rolling for almost two
