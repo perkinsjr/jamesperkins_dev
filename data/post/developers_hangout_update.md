@@ -31,7 +31,7 @@ The show now has it's own [website](https://developershangoutpodcast.com/) which
 
 ### What can you do to support me?
 
-Well first leave a review if you have listened to the show on Apple podcast or whevever you listen to the show! If you aren't listening, how about considering checking it out, we have had some interesting stories so far and I think you'd learn a lot.
+Well first leave a review if you have listened to the show on Apple podcast or wherever you listen to the show! If you aren't listening, how about considering checking it out, we have had some interesting stories so far and I think you'd learn a lot.
 
 Considering support both the YouTube Channel and Podcast via [Buy Me a Coffee](https://www.buymeacoffee.com/jamesperkins).
 
