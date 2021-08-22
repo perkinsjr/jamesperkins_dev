@@ -15,6 +15,7 @@ excerpt: >-
 hero_image: >-
   https://res.cloudinary.com/dub20ptvt/image/upload/v1628455828/Developers_Hangout_Update_kwfwf3.png
 tags:
+  - update
   - developers hangout
   - podcast
 published: true
