@@ -4,7 +4,6 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '../utils/theme';
-import ExitTina from '@/components/exitTina';
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 import { TinaCloudCloudinaryMediaStore } from 'next-tinacms-cloudinary';
 import '../styles/globals.css';
@@ -53,7 +52,6 @@ const App = ({ Component, pageProps }) => {
                             <AppThemeProvider>
                                 <Header />
                                 <Component {...livePageProps} />
-                                <ExitTina />
                                 <Footer />
                             </AppThemeProvider>
                         )}
