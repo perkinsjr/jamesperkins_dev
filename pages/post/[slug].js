@@ -8,7 +8,7 @@ import Comments from '@/components/comments';
 import ReactMarkdown from 'react-markdown';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 
-export default function Post({ data }) {
+export default function Post(props) {
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`;
     };
@@ -20,16 +20,16 @@ export default function Post({ data }) {
     return (
         <>
             <Seo
-                title={data?.getPostsDocument?.data?.title || ''}
-                excerpt={data?.getPostsDocument?.data?.excerpt || ''}
-                image={data?.getPostsDocument?.data?.hero_image || ''}
-                date={reformatDate(data?.getPostsDocument?.data?.date) || ''}
+                title={props.data?.getPostsDocument?.data?.title}
+                excerpt={props.data?.getPostsDocument?.data?.excerpt}
+                image={props.data?.getPostsDocument?.data?.hero_image}
+                date={reformatDate(props.data?.getPostsDocument?.data?.date)}
                 type="article"
             />
             <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb={4} px={4}>
                 <article>
                     <Heading as="h2" size="3xl" textAlign="center" my={8}>
-                        {data?.getPostsDocument?.data?.title || ''}
+                        {props.data?.getPostsDocument?.data?.title}
                     </Heading>
                     <Box my={[2, 4]}>
                         <HStack my={4} spacing={4}>
@@ -37,10 +37,10 @@ export default function Post({ data }) {
                                 name="James Perkins"
                                 src="https://res.cloudinary.com/dub20ptvt/image/upload/v1618489779/me_n7quph.jpg"
                             />
-                            <Text size="sm">{data?.getPostsDocument?.data?.author || ''}</Text>
+                            <Text size="sm">{props.data?.getPostsDocument?.data?.author}</Text>
 
                             <Text size="md" fontWeight="normal">
-                                {reformatDate(data?.getPostsDocument?.data?.date || '')}
+                                {reformatDate(props.data?.getPostsDocument?.data?.date)}
                             </Text>
                             <Box justifyContent="flex-end" alignContent="flex-end"></Box>
                         </HStack>
@@ -49,8 +49,8 @@ export default function Post({ data }) {
                     <Flex as="figure" alignContent="center" justifyContent="center" mx="auto">
                         <Image
                             loader={myLoader}
-                            src={data?.getPostsDocument?.data?.hero_image || ''}
-                            alt={data?.getPostsDocument?.data?.hero_image || ''}
+                            src={props.data?.getPostsDocument?.data?.hero_image}
+                            alt={props.data?.getPostsDocument?.data?.hero_image}
                             width={720}
                             quality={50}
                             height={384}
@@ -59,7 +59,7 @@ export default function Post({ data }) {
 
                     <Box width="100%">
                         <ReactMarkdown components={ChakraUIRenderer()} escapeHtml={false}>
-                            {data?.getPostsDocument?.data?.body || ''}
+                            {props.data?.getPostsDocument?.data?.body}
                         </ReactMarkdown>
                     </Box>
                 </article>
