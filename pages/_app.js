@@ -3,10 +3,10 @@ import { TinaEditProvider } from 'tinacms/dist/edit-state';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { ChakraProvider } from '@chakra-ui/react';
-import theme from "../utils/theme";
-import ExitTina from "@/components/exitTina"
+import theme from '../utils/theme';
+import ExitTina from '@/components/exitTina';
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
-import { TinaCloudCloudinaryMediaStore } from 'next-tinacms-cloudinary'
+import { TinaCloudCloudinaryMediaStore } from 'next-tinacms-cloudinary';
 import '../styles/globals.css';
 import { useRouter } from 'next/router';
 
@@ -14,7 +14,7 @@ export function AppThemeProvider({ children }) {
     return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
 }
 
-const App = ({ Component, pageProps }) => {    
+const App = ({ Component, pageProps }) => {
     const router = useRouter();
     return (
         <>
@@ -28,34 +28,32 @@ const App = ({ Component, pageProps }) => {
                             Number(process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT ?? true)
                         )}
                         mediaStore={TinaCloudCloudinaryMediaStore}
-                        cmsCallback={cms => {
-                                            import('react-tinacms-editor').then((field)=>{
-                                              cms.plugins.add(field.MarkdownFieldPlugin)
-                                              })
-                                        }}
+                        cmsCallback={(cms) => {
+                            import('react-tinacms-editor').then((field) => {
+                                cms.plugins.add(field.MarkdownFieldPlugin);
+                            });
+                        }}
                         documentCreatorCallback={{
-                                            /**
-                                             * After a new document is created, redirect to its location
-                                             */
-                        onNewDocument: ({ collection: { slug }, breadcrumbs }) => {
-                                              const relativeUrl = `/post/${breadcrumbs}`;
-                                              return (router.push(relativeUrl));
-                                            },
-                                            /**
-                                             * Only allows documents to be created to the `Blog Posts` Collection
-                                             */
-                                            filterCollections: (options) => {
-                                              return options.filter(
-                                                (option) => option.label === "Blog Posts"
-                                              );
-                                            },
-                                          }}                                        
+                            /**
+                             * After a new document is created, redirect to its location
+                             */
+                            onNewDocument: ({ breadcrumbs }) => {
+                                const relativeUrl = `/post/${breadcrumbs}`;
+                                return router.push(relativeUrl);
+                            },
+                            /**
+                             * Only allows documents to be created to the `Blog Posts` Collection
+                             */
+                            filterCollections: (options) => {
+                                return options.filter((option) => option.label === 'Blog Posts');
+                            }
+                        }}
                         {...pageProps}>
                         {(livePageProps) => (
                             <AppThemeProvider>
                                 <Header />
                                 <Component {...livePageProps} />
-                                <ExitTina/>
+                                <ExitTina />
                                 <Footer />
                             </AppThemeProvider>
                         )}
