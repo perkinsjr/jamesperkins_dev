@@ -1,4 +1,5 @@
 import { Box, HStack, Heading, Flex, Text, Divider, Avatar } from '@chakra-ui/react';
+import { LoadingSpinner } from "@/components/loadingSpinner";
 import Image from 'next/image';
 import OptInForm from '@/components/optinform';
 import Seo from '@/components/seo';
@@ -15,7 +16,7 @@ export default function Post({ data }) {
         const date = new Date(fullDate);
         return date.toDateString().slice(4);
     }
-
+    if (props.data && props.data.getPostsDocument) {
     return (
         <>
             <Seo
@@ -71,7 +72,11 @@ export default function Post({ data }) {
                 </Box>
             </Box>
         </>
+  
     );
+    }else{
+        return <LoadingSpinner/>;
+    }
 }
 
 export async function getStaticPaths() {
@@ -95,7 +100,7 @@ export async function getStaticPaths() {
         paths: postsListData.getPostsList.edges.map((edge) => ({
             params: { slug: edge.node.sys.filename }
         })),
-        fallback: true
+        fallback: 'blocking'
     };
 }
 
