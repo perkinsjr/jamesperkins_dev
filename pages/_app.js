@@ -37,15 +37,18 @@ const App = ({ Component, pageProps }) => {
                              * After a new document is created, redirect to its location
                              */
                             onNewDocument: ({ breadcrumbs }) => {
-                                return router.push(`https://jamesperkins.dev/post/${breadcrumbs}`);
+                              const relativeUrl = `/post/${breadcrumbs.join("/")}`;
+                              return (window.location.href = relativeUrl);
                             },
                             /**
                              * Only allows documents to be created to the `Blog Posts` Collection
                              */
                             filterCollections: (options) => {
-                                return options.filter((option) => option.label === 'Blog Posts');
-                            }
-                        }}
+                              return options.filter(
+                                (option) => option.label === "Blog Posts"
+                              );
+                            },
+                          }}
                         {...pageProps}>
                         {(livePageProps) => (
                             <AppThemeProvider>
