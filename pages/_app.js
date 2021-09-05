@@ -37,7 +37,7 @@ const App = ({ Component, pageProps }) => {
                              * After a new document is created, redirect to its location
                              */
                             onNewDocument: ({ breadcrumbs }) => {
-                                return window.location.asssign(`https://jamesperkins.dev/post/${breadcrumbs}`);
+                                return router.push(`https://jamesperkins.dev/post/${breadcrumbs}`);
                             },
                             /**
                              * Only allows documents to be created to the `Blog Posts` Collection
