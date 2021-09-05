@@ -16,7 +16,7 @@ export default function Post(props) {
         const date = new Date(fullDate);
         return date.toDateString().slice(4);
     }
-    if (props.data && props.data.getPostsDocument) {
+    if (props.data && props.data?.getPostsDocument?.data) {
     return (
         <>
             <Seo
