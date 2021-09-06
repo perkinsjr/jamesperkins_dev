@@ -1,4 +1,9 @@
-import { Box, HStack, Heading, Flex, Text, Divider, Avatar } from '@chakra-ui/react';
+import { Box, HStack, Heading, Flex, Text, Divider, Avatar,Code ,Icon,
+    IconButton,
+    useClipboard,
+    useTheme,
+  } from "@chakra-ui/react";
+import {HiClipboardCopy,HiClipboardCheck} from "react-icons/hi"
 import { LoadingSpinner } from "@/components/loadingSpinner";
 import Image from 'next/image';
 import OptInForm from '@/components/optinform';
@@ -7,8 +12,82 @@ import { staticRequest, getStaticPropsForTina } from 'tinacms';
 import Comments from '@/components/comments';
 import ReactMarkdown from 'react-markdown';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
-
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import atomOneDark from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
 export default function Post(props) {
+    const theme = useTheme();
+    const CopyButton = ({ codeString }) => {
+        const { hasCopied, onCopy } = useClipboard(codeString);
+      
+        return (
+          <IconButton
+            size="sm"
+            colorScheme="blackAlpha"
+            variant="outline"
+            icon={
+              <Icon
+                as={hasCopied ? HiClipboardCheck : HiClipboardCopy}
+                height={5}
+                width={5}
+                color="white"
+                aria-hidden="true"
+              />
+            }
+            onClick={onCopy}
+            aria-hidden={hasCopied ? "Copied" : "Copy"}
+          />
+        );
+      };
+    const CodeBlock = ({ children, ...rest }) => {
+        
+        if(rest.inline){
+            return(<Code>{children}</Code>)
+        }
+        return (
+    <Box position="relative" width={{base:"100vw", md: "inherit"}}>
+      <SyntaxHighlighter
+        wrapLongLines 
+        language={rest.className?.replace("language-", "")}
+        style={atomOneDark}
+        customStyle={{
+            marginTop: 0,
+            marginBottom: 0,
+            padding: `${theme.space["12"]} ${theme.space["4"]} ${theme.space["4"]}`,
+            fontSize: theme.fontSizes["sm"],
+            borderRadius: theme.radii["md"],
+          }}
+       
+      >
+        {children}
+      </SyntaxHighlighter>
+      <Flex
+        position="absolute"
+        top={2}
+        insetX={4}
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Text
+          as="span"
+          textColor="gray.500"
+          fontSize="xs"
+          fontWeight="medium"
+          textTransform="uppercase"
+          letterSpacing="wide"
+        >
+          {rest.className?.replace("language-", "")}
+        </Text>
+        <CopyButton codeString={children} />
+      </Flex>
+    </Box>
+
+        );
+    };
+
+    const custom = {
+        code: CodeBlock,
+    };
+
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`;
     };
@@ -56,12 +135,9 @@ export default function Post(props) {
                             height={384}
                         />
                     </Flex>
-
-                    <Box width="100%">
-                        <ReactMarkdown components={ChakraUIRenderer()} escapeHtml={false}>
+                        <ReactMarkdown components={ChakraUIRenderer(custom)} escapeHtml={false}>
                             {props.data?.getPostsDocument?.data?.body}
                         </ReactMarkdown>
-                    </Box>
                 </article>
                 <Divider my={4} border="8px" />
                 <Box maxWidth="720px" width="100%" mx="auto" my={6} px={4}>

@@ -4,8 +4,15 @@
         <description><![CDATA[James Perkins]]></description>
         <link>https://jamesperkins.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 20 Aug 2021 21:34:04 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 Sep 2021 17:44:45 GMT</lastBuildDate>
         <atom:link href="https://jamesperkins.dev/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Create content to solidify your knowledge]]></title>
+            <description><![CDATA[Creating content on something you just learned such as a youtube video or a blog post is another way to solidify your knowledge. It allows for a greater understanding by teaching another about]]></description>
+            <link>https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</guid>
+            <pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Adding Comments To My Blog]]></title>
             <description><![CDATA[Comments are important to a blog, people love to engage but I did not want to pay for a service, or invade my readers with ads or tracking.]]></description>
@@ -21,13 +28,6 @@ When I first started Developers Hangout podcast, I wanted it to be a live show t
             <link>https://jamesperkins.dev/post/developers_hangout_update</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/developers_hangout_update</guid>
             <pubDate>Mon, 09 Aug 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Create content to solidify your knowledge]]></title>
-            <description><![CDATA[Creating content on something you just learned such as a youtube video or a blog post is another way to solidify your knowledge. It allows for a greater understanding by teaching another about]]></description>
-            <link>https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/create-content-to-solidify-your-knowledge</guid>
-            <pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Developer Relations what do we do?]]></title>
@@ -66,6 +66,20 @@ When I first started Developers Hangout podcast, I wanted it to be a live show t
             <pubDate>Sat, 24 Apr 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[Why flag parameters suck]]></title>
+            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
+            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
+            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>
+            <description><![CDATA[When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra.]]></description>
+            <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</link>
+            <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</guid>
+            <pubDate>Mon, 27 Jul 2020 04:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[SSG VS SSR]]></title>
             <description><![CDATA[The words SSG and SSR get tossed about so frequently in the JAMStack world, today we are going to look at what they mean and what they do]]></description>
             <link>https://jamesperkins.dev/post/ssg-vs-srr</link>
@@ -85,20 +99,6 @@ When I first started Developers Hangout podcast, I wanted it to be a live show t
             <link>https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</link>
             <guid isPermaLink="true">https://jamesperkins.dev/post/why-I-removed-analytics-and-used-nextjs</guid>
             <pubDate>Fri, 03 Apr 2020 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Why flag parameters suck]]></title>
-            <description><![CDATA[When coding people tend to use flag parameters to drive their functions, without considering that they absolutely suck! They cause more trouble when a you write complex functions or a codebase that is large in nature, because the readability is just terrible let me explain.]]></description>
-            <link>https://jamesperkins.dev/post/why-flag-parameters-suck</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/why-flag-parameters-suck</guid>
-            <pubDate>Sat, 17 Apr 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Why you don't need to be a mathematics genius to be a developer.]]></title>
-            <description><![CDATA[When you first start thinking about becoming a developer, one of the things you might hear is you need to be a math(s) wizz. I am here to tell you that a small number of developers need the mathematics outside of algebra.]]></description>
-            <link>https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</link>
-            <guid isPermaLink="true">https://jamesperkins.dev/post/you-dont-need-to-be-a-math-genius</guid>
-            <pubDate>Mon, 27 Jul 2020 04:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[NextJS + FaunaDB Crash Course]]></title>
