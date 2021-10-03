@@ -2291,10 +2291,10 @@
   resolved "https://registry.yarnpkg.com/@sambego/storybook-styles/-/storybook-styles-1.0.0.tgz#4f840ee26dd0b25dcb803a75caa42e16071dcaae"
   integrity sha512-n0SqZwDewUDRaStEcoNMiYy9qovaLVStsh4Gb2dc2LLiG3IIK0UXdeR1N7puVuRihJq/192uOyGPCjZ/NAteuA==
 
-"@tinacms/auth@^0.50.0":
-  version "0.50.0"
-  resolved "https://registry.yarnpkg.com/@tinacms/auth/-/auth-0.50.0.tgz#07b05cc4f79d7c442269cb371df29297078a3174"
-  integrity sha512-C4LQALN+eJqyrnEVmgB2Ee/kpZWdIGPZ2CuAdA0VHtOiuUovBasH3ut4/WjcgwJz9itzAT9b51raSMgZ9XUgXw==
+"@tinacms/auth@^0.50.1":
+  version "0.50.1"
+  resolved "https://registry.yarnpkg.com/@tinacms/auth/-/auth-0.50.1.tgz#47ee8fd6fb235de07d30802076391a9221f9270e"
+  integrity sha512-lXlH2Y+ffRAHejvw2TGUU+LO+R5MBYcaxb7uE9dr5jgVURCqRRVLiuwSz4o8WgfwUb5cni+wFHCZVHjqT3e0kQ==
 
 "@tinacms/cli@^0.52.1":
   version "0.52.2"
@@ -8629,10 +8629,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next-tinacms-cloudinary@^3.1.1:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/next-tinacms-cloudinary/-/next-tinacms-cloudinary-3.2.3.tgz#5224582e26860b0e32646a9b276e4a6e0fa8ebf8"
-  integrity sha512-z5588aevbXI8YVrhsdBdg4UVQjEi6G91NJaSdJ+IqczhiFuB44A2FoaHvfBxMt4ASQULcWAw+4FAZ13bHpmGiw==
+next-tinacms-cloudinary@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/next-tinacms-cloudinary/-/next-tinacms-cloudinary-3.2.5.tgz#e1a248a057b69f5647608c1ce92a4192a82109fb"
+  integrity sha512-H0Wqe0itDr28Y7i5r/L7tMwB3u6Zzv8XkQnjM7t+PdotEEaY0dNtFpEr9yB+FrtdrGNN/X+7gd3SNCDlw+0ECQ==
   dependencies:
     cloudinary "^1.25.2"
     multer "^1.4.2"

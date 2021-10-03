@@ -32,7 +32,6 @@ const DesktopNavLink = (props) => {
             _hover={{
                 color: 'primary.200'
             }}
-            isExternal
             {...props}
         />
     );

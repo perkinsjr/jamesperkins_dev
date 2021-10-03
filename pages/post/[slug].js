@@ -45,7 +45,7 @@ export default function Post(props) {
             return(<Code colorScheme="purple">{children}</Code>)
         }
         return (
-    <Box position="relative"  width="50vw">
+    <Box position="relative" width={["100vw","50vw"]}>
       <SyntaxHighlighter
         wrapLongLines 
         language={rest.className?.replace("language-", "")}
@@ -169,7 +169,7 @@ export default function Post(props) {
                             height={384}
                         />
                     </Flex>
-                        <ReactMarkdown components={ChakraUIRenderer(custom)} escapeHtml={false}>
+                        <ReactMarkdown components={ChakraUIRenderer(custom)}>
                             {props.data?.getPostsDocument?.data?.body}
                         </ReactMarkdown>
                 </article>
