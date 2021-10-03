@@ -15,6 +15,7 @@ import ReactMarkdown from 'react-markdown';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import atomOneDark from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
+import ErrorPage from "../404";
 export default function Post(props) {
     const theme = useTheme();
     const CopyButton = ({ codeString }) => {
@@ -185,7 +186,7 @@ export default function Post(props) {
   
     );
     }else{
-        return <LoadingSpinner/>;
+        return(<ErrorPage/>)
     }
 }
 
