@@ -5,7 +5,6 @@ import { Box, HStack, Heading, Flex, Text, Divider, Avatar,Code ,Icon,
     Link,
   } from "@chakra-ui/react";
 import {HiClipboardCopy,HiClipboardCheck} from "react-icons/hi"
-import { LoadingSpinner } from "@/components/loadingSpinner";
 import Image from 'next/image';
 import OptInForm from '@/components/optinform';
 import Seo from '@/components/seo';
@@ -130,7 +129,7 @@ export default function Post(props) {
         const date = new Date(fullDate);
         return date.toDateString().slice(4);
     }
-    if (props.data && props.data?.getPostsDocument?.data) {
+    if (props.data && props.data.getPostsDocument) {
     return (
         <>
             <Seo
@@ -238,7 +237,7 @@ export const getStaticProps = async ({ params }) => {
     });
     return {
         props: {
-            ...tinaProps, // {data: {...}, query: '...', variables: {...}}
+            ...tinaProps,
             slug
         }
     };
