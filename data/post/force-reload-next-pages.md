@@ -7,7 +7,7 @@ excerpt: >+
   couple ways you can do this! 
 
 hero_image: >-
-  https://res.cloudinary.com/dub20ptvt/image/upload/v1619300077/jsconfig_for_faster_NextJS_development_1_d14bul.png
+  http://res.cloudinary.com/dub20ptvt/image/upload/v1633284008/force-page-reload_rqi48d.webp
 tags:
   - tutorial
 published: false
