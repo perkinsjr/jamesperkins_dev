@@ -2,6 +2,7 @@ import { Box, HStack, Heading, Flex, Text, Divider, Avatar,Code ,Icon,
     IconButton,
     useClipboard,
     useTheme,
+    Link,
   } from "@chakra-ui/react";
 import {HiClipboardCopy,HiClipboardCheck} from "react-icons/hi"
 import { LoadingSpinner } from "@/components/loadingSpinner";
@@ -41,10 +42,10 @@ export default function Post(props) {
     const CodeBlock = ({ children, ...rest }) => {
         
         if(rest.inline){
-            return(<Code>{children}</Code>)
+            return(<Code colorScheme="purple">{children}</Code>)
         }
         return (
-    <Box position="relative" width={{base:"100vw", md: "inherit"}}>
+    <Box position="relative"  width="50vw">
       <SyntaxHighlighter
         wrapLongLines 
         language={rest.className?.replace("language-", "")}
@@ -52,6 +53,7 @@ export default function Post(props) {
         customStyle={{
             marginTop: 0,
             marginBottom: 0,
+            width:"100%",
             padding: `${theme.space["12"]} ${theme.space["4"]} ${theme.space["4"]}`,
             fontSize: theme.fontSizes["sm"],
             borderRadius: theme.radii["md"],
@@ -80,12 +82,44 @@ export default function Post(props) {
         <CopyButton codeString={children} />
       </Flex>
     </Box>
-
         );
     };
 
+    const CustomLink = ({children,href}) => {
+      console.log(children)
+      return (
+        <Link
+          textDecoration="underline"
+          fontWeight="bold"
+          transition=".3s"
+          pos="relative"
+          fontSize="1rem"
+          _hover={{
+            color: "#E883ED",
+            _after: {
+              w: "100%",
+            }
+          }}
+          _after={{
+            content: "''",
+            height: "2px",
+            bgColor: "#E883ED",
+            position: "absolute",
+            left: "0",
+            bottom: "-3px",
+            transition: ".3s",
+            w: "0"
+          }}
+          href={href}
+        >
+          {children}
+        </Link>
+      )
+    }
+
     const custom = {
         code: CodeBlock,
+        a: CustomLink
     };
 
     const myLoader = ({ src, width, quality }) => {
