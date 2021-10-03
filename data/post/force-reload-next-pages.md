@@ -7,7 +7,7 @@ excerpt: >+
   couple ways you can do this! 
 
 hero_image: >-
-  http://res.cloudinary.com/dub20ptvt/image/upload/v1633284008/force-page-reload_rqi48d.webp
+  https://res.cloudinary.com/dub20ptvt/image/upload/v1633284008/force-page-reload_rqi48d.webp
 tags:
   - tutorial
 published: false
