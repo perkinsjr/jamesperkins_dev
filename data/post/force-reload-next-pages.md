@@ -1,6 +1,6 @@
 ---
 author: James Perkins
-date: 'Mon, 04 Oct 2021 00:00:00 GMT'
+date: 'Tue, 05 Oct 2021 00:00:00 GMT'
 title: Force Reload Next.js Pages
 excerpt: >+
   Sometimes you need to just force reload a page in Next.js, lets look at a
@@ -25,7 +25,7 @@ export default function myComponent() {
 
 const router = useRouter()
 
-router.reload(window.location.pathname)
+router.reload()
 }
 ```
 
@@ -36,7 +36,7 @@ There are on occasion where you might be out of a component, such as a utility o
 ```javascript
 import Router from 'next/router'
 
-Router.reload(window.location.pathname)
+Router.reload()
 ```
 
 This will force the reload but without the hook, allowing you to do it wherever you need it outside of component function.
