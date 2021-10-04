@@ -11,6 +11,7 @@ const DesktopNavLink = (props) => {
             <NextLink href={href} passHref>
                 <chakra.a
                     fontSize="lg"
+                    fontWeight="semibold"
                     color="primary.400"
                     w="full"
                     _hover={{
@@ -27,6 +28,7 @@ const DesktopNavLink = (props) => {
             target="_blank"
             rel="noopener noreferrer"
             fontSize="lg"
+            fontWeight="semibold"
             color="primary.400"
             w="full"
             _hover={{

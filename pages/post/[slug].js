@@ -159,7 +159,7 @@ export default function Post(props) {
                         </HStack>
                         <Divider />
                     </Box>
-                    <Flex as="figure" alignContent="center" justifyContent="center" mx="auto">
+                    <Flex as="figure" alignContent="center" justifyContent="center" mx="auto" mb={["4","8"]}>
                         <Image
                             loader={myLoader}
                             src={props.data?.getPostsDocument?.data?.hero_image}
