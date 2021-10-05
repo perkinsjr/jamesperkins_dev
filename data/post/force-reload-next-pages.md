@@ -10,7 +10,7 @@ hero_image: >-
   https://res.cloudinary.com/dub20ptvt/image/upload/v1633284008/force-page-reload_rqi48d.webp
 tags:
   - tutorial
-published: false
+published: true
 ---
 In some circumstances, you might need to force refresh a page, maybe you have data that needs to be fetched from the server but aren't using a Stale While Revalidating method. For example a user profile page, where a user might update a password or email.
 
