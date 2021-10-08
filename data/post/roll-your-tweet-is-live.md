@@ -5,7 +5,7 @@ title: "Roll Your Tweet Is Live!"
 excerpt: ""
 hero_image: "https://res.cloudinary.com/dub20ptvt/image/upload/v1633651322/roll_your_tweet_share_junohk.png"
 tags: ["saas", announcement]
-published: false
+published: true
 ---
 
 Today is the day! Roll Your Tweet is live! 
